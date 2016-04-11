@@ -20,6 +20,9 @@
 		582D5CD41CBB51F5004D8F78 /* ServiceMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CCC1CBB51F5004D8F78 /* ServiceMethod.swift */; };
 		582D5CD51CBB51F5004D8F78 /* ServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CCD1CBB51F5004D8F78 /* ServiceRequest.swift */; };
 		582D5CD61CBB51F5004D8F78 /* ServiceResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CCE1CBB51F5004D8F78 /* ServiceResult.swift */; };
+		582D5CDC1CBB52EB004D8F78 /* SystemVersionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CD91CBB52EB004D8F78 /* SystemVersionFunctions.swift */; };
+		582D5CDD1CBB52EB004D8F78 /* DMVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CDB1CBB52EB004D8F78 /* DMVersion.swift */; };
+		582D5CE11CBB5412004D8F78 /* UIDevice+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CE01CBB5412004D8F78 /* UIDevice+Utils.swift */; };
 		9017C18C0156D6C83AA20C7A /* Pods_ContactTexter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6499C999D7EE576274DB9D /* Pods_ContactTexter.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +45,9 @@
 		582D5CCC1CBB51F5004D8F78 /* ServiceMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceMethod.swift; sourceTree = "<group>"; };
 		582D5CCD1CBB51F5004D8F78 /* ServiceRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceRequest.swift; sourceTree = "<group>"; };
 		582D5CCE1CBB51F5004D8F78 /* ServiceResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceResult.swift; sourceTree = "<group>"; };
+		582D5CD91CBB52EB004D8F78 /* SystemVersionFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemVersionFunctions.swift; sourceTree = "<group>"; };
+		582D5CDB1CBB52EB004D8F78 /* DMVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMVersion.swift; sourceTree = "<group>"; };
+		582D5CE01CBB5412004D8F78 /* UIDevice+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				582D5CC31CBB51F5004D8F78 /* ServiceLayer */,
+				582D5CDE1CBB5412004D8F78 /* UI */,
+				582D5CD71CBB52EB004D8F78 /* Utilities */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -133,6 +141,47 @@
 				582D5CCE1CBB51F5004D8F78 /* ServiceResult.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		582D5CD71CBB52EB004D8F78 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				582D5CD81CBB52EB004D8F78 /* Functions */,
+				582D5CDA1CBB52EB004D8F78 /* Version */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		582D5CD81CBB52EB004D8F78 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				582D5CD91CBB52EB004D8F78 /* SystemVersionFunctions.swift */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
+		582D5CDA1CBB52EB004D8F78 /* Version */ = {
+			isa = PBXGroup;
+			children = (
+				582D5CDB1CBB52EB004D8F78 /* DMVersion.swift */,
+			);
+			path = Version;
+			sourceTree = "<group>";
+		};
+		582D5CDE1CBB5412004D8F78 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				582D5CDF1CBB5412004D8F78 /* Extensions */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		582D5CDF1CBB5412004D8F78 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				582D5CE01CBB5412004D8F78 /* UIDevice+Utils.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		6FE66ECB1088B6EC4FDF6AF3 /* Pods */ = {
@@ -276,8 +325,11 @@
 			files = (
 				582D5CD61CBB51F5004D8F78 /* ServiceResult.swift in Sources */,
 				582D5CD41CBB51F5004D8F78 /* ServiceMethod.swift in Sources */,
+				582D5CDC1CBB52EB004D8F78 /* SystemVersionFunctions.swift in Sources */,
 				582D5CD01CBB51F5004D8F78 /* FreddyResponseSerializer.swift in Sources */,
 				582D5CB31CBB4CB7004D8F78 /* ViewController.swift in Sources */,
+				582D5CDD1CBB52EB004D8F78 /* DMVersion.swift in Sources */,
+				582D5CE11CBB5412004D8F78 /* UIDevice+Utils.swift in Sources */,
 				582D5CCF1CBB51F5004D8F78 /* ServiceClient.swift in Sources */,
 				582D5CB11CBB4CB7004D8F78 /* AppDelegate.swift in Sources */,
 				582D5CD51CBB51F5004D8F78 /* ServiceRequest.swift in Sources */,
