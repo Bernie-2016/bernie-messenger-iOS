@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		582D5CB11CBB4CB7004D8F78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CB01CBB4CB7004D8F78 /* AppDelegate.swift */; };
-		582D5CB31CBB4CB7004D8F78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CB21CBB4CB7004D8F78 /* ViewController.swift */; };
 		582D5CB61CBB4CB7004D8F78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 582D5CB41CBB4CB7004D8F78 /* Main.storyboard */; };
 		582D5CB81CBB4CB7004D8F78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 582D5CB71CBB4CB7004D8F78 /* Assets.xcassets */; };
 		582D5CBB1CBB4CB7004D8F78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 582D5CB91CBB4CB7004D8F78 /* LaunchScreen.storyboard */; };
@@ -23,6 +22,9 @@
 		582D5CDC1CBB52EB004D8F78 /* SystemVersionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CD91CBB52EB004D8F78 /* SystemVersionFunctions.swift */; };
 		582D5CDD1CBB52EB004D8F78 /* DMVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CDB1CBB52EB004D8F78 /* DMVersion.swift */; };
 		582D5CE11CBB5412004D8F78 /* UIDevice+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CE01CBB5412004D8F78 /* UIDevice+Utils.swift */; };
+		582D5CEA1CBB5574004D8F78 /* MultilineLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CE61CBB5574004D8F78 /* MultilineLabel.swift */; };
+		582D5CEB1CBB5574004D8F78 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CE81CBB5574004D8F78 /* TableViewController.swift */; };
+		582D5CEC1CBB5574004D8F78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CE91CBB5574004D8F78 /* ViewController.swift */; };
 		9017C18C0156D6C83AA20C7A /* Pods_ContactTexter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6499C999D7EE576274DB9D /* Pods_ContactTexter.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +34,6 @@
 		3C6499C999D7EE576274DB9D /* Pods_ContactTexter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContactTexter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		582D5CAD1CBB4CB7004D8F78 /* ContactTexter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactTexter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		582D5CB01CBB4CB7004D8F78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		582D5CB21CBB4CB7004D8F78 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		582D5CB51CBB4CB7004D8F78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		582D5CB71CBB4CB7004D8F78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		582D5CBA1CBB4CB7004D8F78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,6 +49,9 @@
 		582D5CD91CBB52EB004D8F78 /* SystemVersionFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemVersionFunctions.swift; sourceTree = "<group>"; };
 		582D5CDB1CBB52EB004D8F78 /* DMVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMVersion.swift; sourceTree = "<group>"; };
 		582D5CE01CBB5412004D8F78 /* UIDevice+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Utils.swift"; sourceTree = "<group>"; };
+		582D5CE61CBB5574004D8F78 /* MultilineLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultilineLabel.swift; sourceTree = "<group>"; };
+		582D5CE81CBB5574004D8F78 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		582D5CE91CBB5574004D8F78 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +89,6 @@
 			children = (
 				582D5CC21CBB51C1004D8F78 /* Common */,
 				582D5CB01CBB4CB7004D8F78 /* AppDelegate.swift */,
-				582D5CB21CBB4CB7004D8F78 /* ViewController.swift */,
 				582D5CB41CBB4CB7004D8F78 /* Main.storyboard */,
 				582D5CB71CBB4CB7004D8F78 /* Assets.xcassets */,
 				582D5CB91CBB4CB7004D8F78 /* LaunchScreen.storyboard */,
@@ -172,6 +175,8 @@
 			isa = PBXGroup;
 			children = (
 				582D5CDF1CBB5412004D8F78 /* Extensions */,
+				582D5CE51CBB5574004D8F78 /* Labels */,
+				582D5CE71CBB5574004D8F78 /* ViewControllers */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -182,6 +187,23 @@
 				582D5CE01CBB5412004D8F78 /* UIDevice+Utils.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		582D5CE51CBB5574004D8F78 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				582D5CE61CBB5574004D8F78 /* MultilineLabel.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		582D5CE71CBB5574004D8F78 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				582D5CE81CBB5574004D8F78 /* TableViewController.swift */,
+				582D5CE91CBB5574004D8F78 /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		6FE66ECB1088B6EC4FDF6AF3 /* Pods */ = {
@@ -327,14 +349,16 @@
 				582D5CD41CBB51F5004D8F78 /* ServiceMethod.swift in Sources */,
 				582D5CDC1CBB52EB004D8F78 /* SystemVersionFunctions.swift in Sources */,
 				582D5CD01CBB51F5004D8F78 /* FreddyResponseSerializer.swift in Sources */,
-				582D5CB31CBB4CB7004D8F78 /* ViewController.swift in Sources */,
 				582D5CDD1CBB52EB004D8F78 /* DMVersion.swift in Sources */,
 				582D5CE11CBB5412004D8F78 /* UIDevice+Utils.swift in Sources */,
 				582D5CCF1CBB51F5004D8F78 /* ServiceClient.swift in Sources */,
+				582D5CEA1CBB5574004D8F78 /* MultilineLabel.swift in Sources */,
 				582D5CB11CBB4CB7004D8F78 /* AppDelegate.swift in Sources */,
 				582D5CD51CBB51F5004D8F78 /* ServiceRequest.swift in Sources */,
 				582D5CD21CBB51F5004D8F78 /* ServiceEndpoint.swift in Sources */,
 				582D5CD31CBB51F5004D8F78 /* ServiceError.swift in Sources */,
+				582D5CEB1CBB5574004D8F78 /* TableViewController.swift in Sources */,
+				582D5CEC1CBB5574004D8F78 /* ViewController.swift in Sources */,
 				582D5CD11CBB51F5004D8F78 /* ServiceEmptyResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
