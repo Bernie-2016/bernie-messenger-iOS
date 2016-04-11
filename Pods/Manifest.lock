@@ -1,0 +1,21 @@
+PODS:
+  - Alamofire (3.3.0)
+  - Font-Awesome-Swift (1.4.6)
+  - Freddy (2.0.2)
+  - PureLayout (3.0.1)
+
+DEPENDENCIES:
+  - Alamofire (= 3.3.0)
+  - Font-Awesome-Swift (= 1.4.6)
+  - Freddy (= 2.0.2)
+  - PureLayout (= 3.0.1)
+
+SPEC CHECKSUMS:
+  Alamofire: 9054db4a1b1ca9e363223183e01cea380159a27c
+  Font-Awesome-Swift: a965c23e619514be65de9b113f49038ca683c1bb
+  Freddy: e53713b8d5be02dbf5f4132c44d899d99eb09a6b
+  PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
+
+PODFILE CHECKSUM: cbf7605e2c922bcd693285316b823a054625e3a7
+
+COCOAPODS: 1.0.0.beta.5
