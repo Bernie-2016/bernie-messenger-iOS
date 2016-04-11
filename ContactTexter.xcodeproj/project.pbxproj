@@ -36,6 +36,8 @@
 		582D5D061CBB5BC9004D8F78 /* LandingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 582D5D051CBB5BC9004D8F78 /* LandingTableViewCell.xib */; };
 		582D5D091CBB5D25004D8F78 /* AppearanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5D081CBB5D25004D8F78 /* AppearanceManager.swift */; };
 		582D5D101CBB6AD6004D8F78 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 582D5D0F1CBB6AD6004D8F78 /* LaunchScreen.xib */; };
+		582D5D131CBB6FD9004D8F78 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5D121CBB6FD9004D8F78 /* Assignment.swift */; };
+		582D5D151CBB70C8004D8F78 /* TextAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5D141CBB70C8004D8F78 /* TextAction.swift */; };
 		9017C18C0156D6C83AA20C7A /* Pods_ContactTexter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6499C999D7EE576274DB9D /* Pods_ContactTexter.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +76,8 @@
 		582D5D051CBB5BC9004D8F78 /* LandingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LandingTableViewCell.xib; sourceTree = "<group>"; };
 		582D5D081CBB5D25004D8F78 /* AppearanceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceManager.swift; sourceTree = "<group>"; };
 		582D5D0F1CBB6AD6004D8F78 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		582D5D121CBB6FD9004D8F78 /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
+		582D5D141CBB70C8004D8F78 /* TextAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextAction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,7 @@
 		582D5CC21CBB51C1004D8F78 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				582D5D111CBB6FCE004D8F78 /* Models */,
 				582D5CC31CBB51F5004D8F78 /* ServiceLayer */,
 				582D5CDE1CBB5412004D8F78 /* UI */,
 				582D5CD71CBB52EB004D8F78 /* Utilities */,
@@ -279,6 +284,15 @@
 			path = Appearance;
 			sourceTree = "<group>";
 		};
+		582D5D111CBB6FCE004D8F78 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				582D5D121CBB6FD9004D8F78 /* Assignment.swift */,
+				582D5D141CBB70C8004D8F78 /* TextAction.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		6FE66ECB1088B6EC4FDF6AF3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -429,8 +443,10 @@
 				582D5CD01CBB51F5004D8F78 /* FreddyResponseSerializer.swift in Sources */,
 				582D5CDD1CBB52EB004D8F78 /* DMVersion.swift in Sources */,
 				582D5CE11CBB5412004D8F78 /* UIDevice+Utils.swift in Sources */,
+				582D5D131CBB6FD9004D8F78 /* Assignment.swift in Sources */,
 				582D5CCF1CBB51F5004D8F78 /* ServiceClient.swift in Sources */,
 				582D5CF91CBB5799004D8F78 /* UIImage+Utils.swift in Sources */,
+				582D5D151CBB70C8004D8F78 /* TextAction.swift in Sources */,
 				582D5CEA1CBB5574004D8F78 /* MultilineLabel.swift in Sources */,
 				582D5D021CBB5B95004D8F78 /* LandingTableViewCell.swift in Sources */,
 				582D5CB11CBB4CB7004D8F78 /* AppDelegate.swift in Sources */,
