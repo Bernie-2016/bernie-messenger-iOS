@@ -1,5 +1,5 @@
 //
-//  LandingTableViewController.swift
+//  AssignmentsTableViewController.swift
 //  ContactTexter
 //
 //  Created by Justin Baumgartner on 4/10/16.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class LandingTableViewController : TableViewController {
+class AssignmentsTableViewController : TableViewController {
     
-    private lazy var dummyCell = LandingTableViewCell.loadFromNib()
+    private lazy var dummyAssignmentCell = AssignmentTableViewCell.loadFromNib()
     
     // MARK: Life cycle methods
     
@@ -18,7 +18,7 @@ class LandingTableViewController : TableViewController {
         super.viewDidLoad()
         
         self.tableView.estimatedRowHeight = 50.0
-        self.tableView.registerReusableCell(LandingTableViewCell.self)
+        self.tableView.registerReusableCell(AssignmentTableViewCell.self)
     }
     
     // MARK: UITableViewDataSource
@@ -34,14 +34,14 @@ class LandingTableViewController : TableViewController {
     // MARK: UITableViewDelegate
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: LandingTableViewCell = tableView.dequeueReusableCell(indexPath)
+        let cell: AssignmentTableViewCell = tableView.dequeueReusableCell(indexPath)
         // TODO: Configure cell with assignment data
         return cell
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         // TODO: Configure dummy cell with assignment data
-        return self.dummyCell.calculatedHeight(tableView: tableView)
+        return self.dummyAssignmentCell.calculatedHeight(tableView: tableView)
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

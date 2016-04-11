@@ -1,5 +1,5 @@
 //
-//  LandingTableViewCell.swift
+//  AssignmentTableViewCell.swift
 //  ContactTexter
 //
 //  Created by Justin Baumgartner on 4/10/16.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-class LandingTableViewCell : UITableViewCell, LoadableFromNib {
+class AssignmentTableViewCell : UITableViewCell, LoadableFromNib {
     
 }
