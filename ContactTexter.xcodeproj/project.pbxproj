@@ -25,6 +25,11 @@
 		582D5CEA1CBB5574004D8F78 /* MultilineLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CE61CBB5574004D8F78 /* MultilineLabel.swift */; };
 		582D5CEB1CBB5574004D8F78 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CE81CBB5574004D8F78 /* TableViewController.swift */; };
 		582D5CEC1CBB5574004D8F78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CE91CBB5574004D8F78 /* ViewController.swift */; };
+		582D5CF01CBB569A004D8F78 /* LoadableFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CEE1CBB569A004D8F78 /* LoadableFromNib.swift */; };
+		582D5CF11CBB569A004D8F78 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CEF1CBB569A004D8F78 /* Reusable.swift */; };
+		582D5CF51CBB56E2004D8F78 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CF21CBB56E2004D8F78 /* UITableView+Reusable.swift */; };
+		582D5CF61CBB56E2004D8F78 /* UITableView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CF31CBB56E2004D8F78 /* UITableView+Utils.swift */; };
+		582D5CF71CBB56E2004D8F78 /* UITableViewCell+HeightCalculatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CF41CBB56E2004D8F78 /* UITableViewCell+HeightCalculatable.swift */; };
 		9017C18C0156D6C83AA20C7A /* Pods_ContactTexter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6499C999D7EE576274DB9D /* Pods_ContactTexter.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +57,11 @@
 		582D5CE61CBB5574004D8F78 /* MultilineLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultilineLabel.swift; sourceTree = "<group>"; };
 		582D5CE81CBB5574004D8F78 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		582D5CE91CBB5574004D8F78 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		582D5CEE1CBB569A004D8F78 /* LoadableFromNib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadableFromNib.swift; sourceTree = "<group>"; };
+		582D5CEF1CBB569A004D8F78 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		582D5CF21CBB56E2004D8F78 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
+		582D5CF31CBB56E2004D8F78 /* UITableView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Utils.swift"; sourceTree = "<group>"; };
+		582D5CF41CBB56E2004D8F78 /* UITableViewCell+HeightCalculatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+HeightCalculatable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +186,7 @@
 			children = (
 				582D5CDF1CBB5412004D8F78 /* Extensions */,
 				582D5CE51CBB5574004D8F78 /* Labels */,
+				582D5CED1CBB569A004D8F78 /* Protocols */,
 				582D5CE71CBB5574004D8F78 /* ViewControllers */,
 			);
 			path = UI;
@@ -185,6 +196,9 @@
 			isa = PBXGroup;
 			children = (
 				582D5CE01CBB5412004D8F78 /* UIDevice+Utils.swift */,
+				582D5CF21CBB56E2004D8F78 /* UITableView+Reusable.swift */,
+				582D5CF31CBB56E2004D8F78 /* UITableView+Utils.swift */,
+				582D5CF41CBB56E2004D8F78 /* UITableViewCell+HeightCalculatable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -204,6 +218,15 @@
 				582D5CE91CBB5574004D8F78 /* ViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		582D5CED1CBB569A004D8F78 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				582D5CEE1CBB569A004D8F78 /* LoadableFromNib.swift */,
+				582D5CEF1CBB569A004D8F78 /* Reusable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		6FE66ECB1088B6EC4FDF6AF3 /* Pods */ = {
@@ -345,8 +368,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				582D5CF11CBB569A004D8F78 /* Reusable.swift in Sources */,
 				582D5CD61CBB51F5004D8F78 /* ServiceResult.swift in Sources */,
+				582D5CF01CBB569A004D8F78 /* LoadableFromNib.swift in Sources */,
 				582D5CD41CBB51F5004D8F78 /* ServiceMethod.swift in Sources */,
+				582D5CF51CBB56E2004D8F78 /* UITableView+Reusable.swift in Sources */,
+				582D5CF71CBB56E2004D8F78 /* UITableViewCell+HeightCalculatable.swift in Sources */,
 				582D5CDC1CBB52EB004D8F78 /* SystemVersionFunctions.swift in Sources */,
 				582D5CD01CBB51F5004D8F78 /* FreddyResponseSerializer.swift in Sources */,
 				582D5CDD1CBB52EB004D8F78 /* DMVersion.swift in Sources */,
@@ -358,6 +385,7 @@
 				582D5CD21CBB51F5004D8F78 /* ServiceEndpoint.swift in Sources */,
 				582D5CD31CBB51F5004D8F78 /* ServiceError.swift in Sources */,
 				582D5CEB1CBB5574004D8F78 /* TableViewController.swift in Sources */,
+				582D5CF61CBB56E2004D8F78 /* UITableView+Utils.swift in Sources */,
 				582D5CEC1CBB5574004D8F78 /* ViewController.swift in Sources */,
 				582D5CD11CBB51F5004D8F78 /* ServiceEmptyResponse.swift in Sources */,
 			);
