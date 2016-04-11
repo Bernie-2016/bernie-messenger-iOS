@@ -1,0 +1,295 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		582D5CB11CBB4CB7004D8F78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CB01CBB4CB7004D8F78 /* AppDelegate.swift */; };
+		582D5CB31CBB4CB7004D8F78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CB21CBB4CB7004D8F78 /* ViewController.swift */; };
+		582D5CB61CBB4CB7004D8F78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 582D5CB41CBB4CB7004D8F78 /* Main.storyboard */; };
+		582D5CB81CBB4CB7004D8F78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 582D5CB71CBB4CB7004D8F78 /* Assets.xcassets */; };
+		582D5CBB1CBB4CB7004D8F78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 582D5CB91CBB4CB7004D8F78 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		582D5CAD1CBB4CB7004D8F78 /* ContactTexter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactTexter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		582D5CB01CBB4CB7004D8F78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		582D5CB21CBB4CB7004D8F78 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		582D5CB51CBB4CB7004D8F78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		582D5CB71CBB4CB7004D8F78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		582D5CBA1CBB4CB7004D8F78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		582D5CBC1CBB4CB8004D8F78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		582D5CAA1CBB4CB7004D8F78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		582D5CA41CBB4CB7004D8F78 = {
+			isa = PBXGroup;
+			children = (
+				582D5CAF1CBB4CB7004D8F78 /* ContactTexter */,
+				582D5CAE1CBB4CB7004D8F78 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		582D5CAE1CBB4CB7004D8F78 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				582D5CAD1CBB4CB7004D8F78 /* ContactTexter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		582D5CAF1CBB4CB7004D8F78 /* ContactTexter */ = {
+			isa = PBXGroup;
+			children = (
+				582D5CB01CBB4CB7004D8F78 /* AppDelegate.swift */,
+				582D5CB21CBB4CB7004D8F78 /* ViewController.swift */,
+				582D5CB41CBB4CB7004D8F78 /* Main.storyboard */,
+				582D5CB71CBB4CB7004D8F78 /* Assets.xcassets */,
+				582D5CB91CBB4CB7004D8F78 /* LaunchScreen.storyboard */,
+				582D5CBC1CBB4CB8004D8F78 /* Info.plist */,
+			);
+			path = ContactTexter;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		582D5CAC1CBB4CB7004D8F78 /* ContactTexter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 582D5CBF1CBB4CB8004D8F78 /* Build configuration list for PBXNativeTarget "ContactTexter" */;
+			buildPhases = (
+				582D5CA91CBB4CB7004D8F78 /* Sources */,
+				582D5CAA1CBB4CB7004D8F78 /* Frameworks */,
+				582D5CAB1CBB4CB7004D8F78 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ContactTexter;
+			productName = ContactTexter;
+			productReference = 582D5CAD1CBB4CB7004D8F78 /* ContactTexter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		582D5CA51CBB4CB7004D8F78 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Bernie Sanders 2016";
+				TargetAttributes = {
+					582D5CAC1CBB4CB7004D8F78 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 582D5CA81CBB4CB7004D8F78 /* Build configuration list for PBXProject "ContactTexter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 582D5CA41CBB4CB7004D8F78;
+			productRefGroup = 582D5CAE1CBB4CB7004D8F78 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				582D5CAC1CBB4CB7004D8F78 /* ContactTexter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		582D5CAB1CBB4CB7004D8F78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				582D5CBB1CBB4CB7004D8F78 /* LaunchScreen.storyboard in Resources */,
+				582D5CB81CBB4CB7004D8F78 /* Assets.xcassets in Resources */,
+				582D5CB61CBB4CB7004D8F78 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		582D5CA91CBB4CB7004D8F78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				582D5CB31CBB4CB7004D8F78 /* ViewController.swift in Sources */,
+				582D5CB11CBB4CB7004D8F78 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		582D5CB41CBB4CB7004D8F78 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				582D5CB51CBB4CB7004D8F78 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		582D5CB91CBB4CB7004D8F78 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				582D5CBA1CBB4CB7004D8F78 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		582D5CBD1CBB4CB8004D8F78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		582D5CBE1CBB4CB8004D8F78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		582D5CC01CBB4CB8004D8F78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ContactTexter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.berniesanders.ContactTexter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		582D5CC11CBB4CB8004D8F78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ContactTexter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.berniesanders.ContactTexter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		582D5CA81CBB4CB7004D8F78 /* Build configuration list for PBXProject "ContactTexter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				582D5CBD1CBB4CB8004D8F78 /* Debug */,
+				582D5CBE1CBB4CB8004D8F78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		582D5CBF1CBB4CB8004D8F78 /* Build configuration list for PBXNativeTarget "ContactTexter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				582D5CC01CBB4CB8004D8F78 /* Debug */,
+				582D5CC11CBB4CB8004D8F78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 582D5CA51CBB4CB7004D8F78 /* Project object */;
+}
