@@ -30,6 +30,7 @@
 		582D5CF51CBB56E2004D8F78 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CF21CBB56E2004D8F78 /* UITableView+Reusable.swift */; };
 		582D5CF61CBB56E2004D8F78 /* UITableView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CF31CBB56E2004D8F78 /* UITableView+Utils.swift */; };
 		582D5CF71CBB56E2004D8F78 /* UITableViewCell+HeightCalculatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CF41CBB56E2004D8F78 /* UITableViewCell+HeightCalculatable.swift */; };
+		582D5CF91CBB5799004D8F78 /* UIImage+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CF81CBB5799004D8F78 /* UIImage+Utils.swift */; };
 		9017C18C0156D6C83AA20C7A /* Pods_ContactTexter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6499C999D7EE576274DB9D /* Pods_ContactTexter.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		582D5CF21CBB56E2004D8F78 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
 		582D5CF31CBB56E2004D8F78 /* UITableView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Utils.swift"; sourceTree = "<group>"; };
 		582D5CF41CBB56E2004D8F78 /* UITableViewCell+HeightCalculatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+HeightCalculatable.swift"; sourceTree = "<group>"; };
+		582D5CF81CBB5799004D8F78 /* UIImage+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				582D5CE01CBB5412004D8F78 /* UIDevice+Utils.swift */,
+				582D5CF81CBB5799004D8F78 /* UIImage+Utils.swift */,
 				582D5CF21CBB56E2004D8F78 /* UITableView+Reusable.swift */,
 				582D5CF31CBB56E2004D8F78 /* UITableView+Utils.swift */,
 				582D5CF41CBB56E2004D8F78 /* UITableViewCell+HeightCalculatable.swift */,
@@ -379,6 +382,7 @@
 				582D5CDD1CBB52EB004D8F78 /* DMVersion.swift in Sources */,
 				582D5CE11CBB5412004D8F78 /* UIDevice+Utils.swift in Sources */,
 				582D5CCF1CBB51F5004D8F78 /* ServiceClient.swift in Sources */,
+				582D5CF91CBB5799004D8F78 /* UIImage+Utils.swift in Sources */,
 				582D5CEA1CBB5574004D8F78 /* MultilineLabel.swift in Sources */,
 				582D5CB11CBB4CB7004D8F78 /* AppDelegate.swift in Sources */,
 				582D5CD51CBB51F5004D8F78 /* ServiceRequest.swift in Sources */,
