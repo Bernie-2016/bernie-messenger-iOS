@@ -31,6 +31,7 @@
 		582D5CF61CBB56E2004D8F78 /* UITableView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CF31CBB56E2004D8F78 /* UITableView+Utils.swift */; };
 		582D5CF71CBB56E2004D8F78 /* UITableViewCell+HeightCalculatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CF41CBB56E2004D8F78 /* UITableViewCell+HeightCalculatable.swift */; };
 		582D5CF91CBB5799004D8F78 /* UIImage+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CF81CBB5799004D8F78 /* UIImage+Utils.swift */; };
+		582D5CFB1CBB57D2004D8F78 /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CFA1CBB57D2004D8F78 /* UIColor+Utils.swift */; };
 		9017C18C0156D6C83AA20C7A /* Pods_ContactTexter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6499C999D7EE576274DB9D /* Pods_ContactTexter.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		582D5CF31CBB56E2004D8F78 /* UITableView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Utils.swift"; sourceTree = "<group>"; };
 		582D5CF41CBB56E2004D8F78 /* UITableViewCell+HeightCalculatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+HeightCalculatable.swift"; sourceTree = "<group>"; };
 		582D5CF81CBB5799004D8F78 /* UIImage+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Utils.swift"; sourceTree = "<group>"; };
+		582D5CFA1CBB57D2004D8F78 /* UIColor+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 		582D5CDF1CBB5412004D8F78 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				582D5CFA1CBB57D2004D8F78 /* UIColor+Utils.swift */,
 				582D5CE01CBB5412004D8F78 /* UIDevice+Utils.swift */,
 				582D5CF81CBB5799004D8F78 /* UIImage+Utils.swift */,
 				582D5CF21CBB56E2004D8F78 /* UITableView+Reusable.swift */,
@@ -388,6 +391,7 @@
 				582D5CD51CBB51F5004D8F78 /* ServiceRequest.swift in Sources */,
 				582D5CD21CBB51F5004D8F78 /* ServiceEndpoint.swift in Sources */,
 				582D5CD31CBB51F5004D8F78 /* ServiceError.swift in Sources */,
+				582D5CFB1CBB57D2004D8F78 /* UIColor+Utils.swift in Sources */,
 				582D5CEB1CBB5574004D8F78 /* TableViewController.swift in Sources */,
 				582D5CF61CBB56E2004D8F78 /* UITableView+Utils.swift in Sources */,
 				582D5CEC1CBB5574004D8F78 /* ViewController.swift in Sources */,
