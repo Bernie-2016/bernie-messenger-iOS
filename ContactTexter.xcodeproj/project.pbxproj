@@ -34,6 +34,7 @@
 		582D5D021CBB5B95004D8F78 /* LandingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5D011CBB5B95004D8F78 /* LandingTableViewCell.swift */; };
 		582D5D041CBB5BB6004D8F78 /* Landing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 582D5D031CBB5BB6004D8F78 /* Landing.storyboard */; };
 		582D5D061CBB5BC9004D8F78 /* LandingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 582D5D051CBB5BC9004D8F78 /* LandingTableViewCell.xib */; };
+		582D5D091CBB5D25004D8F78 /* AppearanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5D081CBB5D25004D8F78 /* AppearanceManager.swift */; };
 		9017C18C0156D6C83AA20C7A /* Pods_ContactTexter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6499C999D7EE576274DB9D /* Pods_ContactTexter.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		582D5D011CBB5B95004D8F78 /* LandingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingTableViewCell.swift; sourceTree = "<group>"; };
 		582D5D031CBB5BB6004D8F78 /* Landing.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Landing.storyboard; sourceTree = "<group>"; };
 		582D5D051CBB5BC9004D8F78 /* LandingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LandingTableViewCell.xib; sourceTree = "<group>"; };
+		582D5D081CBB5D25004D8F78 /* AppearanceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 		582D5CDE1CBB5412004D8F78 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				582D5D071CBB5D16004D8F78 /* Appearance */,
 				582D5CDF1CBB5412004D8F78 /* Extensions */,
 				582D5CE51CBB5574004D8F78 /* Labels */,
 				582D5CED1CBB569A004D8F78 /* Protocols */,
@@ -263,6 +266,14 @@
 				582D5CFF1CBB5B7E004D8F78 /* LandingTableViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		582D5D071CBB5D16004D8F78 /* Appearance */ = {
+			isa = PBXGroup;
+			children = (
+				582D5D081CBB5D25004D8F78 /* AppearanceManager.swift */,
+			);
+			path = Appearance;
 			sourceTree = "<group>";
 		};
 		6FE66ECB1088B6EC4FDF6AF3 /* Pods */ = {
@@ -428,6 +439,7 @@
 				582D5CF61CBB56E2004D8F78 /* UITableView+Utils.swift in Sources */,
 				582D5CEC1CBB5574004D8F78 /* ViewController.swift in Sources */,
 				582D5CD11CBB51F5004D8F78 /* ServiceEmptyResponse.swift in Sources */,
+				582D5D091CBB5D25004D8F78 /* AppearanceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
