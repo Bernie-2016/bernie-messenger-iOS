@@ -12,4 +12,8 @@ class PerformAssignmentSelectContactTableViewCell : UITableViewCell, LoadableFro
     
     @IBOutlet private weak var contactNameLabel: UILabel!
     
+    func configureCell(contact contact: Contact) {
+        self.contactNameLabel.text = contact.fullName
+    }
+    
 }

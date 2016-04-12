@@ -6,11 +6,14 @@
 //  Copyright © 2016 Bernie Sanders 2016. All rights reserved.
 //
 
+import AddressBookUI
+import ContactsUI
 import UIKit
 
 class PerformAssignmentTableViewController : TableViewController {
     
     private let assignment: Assignment
+    private var selectedContact: Contact?
     
     private lazy var infoCell: PerformAssignmentInfoTableViewCell = {
         let cell = PerformAssignmentInfoTableViewCell.loadFromNib()
@@ -18,8 +21,12 @@ class PerformAssignmentTableViewController : TableViewController {
         return cell
     }()
     
+    private lazy var selectContactCell: PerformAssignmentSelectContactTableViewCell = {
+        return PerformAssignmentSelectContactTableViewCell.loadFromNib()
+    }()
+    
     private lazy var dataSource: [UITableViewCell] = {
-        return [self.infoCell]
+        return [self.infoCell, self.selectContactCell]
     }()
     
     // MARK: Initializers
@@ -60,6 +67,72 @@ class PerformAssignmentTableViewController : TableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         return self.dataSource[indexPath.row]
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = self.dataSource[indexPath.row]
+        
+        switch cell {
+        case self.selectContactCell:
+            let peoplePicker = ABPeoplePickerNavigationController()
+            peoplePicker.displayedProperties = [NSNumber(int: kABPersonPhoneProperty)]
+            peoplePicker.predicateForEnablingPerson = NSPredicate(format: "phoneNumbers.@count > 0")
+            peoplePicker.predicateForSelectionOfPerson = NSPredicate(format: "phoneNumbers.@count == 1")
+            peoplePicker.peoplePickerDelegate = self
+            showViewController(peoplePicker, sender: nil)
+            
+        default:
+            break
+        }
+    }
+    
+    // MARK: Cell management
+    
+    private func didSelectContact(contact: Contact) {
+        self.selectedContact = contact
+        self.selectContactCell.configureCell(contact: contact)
+        self.tableView.reloadData()
+    }
+    
+}
+
+// MARK: ABPeoplePickerNavigationControllerDelegate
+
+extension PerformAssignmentTableViewController : ABPeoplePickerNavigationControllerDelegate {
+    
+    func peoplePickerNavigationController(peoplePicker: ABPeoplePickerNavigationController, didSelectPerson person: ABRecord) {
+        let phoneNumbers = ABRecordCopyValue(person, kABPersonPhoneProperty).takeRetainedValue()
+        guard ABMultiValueGetCount(phoneNumbers) > 0 else {
+            // Should never reach here because of custom `predicateForEnablingPerson`
+            return
+        }
+        
+        let firstName = firstNameOfPerson(person)
+        let lastName = lastNameOfPerson(person)
+        let phoneNumber = ABMultiValueCopyValueAtIndex(phoneNumbers, 0 as CFIndex).takeRetainedValue() as! String
+        
+        let contact = Contact(firstName: firstName, lastName: lastName, phoneNumber: phoneNumber)
+        didSelectContact(contact)
+    }
+    
+    func peoplePickerNavigationController(peoplePicker: ABPeoplePickerNavigationController, didSelectPerson person: ABRecord, property: ABPropertyID, identifier: ABMultiValueIdentifier) {
+        let firstName = firstNameOfPerson(person)
+        let lastName = lastNameOfPerson(person)
+        
+        let phoneNumbers = ABRecordCopyValue(person, property).takeRetainedValue()
+        let selectedIndex = ABMultiValueGetIndexForIdentifier(phoneNumbers, identifier);
+        let selectedPhoneNumber = ABMultiValueCopyValueAtIndex(phoneNumbers, selectedIndex).takeRetainedValue() as! String;
+        
+        let contact = Contact(firstName: firstName, lastName: lastName, phoneNumber: selectedPhoneNumber)
+        didSelectContact(contact)
+    }
+    
+    private func firstNameOfPerson(person: ABRecord) -> String {
+        return ABRecordCopyValue(person, kABPersonFirstNameProperty).takeRetainedValue() as? String ?? ""
+    }
+    
+    private func lastNameOfPerson(person: ABRecord) -> String {
+        return ABRecordCopyValue(person, kABPersonLastNameProperty).takeRetainedValue() as? String ?? ""
     }
     
 }
