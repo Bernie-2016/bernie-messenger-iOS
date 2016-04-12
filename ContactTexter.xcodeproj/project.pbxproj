@@ -42,6 +42,8 @@
 		58ABC0541CBCAFF8009223F4 /* PerformAssignmentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ABC0531CBCAFF8009223F4 /* PerformAssignmentTableViewController.swift */; };
 		58ABC0561CBCB080009223F4 /* PerformAssignmentInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ABC0551CBCB080009223F4 /* PerformAssignmentInfoTableViewCell.swift */; };
 		58ABC0581CBCB090009223F4 /* PerformAssignmentInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58ABC0571CBCB090009223F4 /* PerformAssignmentInfoTableViewCell.xib */; };
+		58ABC05A1CBCB458009223F4 /* PerformAssignmentSelectContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ABC0591CBCB458009223F4 /* PerformAssignmentSelectContactTableViewCell.swift */; };
+		58ABC05C1CBCB469009223F4 /* PerformAssignmentSelectContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58ABC05B1CBCB469009223F4 /* PerformAssignmentSelectContactTableViewCell.xib */; };
 		9017C18C0156D6C83AA20C7A /* Pods_ContactTexter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6499C999D7EE576274DB9D /* Pods_ContactTexter.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +88,8 @@
 		58ABC0531CBCAFF8009223F4 /* PerformAssignmentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformAssignmentTableViewController.swift; sourceTree = "<group>"; };
 		58ABC0551CBCB080009223F4 /* PerformAssignmentInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformAssignmentInfoTableViewCell.swift; sourceTree = "<group>"; };
 		58ABC0571CBCB090009223F4 /* PerformAssignmentInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PerformAssignmentInfoTableViewCell.xib; sourceTree = "<group>"; };
+		58ABC0591CBCB458009223F4 /* PerformAssignmentSelectContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformAssignmentSelectContactTableViewCell.swift; sourceTree = "<group>"; };
+		58ABC05B1CBCB469009223F4 /* PerformAssignmentSelectContactTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PerformAssignmentSelectContactTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -325,6 +329,8 @@
 			children = (
 				58ABC0551CBCB080009223F4 /* PerformAssignmentInfoTableViewCell.swift */,
 				58ABC0571CBCB090009223F4 /* PerformAssignmentInfoTableViewCell.xib */,
+				58ABC0591CBCB458009223F4 /* PerformAssignmentSelectContactTableViewCell.swift */,
+				58ABC05B1CBCB469009223F4 /* PerformAssignmentSelectContactTableViewCell.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -416,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				582D5D101CBB6AD6004D8F78 /* LaunchScreen.xib in Resources */,
+				58ABC05C1CBCB469009223F4 /* PerformAssignmentSelectContactTableViewCell.xib in Resources */,
 				58ABC0581CBCB090009223F4 /* PerformAssignmentInfoTableViewCell.xib in Resources */,
 				582D5D041CBB5BB6004D8F78 /* Assignments.storyboard in Resources */,
 				582D5D061CBB5BC9004D8F78 /* AssignmentTableViewCell.xib in Resources */,
@@ -493,6 +500,7 @@
 				582D5D131CBB6FD9004D8F78 /* Assignment.swift in Sources */,
 				582D5CCF1CBB51F5004D8F78 /* ServiceClient.swift in Sources */,
 				582D5CF91CBB5799004D8F78 /* UIImage+Utils.swift in Sources */,
+				58ABC05A1CBCB458009223F4 /* PerformAssignmentSelectContactTableViewCell.swift in Sources */,
 				582D5D151CBB70C8004D8F78 /* TextAction.swift in Sources */,
 				582D5CEA1CBB5574004D8F78 /* MultilineLabel.swift in Sources */,
 				582D5D021CBB5B95004D8F78 /* AssignmentTableViewCell.swift in Sources */,
