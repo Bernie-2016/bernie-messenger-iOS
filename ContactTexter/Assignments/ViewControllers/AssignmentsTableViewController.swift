@@ -62,7 +62,9 @@ class AssignmentsTableViewController : TableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        // TODO: Go to assignment details page
+        let assignment = self.assignments[indexPath.row]
+        let controller = PerformAssignmentTableViewController(assignment: assignment)
+        showViewController(controller, sender: nil)
     }
     
 }

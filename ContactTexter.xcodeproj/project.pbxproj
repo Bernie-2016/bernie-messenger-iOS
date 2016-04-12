@@ -39,6 +39,9 @@
 		582D5D131CBB6FD9004D8F78 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5D121CBB6FD9004D8F78 /* Assignment.swift */; };
 		582D5D151CBB70C8004D8F78 /* TextAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5D141CBB70C8004D8F78 /* TextAction.swift */; };
 		58ABC04F1CBC9002009223F4 /* AssignmentsBusinessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ABC04E1CBC9002009223F4 /* AssignmentsBusinessService.swift */; };
+		58ABC0541CBCAFF8009223F4 /* PerformAssignmentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ABC0531CBCAFF8009223F4 /* PerformAssignmentTableViewController.swift */; };
+		58ABC0561CBCB080009223F4 /* PerformAssignmentInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ABC0551CBCB080009223F4 /* PerformAssignmentInfoTableViewCell.swift */; };
+		58ABC0581CBCB090009223F4 /* PerformAssignmentInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58ABC0571CBCB090009223F4 /* PerformAssignmentInfoTableViewCell.xib */; };
 		9017C18C0156D6C83AA20C7A /* Pods_ContactTexter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6499C999D7EE576274DB9D /* Pods_ContactTexter.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +83,9 @@
 		582D5D121CBB6FD9004D8F78 /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
 		582D5D141CBB70C8004D8F78 /* TextAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextAction.swift; sourceTree = "<group>"; };
 		58ABC04E1CBC9002009223F4 /* AssignmentsBusinessService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentsBusinessService.swift; sourceTree = "<group>"; };
+		58ABC0531CBCAFF8009223F4 /* PerformAssignmentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformAssignmentTableViewController.swift; sourceTree = "<group>"; };
+		58ABC0551CBCB080009223F4 /* PerformAssignmentInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformAssignmentInfoTableViewCell.swift; sourceTree = "<group>"; };
+		58ABC0571CBCB090009223F4 /* PerformAssignmentInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PerformAssignmentInfoTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,7 @@
 			children = (
 				582D5CFC1CBB5A3B004D8F78 /* Assignments */,
 				582D5CC21CBB51C1004D8F78 /* Common */,
+				58ABC0501CBCAFD4009223F4 /* PerformAssignment */,
 				582D5CB01CBB4CB7004D8F78 /* AppDelegate.swift */,
 				582D5CBC1CBB4CB8004D8F78 /* Info.plist */,
 				582D5CB71CBB4CB7004D8F78 /* Assets.xcassets */,
@@ -304,6 +311,32 @@
 			path = BusinessLayer;
 			sourceTree = "<group>";
 		};
+		58ABC0501CBCAFD4009223F4 /* PerformAssignment */ = {
+			isa = PBXGroup;
+			children = (
+				58ABC0511CBCAFE5009223F4 /* UI */,
+				58ABC0521CBCAFE5009223F4 /* ViewControllers */,
+			);
+			path = PerformAssignment;
+			sourceTree = "<group>";
+		};
+		58ABC0511CBCAFE5009223F4 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				58ABC0551CBCB080009223F4 /* PerformAssignmentInfoTableViewCell.swift */,
+				58ABC0571CBCB090009223F4 /* PerformAssignmentInfoTableViewCell.xib */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		58ABC0521CBCAFE5009223F4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				58ABC0531CBCAFF8009223F4 /* PerformAssignmentTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		6FE66ECB1088B6EC4FDF6AF3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -383,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				582D5D101CBB6AD6004D8F78 /* LaunchScreen.xib in Resources */,
+				58ABC0581CBCB090009223F4 /* PerformAssignmentInfoTableViewCell.xib in Resources */,
 				582D5D041CBB5BB6004D8F78 /* Assignments.storyboard in Resources */,
 				582D5D061CBB5BC9004D8F78 /* AssignmentTableViewCell.xib in Resources */,
 				582D5CB81CBB4CB7004D8F78 /* Assets.xcassets in Resources */,
@@ -454,6 +488,7 @@
 				582D5CD01CBB51F5004D8F78 /* FreddyResponseSerializer.swift in Sources */,
 				58ABC04F1CBC9002009223F4 /* AssignmentsBusinessService.swift in Sources */,
 				582D5CDD1CBB52EB004D8F78 /* DMVersion.swift in Sources */,
+				58ABC0561CBCB080009223F4 /* PerformAssignmentInfoTableViewCell.swift in Sources */,
 				582D5CE11CBB5412004D8F78 /* UIDevice+Utils.swift in Sources */,
 				582D5D131CBB6FD9004D8F78 /* Assignment.swift in Sources */,
 				582D5CCF1CBB51F5004D8F78 /* ServiceClient.swift in Sources */,
@@ -470,6 +505,7 @@
 				582D5CEB1CBB5574004D8F78 /* TableViewController.swift in Sources */,
 				582D5CF61CBB56E2004D8F78 /* UITableView+Utils.swift in Sources */,
 				582D5CEC1CBB5574004D8F78 /* ViewController.swift in Sources */,
+				58ABC0541CBCAFF8009223F4 /* PerformAssignmentTableViewController.swift in Sources */,
 				582D5CD11CBB51F5004D8F78 /* ServiceEmptyResponse.swift in Sources */,
 				582D5D091CBB5D25004D8F78 /* AppearanceManager.swift in Sources */,
 			);
