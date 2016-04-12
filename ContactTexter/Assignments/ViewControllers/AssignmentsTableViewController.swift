@@ -10,6 +10,8 @@ import UIKit
 
 class AssignmentsTableViewController : TableViewController {
     
+    private var assignments: [Assignment] = []
+    
     private lazy var dummyAssignmentCell = AssignmentTableViewCell.loadFromNib()
     
     // MARK: Life cycle methods
@@ -19,6 +21,21 @@ class AssignmentsTableViewController : TableViewController {
         
         self.tableView.estimatedRowHeight = 50.0
         self.tableView.registerReusableCell(AssignmentTableViewCell.self)
+        
+        let businessService = AssignmentsBusinessService()
+        businessService.fetchAssignments {
+            (result: ServiceResult<[Assignment]>) in
+            
+            switch result {
+            case .Success(let assignments):
+                self.assignments = assignments
+                self.tableView.reloadData()
+                
+            case .Failure(_):
+                // Do error things
+                break
+            }
+        }
     }
     
     // MARK: UITableViewDataSource
@@ -28,19 +45,19 @@ class AssignmentsTableViewController : TableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return self.assignments.count
     }
     
     // MARK: UITableViewDelegate
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: AssignmentTableViewCell = tableView.dequeueReusableCell(indexPath)
-        // TODO: Configure cell with assignment data
+        cell.configureCell(assignment: self.assignments[indexPath.row])
         return cell
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        // TODO: Configure dummy cell with assignment data
+        self.dummyAssignmentCell.configureCell(assignment: self.assignments[indexPath.row])
         return self.dummyAssignmentCell.calculatedHeight(tableView: tableView)
     }
     

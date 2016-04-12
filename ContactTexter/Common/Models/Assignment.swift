@@ -19,6 +19,7 @@ struct Assignment {
     
     let instructions: String
     let script: String
+    let textActions: [TextAction]
     
 }
 

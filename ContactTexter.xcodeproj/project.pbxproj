@@ -38,6 +38,7 @@
 		582D5D101CBB6AD6004D8F78 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 582D5D0F1CBB6AD6004D8F78 /* LaunchScreen.xib */; };
 		582D5D131CBB6FD9004D8F78 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5D121CBB6FD9004D8F78 /* Assignment.swift */; };
 		582D5D151CBB70C8004D8F78 /* TextAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5D141CBB70C8004D8F78 /* TextAction.swift */; };
+		58ABC04F1CBC9002009223F4 /* AssignmentsBusinessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ABC04E1CBC9002009223F4 /* AssignmentsBusinessService.swift */; };
 		9017C18C0156D6C83AA20C7A /* Pods_ContactTexter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6499C999D7EE576274DB9D /* Pods_ContactTexter.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		582D5D0F1CBB6AD6004D8F78 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		582D5D121CBB6FD9004D8F78 /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
 		582D5D141CBB70C8004D8F78 /* TextAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextAction.swift; sourceTree = "<group>"; };
+		58ABC04E1CBC9002009223F4 /* AssignmentsBusinessService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentsBusinessService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +254,7 @@
 		582D5CFC1CBB5A3B004D8F78 /* Assignments */ = {
 			isa = PBXGroup;
 			children = (
+				58ABC04D1CBC8FEF009223F4 /* BusinessLayer */,
 				582D5CFD1CBB5A4C004D8F78 /* UI */,
 				582D5CFE1CBB5A4C004D8F78 /* ViewControllers */,
 			);
@@ -291,6 +294,14 @@
 				582D5D141CBB70C8004D8F78 /* TextAction.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		58ABC04D1CBC8FEF009223F4 /* BusinessLayer */ = {
+			isa = PBXGroup;
+			children = (
+				58ABC04E1CBC9002009223F4 /* AssignmentsBusinessService.swift */,
+			);
+			path = BusinessLayer;
 			sourceTree = "<group>";
 		};
 		6FE66ECB1088B6EC4FDF6AF3 /* Pods */ = {
@@ -441,6 +452,7 @@
 				582D5CF71CBB56E2004D8F78 /* UITableViewCell+HeightCalculatable.swift in Sources */,
 				582D5CDC1CBB52EB004D8F78 /* SystemVersionFunctions.swift in Sources */,
 				582D5CD01CBB51F5004D8F78 /* FreddyResponseSerializer.swift in Sources */,
+				58ABC04F1CBC9002009223F4 /* AssignmentsBusinessService.swift in Sources */,
 				582D5CDD1CBB52EB004D8F78 /* DMVersion.swift in Sources */,
 				582D5CE11CBB5412004D8F78 /* UIDevice+Utils.swift in Sources */,
 				582D5D131CBB6FD9004D8F78 /* Assignment.swift in Sources */,
