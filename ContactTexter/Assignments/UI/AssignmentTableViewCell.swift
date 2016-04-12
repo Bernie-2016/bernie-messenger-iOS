@@ -10,4 +10,12 @@ import UIKit
 
 class AssignmentTableViewCell : UITableViewCell, LoadableFromNib {
     
+    @IBOutlet private weak var expirationLabel: UILabel!
+    @IBOutlet private weak var nameLabel: MultilineLabel!
+    
+    func configureCell(assignment assignment: Assignment) {
+        self.expirationLabel.text = assignment.expiration.description // TODO: Format this pretty
+        self.nameLabel.text = assignment.name
+    }
+    
 }

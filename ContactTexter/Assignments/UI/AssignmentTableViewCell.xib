@@ -37,6 +37,10 @@
                     <constraint firstItem="g4U-Bc-BKE" firstAttribute="leading" secondItem="DCj-Rp-QlV" secondAttribute="leading" id="wcV-U3-lrf"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="expirationLabel" destination="DCj-Rp-QlV" id="J74-M7-c1Z"/>
+                <outlet property="nameLabel" destination="g4U-Bc-BKE" id="ai5-Xw-Zxk"/>
+            </connections>
             <point key="canvasLocation" x="182" y="242.5"/>
         </tableViewCell>
     </objects>
