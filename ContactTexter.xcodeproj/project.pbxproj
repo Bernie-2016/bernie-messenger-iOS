@@ -44,6 +44,7 @@
 		58ABC0581CBCB090009223F4 /* PerformAssignmentInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58ABC0571CBCB090009223F4 /* PerformAssignmentInfoTableViewCell.xib */; };
 		58ABC05A1CBCB458009223F4 /* PerformAssignmentSelectContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ABC0591CBCB458009223F4 /* PerformAssignmentSelectContactTableViewCell.swift */; };
 		58ABC05C1CBCB469009223F4 /* PerformAssignmentSelectContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58ABC05B1CBCB469009223F4 /* PerformAssignmentSelectContactTableViewCell.xib */; };
+		58ABD80E1CBDB32F00306CC7 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ABD80D1CBDB32F00306CC7 /* Contact.swift */; };
 		9017C18C0156D6C83AA20C7A /* Pods_ContactTexter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6499C999D7EE576274DB9D /* Pods_ContactTexter.framework */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +91,7 @@
 		58ABC0571CBCB090009223F4 /* PerformAssignmentInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PerformAssignmentInfoTableViewCell.xib; sourceTree = "<group>"; };
 		58ABC0591CBCB458009223F4 /* PerformAssignmentSelectContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformAssignmentSelectContactTableViewCell.swift; sourceTree = "<group>"; };
 		58ABC05B1CBCB469009223F4 /* PerformAssignmentSelectContactTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PerformAssignmentSelectContactTableViewCell.xib; sourceTree = "<group>"; };
+		58ABD80D1CBDB32F00306CC7 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				582D5D121CBB6FD9004D8F78 /* Assignment.swift */,
+				58ABD80D1CBDB32F00306CC7 /* Contact.swift */,
 				582D5D141CBB70C8004D8F78 /* TextAction.swift */,
 			);
 			path = Models;
@@ -505,6 +508,7 @@
 				582D5CEA1CBB5574004D8F78 /* MultilineLabel.swift in Sources */,
 				582D5D021CBB5B95004D8F78 /* AssignmentTableViewCell.swift in Sources */,
 				582D5CB11CBB4CB7004D8F78 /* AppDelegate.swift in Sources */,
+				58ABD80E1CBDB32F00306CC7 /* Contact.swift in Sources */,
 				582D5CD51CBB51F5004D8F78 /* ServiceRequest.swift in Sources */,
 				582D5CD21CBB51F5004D8F78 /* ServiceEndpoint.swift in Sources */,
 				582D5D001CBB5B7E004D8F78 /* AssignmentsTableViewController.swift in Sources */,
