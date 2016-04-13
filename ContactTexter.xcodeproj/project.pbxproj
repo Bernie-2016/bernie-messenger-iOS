@@ -45,6 +45,8 @@
 		58ABC05A1CBCB458009223F4 /* PerformAssignmentSelectContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ABC0591CBCB458009223F4 /* PerformAssignmentSelectContactTableViewCell.swift */; };
 		58ABC05C1CBCB469009223F4 /* PerformAssignmentSelectContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58ABC05B1CBCB469009223F4 /* PerformAssignmentSelectContactTableViewCell.xib */; };
 		58ABD80E1CBDB32F00306CC7 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ABD80D1CBDB32F00306CC7 /* Contact.swift */; };
+		58ABD8101CBDBF7700306CC7 /* PerformAssignmentTextContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ABD80F1CBDBF7700306CC7 /* PerformAssignmentTextContactTableViewCell.swift */; };
+		58ABD8121CBDC07C00306CC7 /* PerformAssignmentTextContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58ABD8111CBDC07C00306CC7 /* PerformAssignmentTextContactTableViewCell.xib */; };
 		9017C18C0156D6C83AA20C7A /* Pods_ContactTexter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6499C999D7EE576274DB9D /* Pods_ContactTexter.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +94,8 @@
 		58ABC0591CBCB458009223F4 /* PerformAssignmentSelectContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformAssignmentSelectContactTableViewCell.swift; sourceTree = "<group>"; };
 		58ABC05B1CBCB469009223F4 /* PerformAssignmentSelectContactTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PerformAssignmentSelectContactTableViewCell.xib; sourceTree = "<group>"; };
 		58ABD80D1CBDB32F00306CC7 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		58ABD80F1CBDBF7700306CC7 /* PerformAssignmentTextContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformAssignmentTextContactTableViewCell.swift; sourceTree = "<group>"; };
+		58ABD8111CBDC07C00306CC7 /* PerformAssignmentTextContactTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PerformAssignmentTextContactTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,6 +338,8 @@
 				58ABC0571CBCB090009223F4 /* PerformAssignmentInfoTableViewCell.xib */,
 				58ABC0591CBCB458009223F4 /* PerformAssignmentSelectContactTableViewCell.swift */,
 				58ABC05B1CBCB469009223F4 /* PerformAssignmentSelectContactTableViewCell.xib */,
+				58ABD80F1CBDBF7700306CC7 /* PerformAssignmentTextContactTableViewCell.swift */,
+				58ABD8111CBDC07C00306CC7 /* PerformAssignmentTextContactTableViewCell.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -430,6 +436,7 @@
 				582D5D041CBB5BB6004D8F78 /* Assignments.storyboard in Resources */,
 				582D5D061CBB5BC9004D8F78 /* AssignmentTableViewCell.xib in Resources */,
 				582D5CB81CBB4CB7004D8F78 /* Assets.xcassets in Resources */,
+				58ABD8121CBDC07C00306CC7 /* PerformAssignmentTextContactTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +513,7 @@
 				58ABC05A1CBCB458009223F4 /* PerformAssignmentSelectContactTableViewCell.swift in Sources */,
 				582D5D151CBB70C8004D8F78 /* TextAction.swift in Sources */,
 				582D5CEA1CBB5574004D8F78 /* MultilineLabel.swift in Sources */,
+				58ABD8101CBDBF7700306CC7 /* PerformAssignmentTextContactTableViewCell.swift in Sources */,
 				582D5D021CBB5B95004D8F78 /* AssignmentTableViewCell.swift in Sources */,
 				582D5CB11CBB4CB7004D8F78 /* AppDelegate.swift in Sources */,
 				58ABD80E1CBDB32F00306CC7 /* Contact.swift in Sources */,

@@ -7,7 +7,6 @@
 //
 
 import AddressBookUI
-import ContactsUI
 import UIKit
 
 class PerformAssignmentTableViewController : TableViewController {
@@ -25,8 +24,12 @@ class PerformAssignmentTableViewController : TableViewController {
         return PerformAssignmentSelectContactTableViewCell.loadFromNib()
     }()
     
+    private lazy var textContactCell: PerformAssignmentTextContactTableViewCell = {
+        return PerformAssignmentTextContactTableViewCell.loadFromNib()
+    }()
+    
     private lazy var dataSource: [UITableViewCell] = {
-        return [self.infoCell, self.selectContactCell]
+        return [self.infoCell, self.selectContactCell, self.textContactCell]
     }()
     
     // MARK: Initializers
@@ -45,7 +48,7 @@ class PerformAssignmentTableViewController : TableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.estimatedRowHeight = 100.0
+        self.tableView.estimatedRowHeight = 75.0
     }
     
     // MARK: UITableViewDataSource
@@ -55,7 +58,11 @@ class PerformAssignmentTableViewController : TableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.dataSource.count
+        if self.selectedContact == nil {
+            return 2
+        } else {
+            return 3
+        }
     }
     
     // MARK: UITableViewDelegate
@@ -81,6 +88,9 @@ class PerformAssignmentTableViewController : TableViewController {
             peoplePicker.peoplePickerDelegate = self
             showViewController(peoplePicker, sender: nil)
             
+        case self.textContactCell:
+            break
+            
         default:
             break
         }
@@ -91,7 +101,20 @@ class PerformAssignmentTableViewController : TableViewController {
     private func didSelectContact(contact: Contact) {
         self.selectedContact = contact
         self.selectContactCell.configureCell(contact: contact)
+        self.textContactCell.configureCell(contact: contact)
+        
         self.tableView.reloadData()
+        
+        // Consider some sort of animation like this...
+//        let delay = dispatch_time(DISPATCH_TIME_NOW, Int64(0.3 * Double(NSEC_PER_SEC)))
+//        dispatch_after(delay, dispatch_get_main_queue()) {
+//            self.tableView.update {
+//                if !showingTextContactCell {
+//                    let textContactCellIndexPath = NSIndexPath(forRow: 2, inSection: 0)
+//                    self.tableView.insertRowsAtIndexPaths([textContactCellIndexPath], withRowAnimation: .Automatic)
+//                }
+//            }
+//        }
     }
     
 }
