@@ -15,9 +15,10 @@ class AppearanceManager {
     }
     
     private static func configureNavigationBarAppearance() {
-        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
-        UINavigationBar.appearance().barTintColor = UIColor.primaryBlue()
-        UINavigationBar.appearance().barStyle = .Black
+        let navigationBarAppearance = UINavigationBar.swift_appearanceWhenContainedIn(NavigationController.self)
+        navigationBarAppearance.tintColor = UIColor.whiteColor()
+        navigationBarAppearance.barTintColor = UIColor.primaryBlue()
+        navigationBarAppearance.barStyle = .Black
     }
     
 }

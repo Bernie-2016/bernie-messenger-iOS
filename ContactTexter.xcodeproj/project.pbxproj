@@ -48,6 +48,8 @@
 		58ABD8101CBDBF7700306CC7 /* PerformAssignmentTextContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ABD80F1CBDBF7700306CC7 /* PerformAssignmentTextContactTableViewCell.swift */; };
 		58ABD8121CBDC07C00306CC7 /* PerformAssignmentTextContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58ABD8111CBDC07C00306CC7 /* PerformAssignmentTextContactTableViewCell.xib */; };
 		58ABD8141CBDE30E00306CC7 /* PerformAssignmentTextActionPickerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ABD8131CBDE30E00306CC7 /* PerformAssignmentTextActionPickerTableViewController.swift */; };
+		58ABD8161CBE0C9500306CC7 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ABD8151CBE0C9500306CC7 /* NavigationController.swift */; };
+		58ABD81A1CBE0E4C00306CC7 /* UIView+AppearanceSwift.m in Sources */ = {isa = PBXBuildFile; fileRef = 58ABD8191CBE0E4C00306CC7 /* UIView+AppearanceSwift.m */; };
 		9017C18C0156D6C83AA20C7A /* Pods_ContactTexter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6499C999D7EE576274DB9D /* Pods_ContactTexter.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +100,10 @@
 		58ABD80F1CBDBF7700306CC7 /* PerformAssignmentTextContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformAssignmentTextContactTableViewCell.swift; sourceTree = "<group>"; };
 		58ABD8111CBDC07C00306CC7 /* PerformAssignmentTextContactTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PerformAssignmentTextContactTableViewCell.xib; sourceTree = "<group>"; };
 		58ABD8131CBDE30E00306CC7 /* PerformAssignmentTextActionPickerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformAssignmentTextActionPickerTableViewController.swift; sourceTree = "<group>"; };
+		58ABD8151CBE0C9500306CC7 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		58ABD8171CBE0E4B00306CC7 /* ContactTexter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ContactTexter-Bridging-Header.h"; sourceTree = "<group>"; };
+		58ABD8181CBE0E4C00306CC7 /* UIView+AppearanceSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AppearanceSwift.h"; sourceTree = "<group>"; };
+		58ABD8191CBE0E4C00306CC7 /* UIView+AppearanceSwift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AppearanceSwift.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +143,7 @@
 				582D5CC21CBB51C1004D8F78 /* Common */,
 				58ABC0501CBCAFD4009223F4 /* PerformAssignment */,
 				582D5CB01CBB4CB7004D8F78 /* AppDelegate.swift */,
+				58ABD8171CBE0E4B00306CC7 /* ContactTexter-Bridging-Header.h */,
 				582D5CBC1CBB4CB8004D8F78 /* Info.plist */,
 				582D5CB71CBB4CB7004D8F78 /* Assets.xcassets */,
 				582D5D0F1CBB6AD6004D8F78 /* LaunchScreen.xib */,
@@ -255,6 +262,7 @@
 		582D5CE71CBB5574004D8F78 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				58ABD8151CBE0C9500306CC7 /* NavigationController.swift */,
 				582D5CE81CBB5574004D8F78 /* TableViewController.swift */,
 				582D5CE91CBB5574004D8F78 /* ViewController.swift */,
 			);
@@ -302,6 +310,8 @@
 			isa = PBXGroup;
 			children = (
 				582D5D081CBB5D25004D8F78 /* AppearanceManager.swift */,
+				58ABD8181CBE0E4C00306CC7 /* UIView+AppearanceSwift.h */,
+				58ABD8191CBE0E4C00306CC7 /* UIView+AppearanceSwift.m */,
 			);
 			path = Appearance;
 			sourceTree = "<group>";
@@ -511,6 +521,7 @@
 				582D5CDD1CBB52EB004D8F78 /* DMVersion.swift in Sources */,
 				58ABC0561CBCB080009223F4 /* PerformAssignmentInfoTableViewCell.swift in Sources */,
 				582D5CE11CBB5412004D8F78 /* UIDevice+Utils.swift in Sources */,
+				58ABD8161CBE0C9500306CC7 /* NavigationController.swift in Sources */,
 				582D5D131CBB6FD9004D8F78 /* Assignment.swift in Sources */,
 				582D5CCF1CBB51F5004D8F78 /* ServiceClient.swift in Sources */,
 				582D5CF91CBB5799004D8F78 /* UIImage+Utils.swift in Sources */,
@@ -529,6 +540,7 @@
 				582D5CEB1CBB5574004D8F78 /* TableViewController.swift in Sources */,
 				582D5CF61CBB56E2004D8F78 /* UITableView+Utils.swift in Sources */,
 				582D5CEC1CBB5574004D8F78 /* ViewController.swift in Sources */,
+				58ABD81A1CBE0E4C00306CC7 /* UIView+AppearanceSwift.m in Sources */,
 				58ABC0541CBCAFF8009223F4 /* PerformAssignmentTableViewController.swift in Sources */,
 				582D5CD11CBB51F5004D8F78 /* ServiceEmptyResponse.swift in Sources */,
 				582D5D091CBB5D25004D8F78 /* AppearanceManager.swift in Sources */,
@@ -629,6 +641,7 @@
 			baseConfigurationReference = 18156209D77CADD8CA6049E7 /* Pods-ContactTexter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ContactTexter/Info.plist;
@@ -636,6 +649,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.berniesanders.ContactTexter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ContactTexter/ContactTexter-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -645,6 +660,7 @@
 			baseConfigurationReference = 368FC17A162D848EDE8DF038 /* Pods-ContactTexter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ContactTexter/Info.plist;
@@ -652,6 +668,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.berniesanders.ContactTexter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ContactTexter/ContactTexter-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

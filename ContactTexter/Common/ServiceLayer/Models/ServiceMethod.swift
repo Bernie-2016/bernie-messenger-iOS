@@ -20,7 +20,7 @@ enum ServiceMethod {
     case Delete
     
     /// `Alamofire.Method` equivalent to be used by the Alamofire library.
-    var alamofireMethod: Method {
+    var alamofireMethod: Alamofire.Method {
         switch self {
         case .Get:
             return .GET

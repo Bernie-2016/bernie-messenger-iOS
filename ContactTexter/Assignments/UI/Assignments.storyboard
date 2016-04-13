@@ -27,7 +27,7 @@
         <!--Navigation Controller-->
         <scene sceneID="XC3-zl-eoI">
             <objects>
-                <navigationController id="KQ8-7s-LZg" sceneMemberID="viewController">
+                <navigationController id="KQ8-7s-LZg" customClass="NavigationController" customModule="ContactTexter" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vG8-Ef-ldc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
