@@ -7,12 +7,14 @@
 //
 
 import AddressBookUI
+import MessageUI
 import UIKit
 
 class PerformAssignmentTableViewController : TableViewController {
     
     private let assignment: Assignment
     private var selectedContact: Contact?
+    private var selectedTextAction: TextAction?
     
     private lazy var infoCell: PerformAssignmentInfoTableViewCell = {
         let cell = PerformAssignmentInfoTableViewCell.loadFromNib()
@@ -89,7 +91,9 @@ class PerformAssignmentTableViewController : TableViewController {
             showViewController(peoplePicker, sender: nil)
             
         case self.textContactCell:
-            break
+            let textActionPickerController = PerformAssignmentTextActionPickerTableViewController(textActions: self.assignment.textActions)
+            textActionPickerController.delegate = self
+            showViewController(textActionPickerController, sender: nil)
             
         default:
             break
@@ -104,17 +108,16 @@ class PerformAssignmentTableViewController : TableViewController {
         self.textContactCell.configureCell(contact: contact)
         
         self.tableView.reloadData()
+    }
+    
+    private func didSelectTextAction(textAction: TextAction) {
+        self.selectedTextAction = textAction
         
-        // Consider some sort of animation like this...
-//        let delay = dispatch_time(DISPATCH_TIME_NOW, Int64(0.3 * Double(NSEC_PER_SEC)))
-//        dispatch_after(delay, dispatch_get_main_queue()) {
-//            self.tableView.update {
-//                if !showingTextContactCell {
-//                    let textContactCellIndexPath = NSIndexPath(forRow: 2, inSection: 0)
-//                    self.tableView.insertRowsAtIndexPaths([textContactCellIndexPath], withRowAnimation: .Automatic)
-//                }
-//            }
-//        }
+        let composeMessageController = MFMessageComposeViewController()
+        composeMessageController.messageComposeDelegate = self
+        composeMessageController.recipients = [self.selectedContact!.phoneNumber]
+        composeMessageController.body = textAction.content
+        presentViewController(composeMessageController, animated: true, completion: nil)
     }
     
 }
@@ -156,6 +159,34 @@ extension PerformAssignmentTableViewController : ABPeoplePickerNavigationControl
     
     private func lastNameOfPerson(person: ABRecord) -> String {
         return ABRecordCopyValue(person, kABPersonLastNameProperty).takeRetainedValue() as? String ?? ""
+    }
+    
+}
+
+extension PerformAssignmentTableViewController : PerformAssignmentTextActionPickerTableViewControllerDelegate {
+    
+    func textActionPickerController(controller: PerformAssignmentTextActionPickerTableViewController, didSelectTextAction textAction: TextAction) {
+        didSelectTextAction(textAction)
+    }
+    
+}
+
+extension PerformAssignmentTableViewController : MFMessageComposeViewControllerDelegate {
+    
+    func messageComposeViewController(controller: MFMessageComposeViewController, didFinishWithResult result: MessageComposeResult) {
+        switch result {
+        case MessageComposeResultSent:
+            print("Sent")
+        case MessageComposeResultFailed:
+            print("Failed")
+        case MessageComposeResultCancelled:
+            print("Cancelled")
+        default:
+            print("Unexpected")
+        }
+        
+        controller.dismissViewControllerAnimated(true, completion: nil)
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
 }
