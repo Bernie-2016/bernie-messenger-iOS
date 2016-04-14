@@ -93,7 +93,8 @@ class PerformAssignmentTableViewController : TableViewController {
         case self.textContactCell:
             let textActionPickerController = TextActionPickerTableViewController(textActions: self.assignment.textActions)
             textActionPickerController.delegate = self
-            showViewController(textActionPickerController, sender: nil)
+            let pickerNavigationController = UINavigationController(rootViewController: textActionPickerController)
+            presentViewController(pickerNavigationController, animated: true, completion: nil)
             
         default:
             break
