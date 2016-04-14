@@ -12,6 +12,7 @@ enum RightBarButtonItemType {
     
     case None
     case History
+    case Cancel
     
 }
 
@@ -37,15 +38,21 @@ extension RightBarButtonItemConfigurable where Self : UIViewController {
             break
         case .History:
             rightBarButtonItems.append(historyBarButtonItem())
+        case .Cancel:
+            rightBarButtonItems.append(cancelBarButtonItem())
         }
         
         self.navigationItem.rightBarButtonItems = rightBarButtonItems
     }
     
     private func historyBarButtonItem() -> UIBarButtonItem {
-        let backButton = UIBarButtonItem(title: nil, style: .Plain, target: self.navigationController, action: #selector(UINavigationController.logoutButtonAction))
-        backButton.setFAIcon(.FAHistory, iconSize: 25.0)
+        let backButton = UIBarButtonItem(title: nil, style: .Plain, target: self.navigationController, action: #selector(UINavigationController.cancelButtonAction))
+        backButton.setFAIcon(.FAHistory, iconSize: 20.0)
         return backButton
+    }
+    
+    private func cancelBarButtonItem() -> UIBarButtonItem {
+        return UIBarButtonItem(title: "Cancel", style: .Plain, target: self.navigationController, action: #selector(UINavigationController.cancelButtonAction))
     }
     
     private func clearCurrentRightBarButtonItem() {
@@ -59,8 +66,8 @@ extension RightBarButtonItemConfigurable where Self : UIViewController {
 
 extension UINavigationController {
     
-    func logoutButtonAction() {
-        popToRootViewControllerAnimated(true)
+    func cancelButtonAction() {
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
 }
