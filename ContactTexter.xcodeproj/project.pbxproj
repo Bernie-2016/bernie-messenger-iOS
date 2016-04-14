@@ -50,6 +50,9 @@
 		58ABD8141CBDE30E00306CC7 /* TextActionPickerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ABD8131CBDE30E00306CC7 /* TextActionPickerTableViewController.swift */; };
 		58ABD8161CBE0C9500306CC7 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ABD8151CBE0C9500306CC7 /* NavigationController.swift */; };
 		58ABD81A1CBE0E4C00306CC7 /* UIView+AppearanceSwift.m in Sources */ = {isa = PBXBuildFile; fileRef = 58ABD8191CBE0E4C00306CC7 /* UIView+AppearanceSwift.m */; };
+		58F26F6F1CBF3CD700552945 /* LeftBarButtonItemConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F26F6E1CBF3CD700552945 /* LeftBarButtonItemConfigurable.swift */; };
+		58F26F711CBF3D1200552945 /* NavigationItemTitleProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F26F701CBF3D1200552945 /* NavigationItemTitleProviding.swift */; };
+		58F26F731CBF3D6800552945 /* RightBarButtonItemConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F26F721CBF3D6800552945 /* RightBarButtonItemConfigurable.swift */; };
 		9017C18C0156D6C83AA20C7A /* Pods_ContactTexter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6499C999D7EE576274DB9D /* Pods_ContactTexter.framework */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +107,9 @@
 		58ABD8171CBE0E4B00306CC7 /* ContactTexter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ContactTexter-Bridging-Header.h"; sourceTree = "<group>"; };
 		58ABD8181CBE0E4C00306CC7 /* UIView+AppearanceSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AppearanceSwift.h"; sourceTree = "<group>"; };
 		58ABD8191CBE0E4C00306CC7 /* UIView+AppearanceSwift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AppearanceSwift.m"; sourceTree = "<group>"; };
+		58F26F6E1CBF3CD700552945 /* LeftBarButtonItemConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftBarButtonItemConfigurable.swift; sourceTree = "<group>"; };
+		58F26F701CBF3D1200552945 /* NavigationItemTitleProviding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationItemTitleProviding.swift; sourceTree = "<group>"; };
+		58F26F721CBF3D6800552945 /* RightBarButtonItemConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightBarButtonItemConfigurable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +238,7 @@
 				582D5D071CBB5D16004D8F78 /* Appearance */,
 				582D5CDF1CBB5412004D8F78 /* Extensions */,
 				582D5CE51CBB5574004D8F78 /* Labels */,
+				58F26F6D1CBF3CB900552945 /* NavigationItems */,
 				582D5CED1CBB569A004D8F78 /* Protocols */,
 				582D5CE71CBB5574004D8F78 /* ViewControllers */,
 			);
@@ -363,6 +370,16 @@
 				58ABD8131CBDE30E00306CC7 /* TextActionPickerTableViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		58F26F6D1CBF3CB900552945 /* NavigationItems */ = {
+			isa = PBXGroup;
+			children = (
+				58F26F6E1CBF3CD700552945 /* LeftBarButtonItemConfigurable.swift */,
+				58F26F701CBF3D1200552945 /* NavigationItemTitleProviding.swift */,
+				58F26F721CBF3D6800552945 /* RightBarButtonItemConfigurable.swift */,
+			);
+			path = NavigationItems;
 			sourceTree = "<group>";
 		};
 		6FE66ECB1088B6EC4FDF6AF3 /* Pods */ = {
@@ -525,6 +542,7 @@
 				582D5D131CBB6FD9004D8F78 /* Assignment.swift in Sources */,
 				582D5CCF1CBB51F5004D8F78 /* ServiceClient.swift in Sources */,
 				582D5CF91CBB5799004D8F78 /* UIImage+Utils.swift in Sources */,
+				58F26F711CBF3D1200552945 /* NavigationItemTitleProviding.swift in Sources */,
 				58ABC05A1CBCB458009223F4 /* PerformAssignmentSelectContactTableViewCell.swift in Sources */,
 				582D5D151CBB70C8004D8F78 /* TextAction.swift in Sources */,
 				582D5CEA1CBB5574004D8F78 /* MultilineLabel.swift in Sources */,
@@ -535,11 +553,13 @@
 				582D5CD51CBB51F5004D8F78 /* ServiceRequest.swift in Sources */,
 				582D5CD21CBB51F5004D8F78 /* ServiceEndpoint.swift in Sources */,
 				582D5D001CBB5B7E004D8F78 /* AssignmentsTableViewController.swift in Sources */,
+				58F26F731CBF3D6800552945 /* RightBarButtonItemConfigurable.swift in Sources */,
 				582D5CD31CBB51F5004D8F78 /* ServiceError.swift in Sources */,
 				582D5CFB1CBB57D2004D8F78 /* UIColor+Utils.swift in Sources */,
 				582D5CEB1CBB5574004D8F78 /* TableViewController.swift in Sources */,
 				582D5CF61CBB56E2004D8F78 /* UITableView+Utils.swift in Sources */,
 				582D5CEC1CBB5574004D8F78 /* ViewController.swift in Sources */,
+				58F26F6F1CBF3CD700552945 /* LeftBarButtonItemConfigurable.swift in Sources */,
 				58ABD81A1CBE0E4C00306CC7 /* UIView+AppearanceSwift.m in Sources */,
 				58ABC0541CBCAFF8009223F4 /* PerformAssignmentTableViewController.swift in Sources */,
 				582D5CD11CBB51F5004D8F78 /* ServiceEmptyResponse.swift in Sources */,
