@@ -8,14 +8,32 @@
 
 import UIKit
 
-class TableViewController : UITableViewController {
+class TableViewController : UITableViewController, ViewControllerType {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setUpLeftBarButtonItem()
+        setUpNavigiationItemTitle()
+        setUpRightBarButtonItem()
+        
         if #available(iOS 9, *) {
             self.tableView.cellLayoutMarginsFollowReadableWidth = false
         }
+    }
+    
+    // MARK: ViewControllerType
+    
+    var titleType: NavigationItemTitleType {
+        return .BernieLogo
+    }
+    
+    var leftBarButtonItemType: LeftBarButtonItemType {
+        return .None
+    }
+    
+    var rightBarButtonItemType: RightBarButtonItemType {
+        return .None
     }
     
 }

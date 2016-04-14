@@ -42,7 +42,7 @@ extension NavigationItemTitleProviding where Self : UIViewController {
     }
     
     private func createBernieLogoImageView() -> UIImageView {
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100.0, height: 25.0))
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100.0, height: 35.0))
         imageView.image = UIImage(named: "bernie_logo")?.imageWithRenderingMode(.AlwaysTemplate)
         imageView.contentMode = .ScaleAspectFit
         return imageView

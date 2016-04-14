@@ -53,6 +53,7 @@
 		58F26F6F1CBF3CD700552945 /* LeftBarButtonItemConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F26F6E1CBF3CD700552945 /* LeftBarButtonItemConfigurable.swift */; };
 		58F26F711CBF3D1200552945 /* NavigationItemTitleProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F26F701CBF3D1200552945 /* NavigationItemTitleProviding.swift */; };
 		58F26F731CBF3D6800552945 /* RightBarButtonItemConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F26F721CBF3D6800552945 /* RightBarButtonItemConfigurable.swift */; };
+		58F26F751CBF3E1500552945 /* ViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F26F741CBF3E1500552945 /* ViewControllerType.swift */; };
 		9017C18C0156D6C83AA20C7A /* Pods_ContactTexter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6499C999D7EE576274DB9D /* Pods_ContactTexter.framework */; };
 /* End PBXBuildFile section */
 
@@ -110,6 +111,7 @@
 		58F26F6E1CBF3CD700552945 /* LeftBarButtonItemConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftBarButtonItemConfigurable.swift; sourceTree = "<group>"; };
 		58F26F701CBF3D1200552945 /* NavigationItemTitleProviding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationItemTitleProviding.swift; sourceTree = "<group>"; };
 		58F26F721CBF3D6800552945 /* RightBarButtonItemConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightBarButtonItemConfigurable.swift; sourceTree = "<group>"; };
+		58F26F741CBF3E1500552945 /* ViewControllerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +274,7 @@
 				58ABD8151CBE0C9500306CC7 /* NavigationController.swift */,
 				582D5CE81CBB5574004D8F78 /* TableViewController.swift */,
 				582D5CE91CBB5574004D8F78 /* ViewController.swift */,
+				58F26F741CBF3E1500552945 /* ViewControllerType.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 				58F26F6F1CBF3CD700552945 /* LeftBarButtonItemConfigurable.swift in Sources */,
 				58ABD81A1CBE0E4C00306CC7 /* UIView+AppearanceSwift.m in Sources */,
 				58ABC0541CBCAFF8009223F4 /* PerformAssignmentTableViewController.swift in Sources */,
+				58F26F751CBF3E1500552945 /* ViewControllerType.swift in Sources */,
 				582D5CD11CBB51F5004D8F78 /* ServiceEmptyResponse.swift in Sources */,
 				582D5D091CBB5D25004D8F78 /* AppearanceManager.swift in Sources */,
 				58ABD8141CBDE30E00306CC7 /* TextActionPickerTableViewController.swift in Sources */,

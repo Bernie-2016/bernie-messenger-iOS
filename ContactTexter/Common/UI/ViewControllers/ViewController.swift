@@ -8,6 +8,28 @@
 
 import UIKit
 
-class ViewController : UIViewController {
+class ViewController : UIViewController, ViewControllerType {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setUpLeftBarButtonItem()
+        setUpNavigiationItemTitle()
+        setUpRightBarButtonItem()
+    }
+    
+    // MARK: ViewControllerType
+    
+    var titleType: NavigationItemTitleType {
+        return .BernieLogo
+    }
+    
+    var leftBarButtonItemType: LeftBarButtonItemType {
+        return .None
+    }
+    
+    var rightBarButtonItemType: RightBarButtonItemType {
+        return .None
+    }
     
 }
