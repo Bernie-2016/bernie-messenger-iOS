@@ -91,7 +91,7 @@ class PerformAssignmentTableViewController : TableViewController {
             showViewController(peoplePicker, sender: nil)
             
         case self.textContactCell:
-            let textActionPickerController = PerformAssignmentTextActionPickerTableViewController(textActions: self.assignment.textActions)
+            let textActionPickerController = TextActionPickerTableViewController(textActions: self.assignment.textActions)
             textActionPickerController.delegate = self
             showViewController(textActionPickerController, sender: nil)
             
@@ -163,9 +163,9 @@ extension PerformAssignmentTableViewController : ABPeoplePickerNavigationControl
     
 }
 
-extension PerformAssignmentTableViewController : PerformAssignmentTextActionPickerTableViewControllerDelegate {
+extension PerformAssignmentTableViewController : TextActionPickerTableViewControllerDelegate {
     
-    func textActionPickerController(controller: PerformAssignmentTextActionPickerTableViewController, didSelectTextAction textAction: TextAction) {
+    func textActionPickerController(controller: TextActionPickerTableViewController, didSelectTextAction textAction: TextAction) {
         didSelectTextAction(textAction)
     }
     

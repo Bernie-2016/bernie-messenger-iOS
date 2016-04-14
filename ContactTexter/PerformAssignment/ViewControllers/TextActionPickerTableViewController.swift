@@ -1,5 +1,5 @@
 //
-//  PerformAssignmentTextActionPickerTableViewController.swift
+//  TextActionPickerTableViewController.swift
 //  ContactTexter
 //
 //  Created by Justin Baumgartner on 4/12/16.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-class PerformAssignmentTextActionPickerTableViewController : TableViewController {
+class TextActionPickerTableViewController : TableViewController {
     
     private let textActions: [TextAction]
-    weak var delegate: PerformAssignmentTextActionPickerTableViewControllerDelegate?
+    weak var delegate: TextActionPickerTableViewControllerDelegate?
     
     // MARK: Initializers
     
@@ -58,8 +58,8 @@ class PerformAssignmentTextActionPickerTableViewController : TableViewController
     
 }
 
-protocol PerformAssignmentTextActionPickerTableViewControllerDelegate : class {
+protocol TextActionPickerTableViewControllerDelegate : class {
     
-    func textActionPickerController(controller: PerformAssignmentTextActionPickerTableViewController, didSelectTextAction textAction: TextAction)
+    func textActionPickerController(controller: TextActionPickerTableViewController, didSelectTextAction textAction: TextAction)
     
 }
