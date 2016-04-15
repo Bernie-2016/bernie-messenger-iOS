@@ -27,7 +27,9 @@ class PerformAssignmentTableViewController : TableViewController {
     }()
     
     private lazy var textContactCell: PerformAssignmentTextContactTableViewCell = {
-        return PerformAssignmentTextContactTableViewCell.loadFromNib()
+        let cell = PerformAssignmentTextContactTableViewCell.loadFromNib()
+        cell.disabled = true
+        return cell
     }()
     
     private lazy var dataSource: [UITableViewCell] = {
@@ -114,6 +116,7 @@ class PerformAssignmentTableViewController : TableViewController {
         self.selectedContact = contact
         self.selectContactCell.configureCell(contact: contact)
         self.textContactCell.configureCell(contact: contact)
+        self.textContactCell.disabled = false
         
         self.tableView.reloadData()
     }

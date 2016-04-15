@@ -13,6 +13,13 @@ class TableViewCell : UITableViewCell {
     
     private lazy var customBackgroundView: TableViewCellBackgroundView = TableViewCellBackgroundView(frame: self.bounds)
     
+    var disabled: Bool = false {
+        didSet {
+            self.userInteractionEnabled = !self.disabled
+            self.contentView.alpha = self.disabled ? 0.2 : 1.0
+        }
+    }
+    
     // MARK: Inits
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
