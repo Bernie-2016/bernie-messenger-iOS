@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PerformAssignmentInfoTableViewCell : UITableViewCell, LoadableFromNib {
+class PerformAssignmentInfoTableViewCell : TableViewCell, LoadableFromNib {
     
     @IBOutlet private weak var nameLabel: MultilineLabel!
     @IBOutlet private weak var instructionsLabel: MultilineLabel!

@@ -50,6 +50,7 @@ class PerformAssignmentTableViewController : TableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tableView.separatorStyle = .None
         self.tableView.estimatedRowHeight = 75.0
     }
     

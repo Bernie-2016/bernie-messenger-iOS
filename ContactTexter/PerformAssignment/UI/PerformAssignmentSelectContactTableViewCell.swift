@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PerformAssignmentSelectContactTableViewCell : UITableViewCell, LoadableFromNib {
+class PerformAssignmentSelectContactTableViewCell : TableViewCell, LoadableFromNib {
     
     @IBOutlet private weak var addIconLabel: UILabel!
     @IBOutlet private weak var contactNameLabel: UILabel!

@@ -54,6 +54,7 @@
 		58F26F711CBF3D1200552945 /* NavigationItemTitleProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F26F701CBF3D1200552945 /* NavigationItemTitleProviding.swift */; };
 		58F26F731CBF3D6800552945 /* RightBarButtonItemConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F26F721CBF3D6800552945 /* RightBarButtonItemConfigurable.swift */; };
 		58F26F751CBF3E1500552945 /* ViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F26F741CBF3E1500552945 /* ViewControllerType.swift */; };
+		58F26F7A1CC0A2C500552945 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F26F791CC0A2C500552945 /* TableViewCell.swift */; };
 		9017C18C0156D6C83AA20C7A /* Pods_ContactTexter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6499C999D7EE576274DB9D /* Pods_ContactTexter.framework */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +113,7 @@
 		58F26F701CBF3D1200552945 /* NavigationItemTitleProviding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationItemTitleProviding.swift; sourceTree = "<group>"; };
 		58F26F721CBF3D6800552945 /* RightBarButtonItemConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightBarButtonItemConfigurable.swift; sourceTree = "<group>"; };
 		58F26F741CBF3E1500552945 /* ViewControllerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerType.swift; sourceTree = "<group>"; };
+		58F26F791CC0A2C500552945 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +244,7 @@
 				582D5CE51CBB5574004D8F78 /* Labels */,
 				58F26F6D1CBF3CB900552945 /* NavigationItems */,
 				582D5CED1CBB569A004D8F78 /* Protocols */,
+				58F26F781CC0A2BA00552945 /* TableViewCells */,
 				582D5CE71CBB5574004D8F78 /* ViewControllers */,
 			);
 			path = UI;
@@ -383,6 +386,14 @@
 				58F26F721CBF3D6800552945 /* RightBarButtonItemConfigurable.swift */,
 			);
 			path = NavigationItems;
+			sourceTree = "<group>";
+		};
+		58F26F781CC0A2BA00552945 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				58F26F791CC0A2C500552945 /* TableViewCell.swift */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 		6FE66ECB1088B6EC4FDF6AF3 /* Pods */ = {
@@ -542,6 +553,7 @@
 				58ABC0561CBCB080009223F4 /* PerformAssignmentInfoTableViewCell.swift in Sources */,
 				582D5CE11CBB5412004D8F78 /* UIDevice+Utils.swift in Sources */,
 				58ABD8161CBE0C9500306CC7 /* NavigationController.swift in Sources */,
+				58F26F7A1CC0A2C500552945 /* TableViewCell.swift in Sources */,
 				582D5D131CBB6FD9004D8F78 /* Assignment.swift in Sources */,
 				582D5CCF1CBB51F5004D8F78 /* ServiceClient.swift in Sources */,
 				582D5CF91CBB5799004D8F78 /* UIImage+Utils.swift in Sources */,
