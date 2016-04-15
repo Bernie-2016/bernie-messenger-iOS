@@ -10,10 +10,16 @@ import UIKit
 
 class PerformAssignmentTextContactTableViewCell : UITableViewCell, LoadableFromNib {
     
+    @IBOutlet private weak var textIconLabel: UILabel!
     @IBOutlet private weak var contactNameLabel: UILabel!
     
     func configureCell(contact contact: Contact) {
         self.contactNameLabel.text = "Text " + contact.firstName
+    }
+    
+    override func awakeFromNib() {
+        self.textIconLabel.setFAIcon(.FAComment, iconSize: 20.0)
+        self.textIconLabel.textColor = UIColor.incomplete()
     }
     
 }

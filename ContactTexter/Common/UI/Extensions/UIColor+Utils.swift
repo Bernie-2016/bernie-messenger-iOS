@@ -39,4 +39,26 @@ extension UIColor {
         return UIColor(hex: 0xF55B5B)
     }
     
+    // MARK: Validation states
+    
+    static func success() -> UIColor {
+        return UIColor(hex: 0x228800)
+    }
+    
+    static func successBackground() -> UIColor {
+        return UIColor(hex: 0xE8F3E5)
+    }
+    
+    static func error() -> UIColor {
+        return UIColor(hex: 0xE62622)
+    }
+    
+    static func errorBackground() -> UIColor {
+        return UIColor(hex: 0xFCE9E8)
+    }
+    
+    static func incomplete() -> UIColor {
+        return UIColor(hex: 0x757575)
+    }
+    
 }

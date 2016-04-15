@@ -70,11 +70,7 @@ class PerformAssignmentTableViewController : TableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if self.selectedContact == nil {
-            return 2
-        } else {
-            return 3
-        }
+        return self.dataSource.count
     }
     
     // MARK: UITableViewDelegate

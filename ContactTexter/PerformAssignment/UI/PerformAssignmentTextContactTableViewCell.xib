@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -14,14 +15,20 @@
                 <rect key="frame" x="0.0" y="0.0" width="384" height="83.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkL-Nq-Nzj">
+                        <rect key="frame" x="15" y="31" width="11" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7f-XV-tAJ">
-                        <rect key="frame" x="15" y="41" width="354.5" height="27.5"/>
+                        <rect key="frame" x="36" y="37.5" width="333.5" height="31"/>
                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <color key="textColor" red="0.21176470589999999" green="0.26274509800000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Text Person" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uzb-vH-Zdg">
-                        <rect key="frame" x="15" y="15" width="354" height="18"/>
+                        <rect key="frame" x="36" y="15" width="333" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.96078431369999995" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -32,13 +39,16 @@
                     <constraint firstAttribute="bottom" secondItem="M7f-XV-tAJ" secondAttribute="bottom" constant="15" id="9JX-Fj-dIu"/>
                     <constraint firstItem="M7f-XV-tAJ" firstAttribute="trailing" secondItem="uzb-vH-Zdg" secondAttribute="trailing" id="Gbb-uO-ne3"/>
                     <constraint firstAttribute="trailing" secondItem="uzb-vH-Zdg" secondAttribute="trailing" constant="15" id="L0a-dE-PnC"/>
+                    <constraint firstItem="kkL-Nq-Nzj" firstAttribute="leading" secondItem="AHK-Hy-z5q" secondAttribute="leading" constant="15" id="Mgg-kC-kIL"/>
+                    <constraint firstItem="uzb-vH-Zdg" firstAttribute="leading" secondItem="kkL-Nq-Nzj" secondAttribute="trailing" constant="10" id="RgY-BJ-Oa5"/>
                     <constraint firstItem="M7f-XV-tAJ" firstAttribute="leading" secondItem="uzb-vH-Zdg" secondAttribute="leading" id="ho7-Ib-qZw"/>
-                    <constraint firstItem="M7f-XV-tAJ" firstAttribute="top" secondItem="uzb-vH-Zdg" secondAttribute="bottom" constant="8" id="jer-l6-inF"/>
-                    <constraint firstItem="uzb-vH-Zdg" firstAttribute="leading" secondItem="AHK-Hy-z5q" secondAttribute="leading" constant="15" id="uG6-DS-jqe"/>
+                    <constraint firstItem="M7f-XV-tAJ" firstAttribute="top" secondItem="uzb-vH-Zdg" secondAttribute="baseline" constant="8" id="jer-l6-inF"/>
+                    <constraint firstItem="kkL-Nq-Nzj" firstAttribute="centerY" secondItem="AHK-Hy-z5q" secondAttribute="centerY" id="l2s-8k-bND"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="contactNameLabel" destination="uzb-vH-Zdg" id="R26-Zd-9ZZ"/>
+                <outlet property="textIconLabel" destination="kkL-Nq-Nzj" id="GFc-UK-jzi"/>
             </connections>
             <point key="canvasLocation" x="281.5" y="206"/>
         </tableViewCell>
