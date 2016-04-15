@@ -112,6 +112,10 @@ class PerformAssignmentTableViewController : TableViewController {
             peoplePicker.peoplePickerDelegate = self
             showViewController(peoplePicker, sender: nil)
             
+        case self.callContactCell:
+            let phoneNumberURL = "telprompt://" + self.selectedContact!.phoneNumber
+            UIApplication.sharedApplication().openURL(NSURL(string: phoneNumberURL)!)
+            
         case self.textContactCell:
             let textActionPickerController = TextActionPickerTableViewController(textActions: self.assignment.textActions)
             textActionPickerController.delegate = self
