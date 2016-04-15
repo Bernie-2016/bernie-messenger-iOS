@@ -53,6 +53,16 @@ class PerformAssignmentTableViewController : TableViewController {
         self.tableView.estimatedRowHeight = 75.0
     }
     
+    // MARK: ViewControllerType
+    
+    override var leftBarButtonItemType: LeftBarButtonItemType {
+        return .Back
+    }
+    
+    override var rightBarButtonItemType: RightBarButtonItemType {
+        return .History
+    }
+    
     // MARK: UITableViewDataSource
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

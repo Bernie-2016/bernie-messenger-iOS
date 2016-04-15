@@ -32,6 +32,16 @@ class TextActionPickerTableViewController : TableViewController {
         self.tableView.registerReusableCell(UITableViewCell.self)
     }
     
+    // MARK: ViewControllerType
+    
+    override var titleType: NavigationItemTitleType {
+        return .Text(title: "Text Actions")
+    }
+    
+    override var rightBarButtonItemType: RightBarButtonItemType {
+        return .Cancel
+    }
+    
     // MARK: UITableViewDataSource
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
