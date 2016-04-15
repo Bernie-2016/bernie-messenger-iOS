@@ -13,6 +13,12 @@ class PerformAssignmentTextContactTableViewCell : TableViewCell, LoadableFromNib
     @IBOutlet private weak var textIconLabel: UILabel!
     @IBOutlet private weak var contactNameLabel: UILabel!
     
+    var isCompleted: Bool = false {
+        didSet {
+            self.textIconLabel.textColor = self.isCompleted ? UIColor.success() : UIColor.incomplete()
+        }
+    }
+    
     func configureCell(contact contact: Contact) {
         self.contactNameLabel.text = "Text " + contact.firstName
     }
