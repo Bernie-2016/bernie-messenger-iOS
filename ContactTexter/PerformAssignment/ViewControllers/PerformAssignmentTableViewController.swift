@@ -115,6 +115,7 @@ class PerformAssignmentTableViewController : TableViewController {
         case self.callContactCell:
             let phoneNumberURL = "telprompt://" + self.selectedContact!.phoneNumber
             UIApplication.sharedApplication().openURL(NSURL(string: phoneNumberURL)!)
+            self.textContactCell.disabled = false
             
         case self.textContactCell:
             let textActionPickerController = TextActionPickerTableViewController(textActions: self.assignment.textActions)
@@ -136,7 +137,7 @@ class PerformAssignmentTableViewController : TableViewController {
         self.callContactCell.configureCell(contact: contact)
         self.callContactCell.disabled = false
         self.textContactCell.configureCell(contact: contact)
-        self.textContactCell.disabled = false
+        self.textContactCell.disabled = self.assignment.type == .CallAndText
         
         self.tableView.reloadData()
     }
