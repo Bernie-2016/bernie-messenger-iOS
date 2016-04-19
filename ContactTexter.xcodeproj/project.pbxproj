@@ -53,6 +53,8 @@
 		58EF52561CC5C42A0041E6C0 /* AlertOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EF52551CC5C42A0041E6C0 /* AlertOverlayView.swift */; };
 		58EF52581CC5C4350041E6C0 /* AlertOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58EF52571CC5C4350041E6C0 /* AlertOverlayView.xib */; };
 		58EF525A1CC5C6C70041E6C0 /* UIViewController+AlertOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EF52591CC5C6C70041E6C0 /* UIViewController+AlertOverlay.swift */; };
+		58EF525D1CC5D6980041E6C0 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EF525C1CC5D6980041E6C0 /* UserDefaults.swift */; };
+		58EF525F1CC5D8C80041E6C0 /* AssignmentRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EF525E1CC5D8C80041E6C0 /* AssignmentRecord.swift */; };
 		58F26F6F1CBF3CD700552945 /* LeftBarButtonItemConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F26F6E1CBF3CD700552945 /* LeftBarButtonItemConfigurable.swift */; };
 		58F26F711CBF3D1200552945 /* NavigationItemTitleProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F26F701CBF3D1200552945 /* NavigationItemTitleProviding.swift */; };
 		58F26F731CBF3D6800552945 /* RightBarButtonItemConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F26F721CBF3D6800552945 /* RightBarButtonItemConfigurable.swift */; };
@@ -117,6 +119,8 @@
 		58EF52551CC5C42A0041E6C0 /* AlertOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertOverlayView.swift; sourceTree = "<group>"; };
 		58EF52571CC5C4350041E6C0 /* AlertOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertOverlayView.xib; sourceTree = "<group>"; };
 		58EF52591CC5C6C70041E6C0 /* UIViewController+AlertOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+AlertOverlay.swift"; sourceTree = "<group>"; };
+		58EF525C1CC5D6980041E6C0 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		58EF525E1CC5D8C80041E6C0 /* AssignmentRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentRecord.swift; sourceTree = "<group>"; };
 		58F26F6E1CBF3CD700552945 /* LeftBarButtonItemConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftBarButtonItemConfigurable.swift; sourceTree = "<group>"; };
 		58F26F701CBF3D1200552945 /* NavigationItemTitleProviding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationItemTitleProviding.swift; sourceTree = "<group>"; };
 		58F26F721CBF3D6800552945 /* RightBarButtonItemConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightBarButtonItemConfigurable.swift; sourceTree = "<group>"; };
@@ -225,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				582D5CD81CBB52EB004D8F78 /* Functions */,
+				58EF525B1CC5D6760041E6C0 /* Storage */,
 				582D5CDA1CBB52EB004D8F78 /* Version */,
 			);
 			path = Utilities;
@@ -344,6 +349,7 @@
 			isa = PBXGroup;
 			children = (
 				582D5D121CBB6FD9004D8F78 /* Assignment.swift */,
+				58EF525E1CC5D8C80041E6C0 /* AssignmentRecord.swift */,
 				58ABD80D1CBDB32F00306CC7 /* Contact.swift */,
 				582D5D141CBB70C8004D8F78 /* TextAction.swift */,
 			);
@@ -400,6 +406,15 @@
 			);
 			path = AlertOverlay;
 			sourceTree = "<group>";
+		};
+		58EF525B1CC5D6760041E6C0 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				58EF525C1CC5D6980041E6C0 /* UserDefaults.swift */,
+			);
+			name = Storage;
+			path = ContactTexter/Common/Utilities/Storage;
+			sourceTree = SOURCE_ROOT;
 		};
 		58F26F6D1CBF3CB900552945 /* NavigationItems */ = {
 			isa = PBXGroup;
@@ -606,9 +621,11 @@
 				58ABC0541CBCAFF8009223F4 /* PerformAssignmentTableViewController.swift in Sources */,
 				58F26F7C1CC0A5BA00552945 /* PerformAssignmentCallContactTableViewCell.swift in Sources */,
 				58F26F751CBF3E1500552945 /* ViewControllerType.swift in Sources */,
+				58EF525D1CC5D6980041E6C0 /* UserDefaults.swift in Sources */,
 				582D5CD11CBB51F5004D8F78 /* ServiceEmptyResponse.swift in Sources */,
 				582D5D091CBB5D25004D8F78 /* AppearanceManager.swift in Sources */,
 				58ABD8141CBDE30E00306CC7 /* TextActionPickerTableViewController.swift in Sources */,
+				58EF525F1CC5D8C80041E6C0 /* AssignmentRecord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
