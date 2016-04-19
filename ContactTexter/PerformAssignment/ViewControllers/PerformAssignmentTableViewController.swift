@@ -16,6 +16,14 @@ class PerformAssignmentTableViewController : TableViewController {
     private var selectedContact: Contact?
     private var selectedTextAction: TextAction?
     
+    private var assignmentRecord: AssignmentRecord? {
+        guard let selectedContact = self.selectedContact else {
+            return nil
+        }
+        
+        return AssignmentRecord(assignment: self.assignment, contact: selectedContact, recordDate: NSDate())
+    }
+    
     private lazy var infoCell: PerformAssignmentInfoTableViewCell = {
         let cell = PerformAssignmentInfoTableViewCell.loadFromNib()
         cell.configureCell(assignment: self.assignment)
@@ -207,6 +215,7 @@ extension PerformAssignmentTableViewController : MFMessageComposeViewControllerD
         switch result {
         case MessageComposeResultSent:
             controller.dismissViewControllerAnimated(true, completion: nil)
+            UserDefaults.standardUserDefaults.addAssignmentRecord(self.assignmentRecord!)
             presentAlertMessageOverlay(.Success(message: "Message sent successfully. Keep contacting!"))
             self.navigationController?.popViewControllerAnimated(true)
             
