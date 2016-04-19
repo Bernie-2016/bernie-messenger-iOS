@@ -26,6 +26,14 @@ class UserDefaults {
         self.assignmentHistory = assignmentHistory
     }
     
+    func assignmentRecords(assignmentId assignmentId: String) -> [AssignmentRecord] {
+        guard let assignmentHistory = self.assignmentHistory else {
+            return []
+        }
+        
+        return assignmentHistory[assignmentId] ?? []
+    }
+    
     var assignmentHistory: [String : [AssignmentRecord]]? {
         set {
             if let newValue = newValue {
