@@ -138,8 +138,6 @@ class PerformAssignmentTableViewController : TableViewController {
         self.callContactCell.disabled = false
         self.textContactCell.configureCell(contact: contact)
         self.textContactCell.disabled = self.assignment.type == .CallAndText
-        
-        self.tableView.reloadData()
     }
     
     private func didSelectTextAction(textAction: TextAction) {
@@ -208,17 +206,15 @@ extension PerformAssignmentTableViewController : MFMessageComposeViewControllerD
     func messageComposeViewController(controller: MFMessageComposeViewController, didFinishWithResult result: MessageComposeResult) {
         switch result {
         case MessageComposeResultSent:
-            print("Sent")
+            controller.dismissViewControllerAnimated(true, completion: nil)
+            presentAlertMessageOverlay(.Success(message: "Message sent successfully. Keep contacting!"))
+            self.navigationController?.popViewControllerAnimated(true)
+            
         case MessageComposeResultFailed:
-            print("Failed")
-        case MessageComposeResultCancelled:
-            print("Cancelled")
+            presentAlertMessageOverlay(.Error(message: "Sending text message failed. Try sending your text again!"))
         default:
-            print("Unexpected")
+            break
         }
-        
-        controller.dismissViewControllerAnimated(true, completion: nil)
-        self.navigationController?.popViewControllerAnimated(true)
     }
     
 }
