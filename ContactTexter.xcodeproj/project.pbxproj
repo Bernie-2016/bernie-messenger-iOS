@@ -55,6 +55,7 @@
 		58EF525A1CC5C6C70041E6C0 /* UIViewController+AlertOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EF52591CC5C6C70041E6C0 /* UIViewController+AlertOverlay.swift */; };
 		58EF525D1CC5D6980041E6C0 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EF525C1CC5D6980041E6C0 /* UserDefaults.swift */; };
 		58EF525F1CC5D8C80041E6C0 /* AssignmentRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EF525E1CC5D8C80041E6C0 /* AssignmentRecord.swift */; };
+		58EF52661CC5E8A40041E6C0 /* AssignmentsHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EF52651CC5E8A40041E6C0 /* AssignmentsHistoryViewController.swift */; };
 		58F26F6F1CBF3CD700552945 /* LeftBarButtonItemConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F26F6E1CBF3CD700552945 /* LeftBarButtonItemConfigurable.swift */; };
 		58F26F711CBF3D1200552945 /* NavigationItemTitleProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F26F701CBF3D1200552945 /* NavigationItemTitleProviding.swift */; };
 		58F26F731CBF3D6800552945 /* RightBarButtonItemConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F26F721CBF3D6800552945 /* RightBarButtonItemConfigurable.swift */; };
@@ -121,6 +122,7 @@
 		58EF52591CC5C6C70041E6C0 /* UIViewController+AlertOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+AlertOverlay.swift"; sourceTree = "<group>"; };
 		58EF525C1CC5D6980041E6C0 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		58EF525E1CC5D8C80041E6C0 /* AssignmentRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentRecord.swift; sourceTree = "<group>"; };
+		58EF52651CC5E8A40041E6C0 /* AssignmentsHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentsHistoryViewController.swift; sourceTree = "<group>"; };
 		58F26F6E1CBF3CD700552945 /* LeftBarButtonItemConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftBarButtonItemConfigurable.swift; sourceTree = "<group>"; };
 		58F26F701CBF3D1200552945 /* NavigationItemTitleProviding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationItemTitleProviding.swift; sourceTree = "<group>"; };
 		58F26F721CBF3D6800552945 /* RightBarButtonItemConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightBarButtonItemConfigurable.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				582D5CFC1CBB5A3B004D8F78 /* Assignments */,
+				58EF52621CC5E88A0041E6C0 /* AssignmentsHistory */,
 				582D5CC21CBB51C1004D8F78 /* Common */,
 				58ABC0501CBCAFD4009223F4 /* PerformAssignment */,
 				582D5CB01CBB4CB7004D8F78 /* AppDelegate.swift */,
@@ -416,6 +419,30 @@
 			path = ContactTexter/Common/Utilities/Storage;
 			sourceTree = SOURCE_ROOT;
 		};
+		58EF52621CC5E88A0041E6C0 /* AssignmentsHistory */ = {
+			isa = PBXGroup;
+			children = (
+				58EF52631CC5E88A0041E6C0 /* UI */,
+				58EF52641CC5E88A0041E6C0 /* ViewControllers */,
+			);
+			path = AssignmentsHistory;
+			sourceTree = "<group>";
+		};
+		58EF52631CC5E88A0041E6C0 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		58EF52641CC5E88A0041E6C0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				58EF52651CC5E8A40041E6C0 /* AssignmentsHistoryViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		58F26F6D1CBF3CB900552945 /* NavigationItems */ = {
 			isa = PBXGroup;
 			children = (
@@ -602,6 +629,7 @@
 				582D5D151CBB70C8004D8F78 /* TextAction.swift in Sources */,
 				58EF52561CC5C42A0041E6C0 /* AlertOverlayView.swift in Sources */,
 				582D5CEA1CBB5574004D8F78 /* MultilineLabel.swift in Sources */,
+				58EF52661CC5E8A40041E6C0 /* AssignmentsHistoryViewController.swift in Sources */,
 				58ABD8101CBDBF7700306CC7 /* PerformAssignmentTextContactTableViewCell.swift in Sources */,
 				582D5D021CBB5B95004D8F78 /* AssignmentTableViewCell.swift in Sources */,
 				582D5CB11CBB4CB7004D8F78 /* AppDelegate.swift in Sources */,
