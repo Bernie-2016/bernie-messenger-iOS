@@ -50,6 +50,8 @@
 		58ABD8141CBDE30E00306CC7 /* TextActionPickerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ABD8131CBDE30E00306CC7 /* TextActionPickerTableViewController.swift */; };
 		58ABD8161CBE0C9500306CC7 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ABD8151CBE0C9500306CC7 /* NavigationController.swift */; };
 		58ABD81A1CBE0E4C00306CC7 /* UIView+AppearanceSwift.m in Sources */ = {isa = PBXBuildFile; fileRef = 58ABD8191CBE0E4C00306CC7 /* UIView+AppearanceSwift.m */; };
+		58EF52561CC5C42A0041E6C0 /* AlertOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EF52551CC5C42A0041E6C0 /* AlertOverlayView.swift */; };
+		58EF52581CC5C4350041E6C0 /* AlertOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58EF52571CC5C4350041E6C0 /* AlertOverlayView.xib */; };
 		58F26F6F1CBF3CD700552945 /* LeftBarButtonItemConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F26F6E1CBF3CD700552945 /* LeftBarButtonItemConfigurable.swift */; };
 		58F26F711CBF3D1200552945 /* NavigationItemTitleProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F26F701CBF3D1200552945 /* NavigationItemTitleProviding.swift */; };
 		58F26F731CBF3D6800552945 /* RightBarButtonItemConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F26F721CBF3D6800552945 /* RightBarButtonItemConfigurable.swift */; };
@@ -111,6 +113,8 @@
 		58ABD8171CBE0E4B00306CC7 /* ContactTexter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ContactTexter-Bridging-Header.h"; sourceTree = "<group>"; };
 		58ABD8181CBE0E4C00306CC7 /* UIView+AppearanceSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AppearanceSwift.h"; sourceTree = "<group>"; };
 		58ABD8191CBE0E4C00306CC7 /* UIView+AppearanceSwift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AppearanceSwift.m"; sourceTree = "<group>"; };
+		58EF52551CC5C42A0041E6C0 /* AlertOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertOverlayView.swift; sourceTree = "<group>"; };
+		58EF52571CC5C4350041E6C0 /* AlertOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertOverlayView.xib; sourceTree = "<group>"; };
 		58F26F6E1CBF3CD700552945 /* LeftBarButtonItemConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftBarButtonItemConfigurable.swift; sourceTree = "<group>"; };
 		58F26F701CBF3D1200552945 /* NavigationItemTitleProviding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationItemTitleProviding.swift; sourceTree = "<group>"; };
 		58F26F721CBF3D6800552945 /* RightBarButtonItemConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightBarButtonItemConfigurable.swift; sourceTree = "<group>"; };
@@ -243,6 +247,7 @@
 		582D5CDE1CBB5412004D8F78 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				58EF52531CC5C40D0041E6C0 /* AlertOverlay */,
 				582D5D071CBB5D16004D8F78 /* Appearance */,
 				582D5CDF1CBB5412004D8F78 /* Extensions */,
 				582D5CE51CBB5574004D8F78 /* Labels */,
@@ -384,6 +389,15 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		58EF52531CC5C40D0041E6C0 /* AlertOverlay */ = {
+			isa = PBXGroup;
+			children = (
+				58EF52551CC5C42A0041E6C0 /* AlertOverlayView.swift */,
+				58EF52571CC5C4350041E6C0 /* AlertOverlayView.xib */,
+			);
+			path = AlertOverlay;
+			sourceTree = "<group>";
+		};
 		58F26F6D1CBF3CB900552945 /* NavigationItems */ = {
 			isa = PBXGroup;
 			children = (
@@ -484,6 +498,7 @@
 				582D5D101CBB6AD6004D8F78 /* LaunchScreen.xib in Resources */,
 				58ABC05C1CBCB469009223F4 /* PerformAssignmentSelectContactTableViewCell.xib in Resources */,
 				58ABC0581CBCB090009223F4 /* PerformAssignmentInfoTableViewCell.xib in Resources */,
+				58EF52581CC5C4350041E6C0 /* AlertOverlayView.xib in Resources */,
 				582D5D041CBB5BB6004D8F78 /* Assignments.storyboard in Resources */,
 				582D5D061CBB5BC9004D8F78 /* AssignmentTableViewCell.xib in Resources */,
 				58F26F7E1CC0A5DD00552945 /* PerformAssignmentCallContactTableViewCell.xib in Resources */,
@@ -567,6 +582,7 @@
 				58F26F711CBF3D1200552945 /* NavigationItemTitleProviding.swift in Sources */,
 				58ABC05A1CBCB458009223F4 /* PerformAssignmentSelectContactTableViewCell.swift in Sources */,
 				582D5D151CBB70C8004D8F78 /* TextAction.swift in Sources */,
+				58EF52561CC5C42A0041E6C0 /* AlertOverlayView.swift in Sources */,
 				582D5CEA1CBB5574004D8F78 /* MultilineLabel.swift in Sources */,
 				58ABD8101CBDBF7700306CC7 /* PerformAssignmentTextContactTableViewCell.swift in Sources */,
 				582D5D021CBB5B95004D8F78 /* AssignmentTableViewCell.swift in Sources */,
