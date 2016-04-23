@@ -84,7 +84,18 @@ class PerformAssignmentTableViewController : TableViewController {
     }
     
     override var rightBarButtonItemType: RightBarButtonItemType {
-        return .History
+        let historyButton = UIBarButtonItem(title: nil, style: .Plain, target: self, action: #selector(historyButtonAction))
+        historyButton.setFAIcon(.FAHistory, iconSize: 20.0)
+        return .Custom(historyButton)
+    }
+    
+    // MARK: History button
+    
+    func historyButtonAction() {
+        let assignmentRecords = UserDefaults.standardUserDefaults.assignmentRecords(assignmentId: self.assignment.id)
+        let historyController = AssignmentsHistoryViewController(assignmentRecords: assignmentRecords)
+        let navigationController = NavigationController(rootViewController: historyController)
+        presentViewController(navigationController, animated: true, completion: nil)
     }
     
     // MARK: UITableViewDataSource
@@ -158,6 +169,12 @@ class PerformAssignmentTableViewController : TableViewController {
         presentViewController(composeMessageController, animated: true, completion: nil)
     }
     
+    private func didSendTextMessage() {
+        UserDefaults.standardUserDefaults.addAssignmentRecord(self.assignmentRecord!)
+        presentAlertMessageOverlay(.Success(message: "Message sent successfully. Keep contacting!"))
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
 }
 
 // MARK: ABPeoplePickerNavigationControllerDelegate
@@ -215,10 +232,7 @@ extension PerformAssignmentTableViewController : MFMessageComposeViewControllerD
         switch result {
         case MessageComposeResultSent:
             controller.dismissViewControllerAnimated(true, completion: nil)
-            UserDefaults.standardUserDefaults.addAssignmentRecord(self.assignmentRecord!)
-            presentAlertMessageOverlay(.Success(message: "Message sent successfully. Keep contacting!"))
-            self.navigationController?.popViewControllerAnimated(true)
-            
+            didSendTextMessage()
         case MessageComposeResultFailed:
             presentAlertMessageOverlay(.Error(message: "Sending text message failed. Try sending your text again!"))
         default:

@@ -11,8 +11,9 @@ import UIKit
 enum RightBarButtonItemType {
     
     case None
-    case History
     case Cancel
+    case Close
+    case Custom(UIBarButtonItem)
     
 }
 
@@ -36,23 +37,23 @@ extension RightBarButtonItemConfigurable where Self : UIViewController {
         switch self.rightBarButtonItemType {
         case .None:
             break
-        case .History:
-            rightBarButtonItems.append(historyBarButtonItem())
         case .Cancel:
             rightBarButtonItems.append(cancelBarButtonItem())
+        case .Close:
+            rightBarButtonItems.append(closeBarButtonItem())
+        case .Custom(let barButtonItem):
+            rightBarButtonItems.append(barButtonItem)
         }
         
         self.navigationItem.rightBarButtonItems = rightBarButtonItems
     }
     
-    private func historyBarButtonItem() -> UIBarButtonItem {
-        let backButton = UIBarButtonItem(title: nil, style: .Plain, target: self.navigationController, action: #selector(UINavigationController.cancelButtonAction))
-        backButton.setFAIcon(.FAHistory, iconSize: 20.0)
-        return backButton
-    }
-    
     private func cancelBarButtonItem() -> UIBarButtonItem {
         return UIBarButtonItem(title: "Cancel", style: .Plain, target: self.navigationController, action: #selector(UINavigationController.cancelButtonAction))
+    }
+    
+    private func closeBarButtonItem() -> UIBarButtonItem {
+        return UIBarButtonItem(title: "Close", style: .Plain, target: self.navigationController, action: #selector(UINavigationController.cancelButtonAction))
     }
     
     private func clearCurrentRightBarButtonItem() {
