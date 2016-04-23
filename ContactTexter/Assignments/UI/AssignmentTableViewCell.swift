@@ -17,7 +17,7 @@ class AssignmentTableViewCell : UITableViewCell, LoadableFromNib {
         self.selectionStyle = .Default
         self.accessoryType = .DisclosureIndicator
         
-        self.expirationLabel.text = assignment.expiration.description // TODO: Format this pretty
+        self.expirationLabel.text = assignment.expiration.expirationFormat
         self.nameLabel.text = assignment.name
     }
     
@@ -25,7 +25,7 @@ class AssignmentTableViewCell : UITableViewCell, LoadableFromNib {
         self.selectionStyle = .None
         self.accessoryType = .None
         
-        self.expirationLabel.text = assignmentRecord.recordDate.description // TODO: Format this pretty
+        self.expirationLabel.text = assignmentRecord.recordDate.historyFormat
         self.nameLabel.text = assignmentRecord.contactName
     }
     
