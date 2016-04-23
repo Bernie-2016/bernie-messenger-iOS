@@ -143,10 +143,15 @@ class PerformAssignmentTableViewController : TableViewController {
             self.textContactCell.disabled = false
             
         case self.textContactCell:
-            let textActionPickerController = TextActionPickerTableViewController(textActions: self.assignment.textActions)
-            textActionPickerController.delegate = self
-            let pickerNavigationController = UINavigationController(rootViewController: textActionPickerController)
-            presentViewController(pickerNavigationController, animated: true, completion: nil)
+            if self.assignment.textActions.count > 1 {
+                let textActionPickerController = TextActionPickerTableViewController(textActions: self.assignment.textActions)
+                textActionPickerController.delegate = self
+                let pickerNavigationController = UINavigationController(rootViewController: textActionPickerController)
+                presentViewController(pickerNavigationController, animated: true, completion: nil)
+                
+            } else {
+                didSelectTextAction(self.assignment.textActions.first!)
+            }
             
         default:
             break
