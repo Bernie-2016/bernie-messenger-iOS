@@ -12,6 +12,10 @@ class AssignmentsHistoryViewController : TableViewController {
     
     private let assignmentRecords: [AssignmentRecord]
     
+    private lazy var dummyAssignmentCell = AssignmentTableViewCell.loadFromNib()
+    
+    // MARK: Initializers
+    
     init(assignmentRecords: [AssignmentRecord]) {
         self.assignmentRecords = assignmentRecords
         super.init(nibName: nil, bundle: nil)
@@ -27,6 +31,13 @@ class AssignmentsHistoryViewController : TableViewController {
         super.viewDidLoad()
         
         self.tableView.separatorStyle = .None
+        self.tableView.registerReusableCell(AssignmentTableViewCell.self)
+    }
+    
+    // MARK: ViewControllerType
+    
+    override var rightBarButtonItemType: RightBarButtonItemType {
+        return .Close
     }
     
     // MARK: UITableViewDataSource
@@ -42,7 +53,14 @@ class AssignmentsHistoryViewController : TableViewController {
     // MARK: UITableViewDelegate
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell: AssignmentTableViewCell = tableView.dequeueReusableCell(indexPath)
+        cell.configureCell(assignmentRecord: self.assignmentRecords[indexPath.row])
+        return cell
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        self.dummyAssignmentCell.configureCell(assignmentRecord: self.assignmentRecords[indexPath.row])
+        return self.dummyAssignmentCell.calculatedHeight(tableView: tableView)
     }
     
 }
