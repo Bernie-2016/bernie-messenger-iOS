@@ -18,4 +18,9 @@ class AssignmentTableViewCell : UITableViewCell, LoadableFromNib {
         self.nameLabel.text = assignment.name
     }
     
+    func configureCell(assignmentRecord assignmentRecord: AssignmentRecord) {
+        self.expirationLabel.text = assignmentRecord.recordDate.description // TODO: Format this pretty
+        self.nameLabel.text = assignmentRecord.contactName
+    }
+    
 }
