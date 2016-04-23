@@ -30,7 +30,7 @@ class AssignmentsHistoryViewController : TableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.separatorStyle = .None
+        self.tableView.estimatedRowHeight = 50.0
         self.tableView.registerReusableCell(AssignmentTableViewCell.self)
     }
     

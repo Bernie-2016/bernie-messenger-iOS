@@ -14,11 +14,17 @@ class AssignmentTableViewCell : UITableViewCell, LoadableFromNib {
     @IBOutlet private weak var nameLabel: MultilineLabel!
     
     func configureCell(assignment assignment: Assignment) {
+        self.selectionStyle = .Default
+        self.accessoryType = .DisclosureIndicator
+        
         self.expirationLabel.text = assignment.expiration.description // TODO: Format this pretty
         self.nameLabel.text = assignment.name
     }
     
     func configureCell(assignmentRecord assignmentRecord: AssignmentRecord) {
+        self.selectionStyle = .None
+        self.accessoryType = .None
+        
         self.expirationLabel.text = assignmentRecord.recordDate.description // TODO: Format this pretty
         self.nameLabel.text = assignmentRecord.contactName
     }

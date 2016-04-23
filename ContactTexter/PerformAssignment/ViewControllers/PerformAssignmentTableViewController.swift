@@ -221,6 +221,7 @@ extension PerformAssignmentTableViewController : ABPeoplePickerNavigationControl
 extension PerformAssignmentTableViewController : TextActionPickerTableViewControllerDelegate {
     
     func textActionPickerController(controller: TextActionPickerTableViewController, didSelectTextAction textAction: TextAction) {
+        controller.dismissViewControllerAnimated(true, completion: nil)
         didSelectTextAction(textAction)
     }
     

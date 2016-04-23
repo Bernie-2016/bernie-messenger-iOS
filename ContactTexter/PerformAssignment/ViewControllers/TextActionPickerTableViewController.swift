@@ -63,7 +63,6 @@ class TextActionPickerTableViewController : TableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let selectedTextAction = self.textActions[indexPath.row]
         self.delegate?.textActionPickerController(self, didSelectTextAction: selectedTextAction)
-        self.navigationController?.popViewControllerAnimated(true)
     }
     
 }
