@@ -132,8 +132,14 @@ class PerformAssignmentTableViewController : TableViewController {
             showViewController(peoplePicker, sender: nil)
             
         case self.callContactCell:
-            let phoneNumberURL = "telprompt://" + self.selectedContact!.phoneNumber
+            let phoneNumber = self.selectedContact!.phoneNumber
+            let phoneNumberArray = phoneNumber.componentsSeparatedByCharactersInSet(
+                NSCharacterSet.decimalDigitCharacterSet().invertedSet)
+            let strippedPhoneNumber = NSArray(array: phoneNumberArray).componentsJoinedByString("")
+            
+            let phoneNumberURL = "telprompt://" + strippedPhoneNumber
             UIApplication.sharedApplication().openURL(NSURL(string: phoneNumberURL)!)
+            self.callContactCell.isCompleted = true
             self.textContactCell.disabled = false
             
         case self.textContactCell:
@@ -155,8 +161,10 @@ class PerformAssignmentTableViewController : TableViewController {
         self.selectContactCell.configureCell(contact: contact)
         self.callContactCell.configureCell(contact: contact)
         self.callContactCell.disabled = false
+        self.callContactCell.isCompleted = false
         self.textContactCell.configureCell(contact: contact)
         self.textContactCell.disabled = self.assignment.type == .CallAndText
+        self.textContactCell.isCompleted = false
     }
     
     private func didSelectTextAction(textAction: TextAction) {
