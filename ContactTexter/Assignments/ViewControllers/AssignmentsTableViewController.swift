@@ -23,7 +23,7 @@ class AssignmentsTableViewController : TableViewController {
         self.tableView.registerReusableCell(AssignmentTableViewCell.self)
         
         let businessService = AssignmentsBusinessService()
-        businessService.fetchAssignments {
+        businessService.fetchFakeAssignments {
             (result: ServiceResult<[Assignment]>) in
             
             switch result {
