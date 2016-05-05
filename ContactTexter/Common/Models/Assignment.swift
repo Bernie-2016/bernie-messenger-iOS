@@ -40,10 +40,3 @@ extension Assignment : JSONDecodable {
     }
     
 }
-
-enum AssignmentType : String, JSONDecodable {
-    
-    case Text = "text"
-    case CallAndText = "call-and-text"
-    
-}

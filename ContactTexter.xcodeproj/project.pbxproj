@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		580316D61CDADE9900DB7839 /* AssignmentsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580316D51CDADE9900DB7839 /* AssignmentsEndpoint.swift */; };
+		580316D91CDAE6B200DB7839 /* AssignmentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580316D81CDAE6B200DB7839 /* AssignmentType.swift */; };
 		582D5CB11CBB4CB7004D8F78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CB01CBB4CB7004D8F78 /* AppDelegate.swift */; };
 		582D5CB81CBB4CB7004D8F78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 582D5CB71CBB4CB7004D8F78 /* Assets.xcassets */; };
 		582D5CCF1CBB51F5004D8F78 /* ServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CC51CBB51F5004D8F78 /* ServiceClient.swift */; };
@@ -73,6 +74,7 @@
 		368FC17A162D848EDE8DF038 /* Pods-ContactTexter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactTexter.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContactTexter/Pods-ContactTexter.release.xcconfig"; sourceTree = "<group>"; };
 		3C6499C999D7EE576274DB9D /* Pods_ContactTexter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContactTexter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		580316D51CDADE9900DB7839 /* AssignmentsEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentsEndpoint.swift; sourceTree = "<group>"; };
+		580316D81CDAE6B200DB7839 /* AssignmentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentType.swift; sourceTree = "<group>"; };
 		582D5CAD1CBB4CB7004D8F78 /* ContactTexter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactTexter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		582D5CB01CBB4CB7004D8F78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		582D5CB71CBB4CB7004D8F78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -367,6 +369,7 @@
 			children = (
 				582D5D121CBB6FD9004D8F78 /* Assignment.swift */,
 				58EF525E1CC5D8C80041E6C0 /* AssignmentRecord.swift */,
+				580316D81CDAE6B200DB7839 /* AssignmentType.swift */,
 				58ABD80D1CBDB32F00306CC7 /* Contact.swift */,
 				582D5D141CBB70C8004D8F78 /* TextAction.swift */,
 			);
@@ -635,6 +638,7 @@
 				582D5CD41CBB51F5004D8F78 /* ServiceMethod.swift in Sources */,
 				580316D61CDADE9900DB7839 /* AssignmentsEndpoint.swift in Sources */,
 				582D5CF51CBB56E2004D8F78 /* UITableView+Reusable.swift in Sources */,
+				580316D91CDAE6B200DB7839 /* AssignmentType.swift in Sources */,
 				582D5CF71CBB56E2004D8F78 /* UITableViewCell+HeightCalculatable.swift in Sources */,
 				582D5CDC1CBB52EB004D8F78 /* SystemVersionFunctions.swift in Sources */,
 				582D5CD01CBB51F5004D8F78 /* FreddyResponseSerializer.swift in Sources */,
