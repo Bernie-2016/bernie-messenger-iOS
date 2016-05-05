@@ -16,14 +16,6 @@ class PerformAssignmentTableViewController : TableViewController {
     private var selectedContact: Contact?
     private var selectedTextAction: TextAction?
     
-    private var assignmentRecord: AssignmentRecord? {
-        guard let selectedContact = self.selectedContact else {
-            return nil
-        }
-        
-        return AssignmentRecord(assignment: self.assignment, contact: selectedContact, recordDate: NSDate())
-    }
-    
     private lazy var infoCell: PerformAssignmentInfoTableViewCell = {
         let cell = PerformAssignmentInfoTableViewCell.loadFromNib()
         cell.configureCell(assignment: self.assignment)
@@ -139,6 +131,8 @@ class PerformAssignmentTableViewController : TableViewController {
             
             let phoneNumberURL = "telprompt://" + strippedPhoneNumber
             UIApplication.sharedApplication().openURL(NSURL(string: phoneNumberURL)!)
+            addCurrentAssignmentRecord(action: .Call)
+            
             self.callContactCell.isCompleted = true
             self.textContactCell.disabled = false
             
@@ -156,6 +150,17 @@ class PerformAssignmentTableViewController : TableViewController {
         default:
             break
         }
+    }
+    
+    // MARK: Recording assignments
+    
+    private func addCurrentAssignmentRecord(action action: AssignmentRecordAction) {
+        guard let selectedContact = self.selectedContact else {
+            return
+        }
+        
+        let record = AssignmentRecord(assignment: self.assignment, action: action, contact: selectedContact, recordDate: NSDate())
+        UserDefaults.standardUserDefaults.addAssignmentRecord(record)
     }
     
     // MARK: Cell management
@@ -183,7 +188,7 @@ class PerformAssignmentTableViewController : TableViewController {
     }
     
     private func didSendTextMessage() {
-        UserDefaults.standardUserDefaults.addAssignmentRecord(self.assignmentRecord!)
+        addCurrentAssignmentRecord(action: .Text)
         presentAlertMessageOverlay(.Success(message: "Message sent successfully. Keep contacting!"))
         self.navigationController?.popViewControllerAnimated(true)
     }

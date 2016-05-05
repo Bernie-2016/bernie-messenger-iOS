@@ -26,7 +26,7 @@ class AssignmentTableViewCell : UITableViewCell, LoadableFromNib {
         self.accessoryType = .None
         
         self.expirationLabel.text = assignmentRecord.recordDate.historyFormat
-        self.nameLabel.text = assignmentRecord.contactName
+        self.nameLabel.text = "\(assignmentRecord.action.rawValue) \(assignmentRecord.contactName)"
     }
     
 }
