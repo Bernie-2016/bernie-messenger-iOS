@@ -26,7 +26,7 @@ extension ServiceEndpoint {
     
     /// Host for endpoint.
     var baseURL: String {
-        return "https://api.berniesanders.com" // TODO: Use real base URL for API calls
+        return "https://organize.berniesanders.com"
     }
     
 }
