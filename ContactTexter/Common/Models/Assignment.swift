@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Freddy
 
 struct Assignment {
     
@@ -23,7 +24,24 @@ struct Assignment {
     
 }
 
-enum AssignmentType : String {
+extension Assignment : JSONDecodable {
+    
+    init(json: JSON) throws {
+        self.id = try json.string("id")
+        self.expiration = NSDate() // TODO: Use date from service call
+        
+        self.name = try json.string("name")
+        self.description = try json.string("description")
+        self.type = try json.decode("type")
+        
+        self.instructions = try json.string("instructions")
+        self.script = try json.string("script")
+        self.textActions = try json.arrayOf("textActions")
+    }
+    
+}
+
+enum AssignmentType : String, JSONDecodable {
     
     case Text = "text"
     case CallAndText = "call-and-text"
