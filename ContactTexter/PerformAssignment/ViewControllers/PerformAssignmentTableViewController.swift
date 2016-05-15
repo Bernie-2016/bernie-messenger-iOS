@@ -40,13 +40,27 @@ class PerformAssignmentTableViewController : TableViewController {
         return cell
     }()
     
+    private lazy var errorCell: UITableViewCell = {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = "Unfortunately, your device cannot complete this assignment. Please try completing this assignment on a device that can call or text!"
+        cell.textLabel?.textColor = UIColor.body()
+        cell.textLabel?.font = UIFont.systemFontOfSize(17.0)
+        cell.textLabel?.numberOfLines = 0
+        return cell
+    }()
+    
     private lazy var dataSource: [UITableViewCell] = {
         var dataSource = [self.infoCell, self.selectContactCell]
-        if self.assignment.type.contains(.Call) {
+        if self.assignment.type.contains(.Call) && UIDevice.currentDevice().canMakeCalls() {
             dataSource.append(self.callContactCell)
         }
-        if self.assignment.type.contains(.Text) {
+        if self.assignment.type.contains(.Text) && UIDevice.currentDevice().canSendTexts() {
             dataSource.append(self.textContactCell)
+        }
+        
+        // Handle device that can't call or text
+        if dataSource.count == 2 {
+            return [self.errorCell]
         }
         return dataSource
     }()
@@ -171,18 +185,22 @@ class PerformAssignmentTableViewController : TableViewController {
         self.selectedContact = contact
         
         self.selectContactCell.configureCell(contact: contact)
-        self.callContactCell.configureCell(contact: contact, callAction: nil)
+        
+        let callAction: CallAction? = self.assignment.callActions.count == 1 ? self.assignment.callActions.first! : nil
+        self.callContactCell.configureCell(contact: contact, callAction: callAction)
         self.callContactCell.disabled = false
         self.callContactCell.isCompleted = false
-        self.textContactCell.configureCell(contact: contact)
-        self.textContactCell.disabled = self.assignment.requireCallFirst
+        
+        let textAction: TextAction? = self.assignment.textActions.count == 1 ? self.assignment.textActions.first! : nil
+        self.textContactCell.configureCell(contact: contact, textAction: textAction)
+        self.textContactCell.disabled = self.assignment.requireCallFirst && UIDevice.currentDevice().canMakeCalls()
         self.textContactCell.isCompleted = false
         
         self.tableView.update()
     }
     
     private func showActionPicker(navigationTitle navigationTitle: String, actions: [ActionPickerable]) {
-        let actionPickerController = ActionPickerTableViewController(navigationTitle: navigationTitle, actions: actions)
+        let actionPickerController = ActionPickerTableViewController(navigationTitle: navigationTitle, contact: self.selectedContact!, actions: actions)
         actionPickerController.delegate = self
         let pickerNavigationController = UINavigationController(rootViewController: actionPickerController)
         presentViewController(pickerNavigationController, animated: true, completion: nil)

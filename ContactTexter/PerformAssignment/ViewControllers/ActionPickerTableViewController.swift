@@ -11,6 +11,7 @@ import UIKit
 class ActionPickerTableViewController : TableViewController {
     
     private let navigationTitle: String
+    private let contact: Contact
     private let actions: [ActionPickerable]
     
     private let dummyCell = TitledTableViewCell.loadFromNib()
@@ -19,8 +20,9 @@ class ActionPickerTableViewController : TableViewController {
     
     // MARK: Initializers
     
-    init(navigationTitle: String, actions: [ActionPickerable]) {
+    init(navigationTitle: String, contact: Contact, actions: [ActionPickerable]) {
         self.actions = actions
+        self.contact = contact
         self.navigationTitle = navigationTitle
         super.init(nibName: nil, bundle: nil)
     }
@@ -62,13 +64,13 @@ class ActionPickerTableViewController : TableViewController {
     // MARK: UITableViewDelegate
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        self.dummyCell.configureCell(action: self.actions[indexPath.row])
+        self.dummyCell.configureCell(contact: self.contact, action: self.actions[indexPath.row])
         return self.dummyCell.calculatedHeight(tableView: tableView)
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: TitledTableViewCell = self.tableView.dequeueReusableCell(indexPath)
-        cell.configureCell(action: self.actions[indexPath.row])
+        cell.configureCell(contact: self.contact, action: self.actions[indexPath.row])
         return cell
     }
     

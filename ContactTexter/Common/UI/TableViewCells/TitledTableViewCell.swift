@@ -29,12 +29,12 @@ class TitledTableViewCell : UITableViewCell, LoadableFromNib {
         self.contentLabel.text = "\(assignmentRecord.action.rawValue) \(assignmentRecord.contactName)"
     }
     
-    func configureCell(action action: ActionPickerable) {
+    func configureCell(contact contact: Contact, action: ActionPickerable) {
         self.selectionStyle = .Default
         self.accessoryType = .None
         
         self.titleLabel.text = action.title
-        self.contentLabel.text = action.body
+        self.contentLabel.text = action.body.stringByReplacingOccurrencesOfString("{{contact.firstName}}", withString: contact.firstName)
     }
     
 }

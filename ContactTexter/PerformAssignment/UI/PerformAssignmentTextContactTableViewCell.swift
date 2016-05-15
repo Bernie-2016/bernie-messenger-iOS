@@ -12,6 +12,7 @@ class PerformAssignmentTextContactTableViewCell : TableViewCell, LoadableFromNib
     
     @IBOutlet private weak var textIconLabel: UILabel!
     @IBOutlet private weak var contactNameLabel: UILabel!
+    @IBOutlet private weak var textContentLabel: MultilineLabel!
     
     var isCompleted: Bool = false {
         didSet {
@@ -19,8 +20,12 @@ class PerformAssignmentTextContactTableViewCell : TableViewCell, LoadableFromNib
         }
     }
     
-    func configureCell(contact contact: Contact) {
-        self.contactNameLabel.text = "Text " + contact.firstName
+    func configureCell(contact contact: Contact?, textAction: TextAction?) {
+        let firstName = contact?.firstName ?? "Contact"
+        let script = textAction?.content ?? "Select a text message"
+        
+        self.contactNameLabel.text = "Text \(firstName)"
+        self.textContentLabel.text = script.stringByReplacingOccurrencesOfString("{{contact.firstName}}", withString: firstName)
     }
     
     override func awakeFromNib() {

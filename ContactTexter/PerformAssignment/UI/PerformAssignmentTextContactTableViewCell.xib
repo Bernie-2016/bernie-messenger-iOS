@@ -27,7 +27,7 @@
                         <color key="textColor" red="0.96078431369999995" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7f-XV-tAJ">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a text message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7f-XV-tAJ" customClass="MultilineLabel" customModule="ContactTexter" customModuleProvider="target">
                         <rect key="frame" x="50" y="37.5" width="319.5" height="31"/>
                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <color key="textColor" red="0.21176470589999999" green="0.26274509800000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -48,6 +48,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="contactNameLabel" destination="uzb-vH-Zdg" id="R26-Zd-9ZZ"/>
+                <outlet property="textContentLabel" destination="M7f-XV-tAJ" id="wMg-kn-2ae"/>
                 <outlet property="textIconLabel" destination="kkL-Nq-Nzj" id="GFc-UK-jzi"/>
             </connections>
             <point key="canvasLocation" x="281.5" y="206"/>
