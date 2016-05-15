@@ -20,13 +20,13 @@ class PerformAssignmentCallContactTableViewCell : TableViewCell, LoadableFromNib
         }
     }
     
-    func configureCell(assignment assignment: Assignment) {
-        self.scriptLabel.text = assignment.script
+    func configureCell(callAction callAction: CallAction?) {
+        self.scriptLabel.text = callAction?.script ?? "Select a script"
     }
     
     func configureCell(contact contact: Contact) {
         self.contactNameLabel.text = "Call " + contact.firstName
-        self.scriptLabel.text = self.scriptLabel.text?.stringByReplacingOccurrencesOfString("{{firstName}}", withString: contact.firstName)
+        self.scriptLabel.text = self.scriptLabel.text?.stringByReplacingOccurrencesOfString("{{contact.firstName}}", withString: contact.firstName)
     }
     
     override func awakeFromNib() {

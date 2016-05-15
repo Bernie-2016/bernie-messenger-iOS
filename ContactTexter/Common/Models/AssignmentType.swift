@@ -8,10 +8,18 @@
 
 import Freddy
 
-enum AssignmentType : String {
+struct AssignmentType : OptionSetType {
     
-    case Text = "text"
-    case CallAndText = "call-and-text"
+    let rawValue: Int
+    
+    init(rawValue: Int) {
+        self.rawValue = rawValue
+    }
+    
+    // MARK: Options
+    
+    static let Call = AssignmentType(rawValue: 1)
+    static let Text = AssignmentType(rawValue: 2)
     
 }
 

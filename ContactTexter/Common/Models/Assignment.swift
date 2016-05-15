@@ -11,31 +11,40 @@ import Freddy
 
 struct Assignment {
     
-    let id: String
-    let expiration: NSDate
-    
+    let id: Int
     let name: String
     let description: String
-    let type: AssignmentType
+    let expires: NSDate
     
+    let requireCallFirst: Bool
     let instructions: String
-    let script: String?
+    let callActions: [CallAction]
     let textActions: [TextAction]
+    
+    var type: AssignmentType {
+        var assignmentType: AssignmentType = []
+        if !self.callActions.isEmpty {
+            assignmentType.insert(.Call)
+        }
+        if !self.textActions.isEmpty {
+            assignmentType.insert(.Text)
+        }
+        return assignmentType
+    }
     
 }
 
 extension Assignment : JSONDecodable {
     
     init(json: JSON) throws {
-        self.id = try json.string("id")
-        self.expiration = NSDate() // TODO: Use date from service call
-        
+        self.id = try json.int("id")
         self.name = try json.string("name")
         self.description = try json.string("description")
-        self.type = try json.decode("type")
+        self.expires = NSDate(fromString: try json.string("expires")) ?? NSDate()
         
+        self.requireCallFirst = try json.bool("requireCallFirst")
         self.instructions = try json.string("instructions")
-        self.script = try json.string("script")
+        self.callActions = try json.arrayOf("callActions")
         self.textActions = try json.arrayOf("textActions")
     }
     

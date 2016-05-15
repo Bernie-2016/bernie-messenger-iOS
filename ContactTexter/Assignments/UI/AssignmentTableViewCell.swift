@@ -17,7 +17,7 @@ class AssignmentTableViewCell : UITableViewCell, LoadableFromNib {
         self.selectionStyle = .Default
         self.accessoryType = .DisclosureIndicator
         
-        self.expirationLabel.text = assignment.expiration.expirationFormat
+        self.expirationLabel.text = assignment.expires.expirationFormat
         self.nameLabel.text = assignment.name
     }
     

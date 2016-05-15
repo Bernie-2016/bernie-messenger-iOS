@@ -40,6 +40,7 @@
 		582D5D101CBB6AD6004D8F78 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 582D5D0F1CBB6AD6004D8F78 /* LaunchScreen.xib */; };
 		582D5D131CBB6FD9004D8F78 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5D121CBB6FD9004D8F78 /* Assignment.swift */; };
 		582D5D151CBB70C8004D8F78 /* TextAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5D141CBB70C8004D8F78 /* TextAction.swift */; };
+		583536D01CE7DD670032B9E5 /* CallAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583536CF1CE7DD670032B9E5 /* CallAction.swift */; };
 		58ABC04F1CBC9002009223F4 /* AssignmentsBusinessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ABC04E1CBC9002009223F4 /* AssignmentsBusinessService.swift */; };
 		58ABC0541CBCAFF8009223F4 /* PerformAssignmentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ABC0531CBCAFF8009223F4 /* PerformAssignmentTableViewController.swift */; };
 		58ABC0561CBCB080009223F4 /* PerformAssignmentInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ABC0551CBCB080009223F4 /* PerformAssignmentInfoTableViewCell.swift */; };
@@ -108,6 +109,7 @@
 		582D5D0F1CBB6AD6004D8F78 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		582D5D121CBB6FD9004D8F78 /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
 		582D5D141CBB70C8004D8F78 /* TextAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextAction.swift; sourceTree = "<group>"; };
+		583536CF1CE7DD670032B9E5 /* CallAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallAction.swift; sourceTree = "<group>"; };
 		58ABC04E1CBC9002009223F4 /* AssignmentsBusinessService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentsBusinessService.swift; sourceTree = "<group>"; };
 		58ABC0531CBCAFF8009223F4 /* PerformAssignmentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformAssignmentTableViewController.swift; sourceTree = "<group>"; };
 		58ABC0551CBCB080009223F4 /* PerformAssignmentInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformAssignmentInfoTableViewCell.swift; sourceTree = "<group>"; };
@@ -370,6 +372,7 @@
 				582D5D121CBB6FD9004D8F78 /* Assignment.swift */,
 				58EF525E1CC5D8C80041E6C0 /* AssignmentRecord.swift */,
 				580316D81CDAE6B200DB7839 /* AssignmentType.swift */,
+				583536CF1CE7DD670032B9E5 /* CallAction.swift */,
 				58ABD80D1CBDB32F00306CC7 /* Contact.swift */,
 				582D5D141CBB70C8004D8F78 /* TextAction.swift */,
 			);
@@ -674,6 +677,7 @@
 				582D5CEC1CBB5574004D8F78 /* ViewController.swift in Sources */,
 				58F26F6F1CBF3CD700552945 /* LeftBarButtonItemConfigurable.swift in Sources */,
 				58ABD81A1CBE0E4C00306CC7 /* UIView+AppearanceSwift.m in Sources */,
+				583536D01CE7DD670032B9E5 /* CallAction.swift in Sources */,
 				58ABC0541CBCAFF8009223F4 /* PerformAssignmentTableViewController.swift in Sources */,
 				58F26F7C1CC0A5BA00552945 /* PerformAssignmentCallContactTableViewCell.swift in Sources */,
 				58F26F751CBF3E1500552945 /* ViewControllerType.swift in Sources */,

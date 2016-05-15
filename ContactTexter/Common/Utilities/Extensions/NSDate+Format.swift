@@ -10,6 +10,21 @@ import Foundation
 
 extension NSDate {
     
+    // MARK: Convenience initializer
+    
+    convenience init?(fromString string: String) {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+        
+        guard let date = dateFormatter.dateFromString(string) else {
+            return nil
+        }
+        
+        self.init(timeIntervalSince1970: date.timeIntervalSince1970)
+    }
+    
+    // MARK: Prettify strings
+    
     var expirationFormat: String {
         let calendar = NSCalendar.currentCalendar()
         if calendar.isDateInToday(self) {

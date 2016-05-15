@@ -28,7 +28,7 @@ class PerformAssignmentTableViewController : TableViewController {
     
     private lazy var callContactCell: PerformAssignmentCallContactTableViewCell = {
         let cell = PerformAssignmentCallContactTableViewCell.loadFromNib()
-        cell.configureCell(assignment: self.assignment)
+        cell.configureCell(callAction: nil)
         cell.disabled = true
         return cell
     }()
@@ -40,13 +40,14 @@ class PerformAssignmentTableViewController : TableViewController {
     }()
     
     private lazy var dataSource: [UITableViewCell] = {
-        switch self.assignment.type {
-        case .Text:
-            return [self.infoCell, self.selectContactCell, self.textContactCell]
-        case .CallAndText:
-            return [self.infoCell, self.selectContactCell, self.callContactCell, self.textContactCell]
+        var dataSource = [self.infoCell, self.selectContactCell]
+        if self.assignment.type.contains(.Call) {
+            dataSource.append(self.callContactCell)
         }
-        
+        if self.assignment.type.contains(.Text) {
+            dataSource.append(self.textContactCell)
+        }
+        return dataSource
     }()
     
     // MARK: Initializers
@@ -173,7 +174,7 @@ class PerformAssignmentTableViewController : TableViewController {
         self.callContactCell.disabled = false
         self.callContactCell.isCompleted = false
         self.textContactCell.configureCell(contact: contact)
-        self.textContactCell.disabled = self.assignment.type == .CallAndText
+        self.textContactCell.disabled = self.assignment.requireCallFirst
         self.textContactCell.isCompleted = false
     }
     

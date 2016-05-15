@@ -11,7 +11,7 @@ import Foundation
 @objc(AssignmentRecord)
 class AssignmentRecord : NSObject, NSCoding {
     
-    let assignmentId: String
+    let assignmentId: Int
     let action: AssignmentRecordAction
     let contactName: String
     let recordDate: NSDate
@@ -26,7 +26,7 @@ class AssignmentRecord : NSObject, NSCoding {
     // MARK: NSCoding
     
     required init?(coder aDecoder: NSCoder) {
-        self.assignmentId = aDecoder.decodeObjectForKey("assignmentId") as! String
+        self.assignmentId = aDecoder.decodeObjectForKey("assignmentId") as! Int
         let actionRawValue = aDecoder.decodeObjectForKey("action") as! String
         self.action = AssignmentRecordAction(rawValue: actionRawValue) ?? .Text
         self.contactName = aDecoder.decodeObjectForKey("contactName") as! String

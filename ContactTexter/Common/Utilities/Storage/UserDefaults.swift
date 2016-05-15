@@ -26,7 +26,7 @@ class UserDefaults {
         self.assignmentHistory = assignmentHistory
     }
     
-    func assignmentRecords(assignmentId assignmentId: String) -> [AssignmentRecord] {
+    func assignmentRecords(assignmentId assignmentId: Int) -> [AssignmentRecord] {
         guard let assignmentHistory = self.assignmentHistory else {
             return []
         }
@@ -34,7 +34,7 @@ class UserDefaults {
         return assignmentHistory[assignmentId] ?? []
     }
     
-    var assignmentHistory: [String : [AssignmentRecord]]? {
+    var assignmentHistory: [Int : [AssignmentRecord]]? {
         set {
             if let newValue = newValue {
                 let data = NSKeyedArchiver.archivedDataWithRootObject(newValue)
@@ -46,7 +46,7 @@ class UserDefaults {
         get {
             let data = self.userDefaults.objectForKey("assignmentHistory") as? NSData
             if let data = data {
-                return NSKeyedUnarchiver.unarchiveObjectWithData(data) as? [String : [AssignmentRecord]]
+                return NSKeyedUnarchiver.unarchiveObjectWithData(data) as? [Int : [AssignmentRecord]]
             } else {
                 return nil
             }
