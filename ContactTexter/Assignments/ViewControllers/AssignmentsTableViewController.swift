@@ -19,7 +19,7 @@ class AssignmentsTableViewController : TableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.estimatedRowHeight = 50.0
+        self.tableView.estimatedRowHeight = 75.0
         self.tableView.registerReusableCell(AssignmentTableViewCell.self)
         
         let businessService = AssignmentsBusinessService(uiDelegate: self)
