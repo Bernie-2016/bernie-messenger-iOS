@@ -22,7 +22,7 @@ class AssignmentsTableViewController : TableViewController {
         self.tableView.estimatedRowHeight = 50.0
         self.tableView.registerReusableCell(AssignmentTableViewCell.self)
         
-        let businessService = AssignmentsBusinessService()
+        let businessService = AssignmentsBusinessService(uiDelegate: self)
         businessService.fetchAssignments {
             (result: ServiceResult<[Assignment]>) in
             

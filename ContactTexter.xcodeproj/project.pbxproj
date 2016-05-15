@@ -41,6 +41,8 @@
 		582D5D131CBB6FD9004D8F78 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5D121CBB6FD9004D8F78 /* Assignment.swift */; };
 		582D5D151CBB70C8004D8F78 /* TextAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5D141CBB70C8004D8F78 /* TextAction.swift */; };
 		583536D01CE7DD670032B9E5 /* CallAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583536CF1CE7DD670032B9E5 /* CallAction.swift */; };
+		584B75A61CE8EE1600FD594A /* BusinessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584B75A51CE8EE1600FD594A /* BusinessService.swift */; };
+		584B75A81CE8EE2C00FD594A /* BusinessServiceUIDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584B75A71CE8EE2C00FD594A /* BusinessServiceUIDelegate.swift */; };
 		58ABC04F1CBC9002009223F4 /* AssignmentsBusinessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ABC04E1CBC9002009223F4 /* AssignmentsBusinessService.swift */; };
 		58ABC0541CBCAFF8009223F4 /* PerformAssignmentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ABC0531CBCAFF8009223F4 /* PerformAssignmentTableViewController.swift */; };
 		58ABC0561CBCB080009223F4 /* PerformAssignmentInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ABC0551CBCB080009223F4 /* PerformAssignmentInfoTableViewCell.swift */; };
@@ -110,6 +112,8 @@
 		582D5D121CBB6FD9004D8F78 /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
 		582D5D141CBB70C8004D8F78 /* TextAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextAction.swift; sourceTree = "<group>"; };
 		583536CF1CE7DD670032B9E5 /* CallAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallAction.swift; sourceTree = "<group>"; };
+		584B75A51CE8EE1600FD594A /* BusinessService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessService.swift; sourceTree = "<group>"; };
+		584B75A71CE8EE2C00FD594A /* BusinessServiceUIDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessServiceUIDelegate.swift; sourceTree = "<group>"; };
 		58ABC04E1CBC9002009223F4 /* AssignmentsBusinessService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentsBusinessService.swift; sourceTree = "<group>"; };
 		58ABC0531CBCAFF8009223F4 /* PerformAssignmentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformAssignmentTableViewController.swift; sourceTree = "<group>"; };
 		58ABC0551CBCB080009223F4 /* PerformAssignmentInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformAssignmentInfoTableViewCell.swift; sourceTree = "<group>"; };
@@ -197,6 +201,7 @@
 		582D5CC21CBB51C1004D8F78 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				584B75A41CE8EE0E00FD594A /* BusinessService */,
 				582D5D111CBB6FCE004D8F78 /* Models */,
 				582D5CC31CBB51F5004D8F78 /* ServiceLayer */,
 				582D5CDE1CBB5412004D8F78 /* UI */,
@@ -377,6 +382,15 @@
 				582D5D141CBB70C8004D8F78 /* TextAction.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		584B75A41CE8EE0E00FD594A /* BusinessService */ = {
+			isa = PBXGroup;
+			children = (
+				584B75A51CE8EE1600FD594A /* BusinessService.swift */,
+				584B75A71CE8EE2C00FD594A /* BusinessServiceUIDelegate.swift */,
+			);
+			path = BusinessService;
 			sourceTree = "<group>";
 		};
 		58ABC04D1CBC8FEF009223F4 /* BusinessLayer */ = {
@@ -636,6 +650,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				582D5CF11CBB569A004D8F78 /* Reusable.swift in Sources */,
+				584B75A81CE8EE2C00FD594A /* BusinessServiceUIDelegate.swift in Sources */,
 				582D5CD61CBB51F5004D8F78 /* ServiceResult.swift in Sources */,
 				582D5CF01CBB569A004D8F78 /* LoadableFromNib.swift in Sources */,
 				582D5CD41CBB51F5004D8F78 /* ServiceMethod.swift in Sources */,
@@ -664,6 +679,7 @@
 				58ABD8101CBDBF7700306CC7 /* PerformAssignmentTextContactTableViewCell.swift in Sources */,
 				582D5D021CBB5B95004D8F78 /* AssignmentTableViewCell.swift in Sources */,
 				582D5CB11CBB4CB7004D8F78 /* AppDelegate.swift in Sources */,
+				584B75A61CE8EE1600FD594A /* BusinessService.swift in Sources */,
 				58ABD80E1CBDB32F00306CC7 /* Contact.swift in Sources */,
 				582D5CD51CBB51F5004D8F78 /* ServiceRequest.swift in Sources */,
 				582D5CD21CBB51F5004D8F78 /* ServiceEndpoint.swift in Sources */,
