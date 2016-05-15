@@ -52,7 +52,7 @@
 		58ABD80E1CBDB32F00306CC7 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ABD80D1CBDB32F00306CC7 /* Contact.swift */; };
 		58ABD8101CBDBF7700306CC7 /* PerformAssignmentTextContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ABD80F1CBDBF7700306CC7 /* PerformAssignmentTextContactTableViewCell.swift */; };
 		58ABD8121CBDC07C00306CC7 /* PerformAssignmentTextContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58ABD8111CBDC07C00306CC7 /* PerformAssignmentTextContactTableViewCell.xib */; };
-		58ABD8141CBDE30E00306CC7 /* TextActionPickerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ABD8131CBDE30E00306CC7 /* TextActionPickerTableViewController.swift */; };
+		58ABD8141CBDE30E00306CC7 /* ActionPickerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ABD8131CBDE30E00306CC7 /* ActionPickerTableViewController.swift */; };
 		58ABD8161CBE0C9500306CC7 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ABD8151CBE0C9500306CC7 /* NavigationController.swift */; };
 		58ABD81A1CBE0E4C00306CC7 /* UIView+AppearanceSwift.m in Sources */ = {isa = PBXBuildFile; fileRef = 58ABD8191CBE0E4C00306CC7 /* UIView+AppearanceSwift.m */; };
 		58EB84021CCB02A700C65327 /* NSDate+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EB84011CCB02A700C65327 /* NSDate+Format.swift */; };
@@ -123,7 +123,7 @@
 		58ABD80D1CBDB32F00306CC7 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		58ABD80F1CBDBF7700306CC7 /* PerformAssignmentTextContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformAssignmentTextContactTableViewCell.swift; sourceTree = "<group>"; };
 		58ABD8111CBDC07C00306CC7 /* PerformAssignmentTextContactTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PerformAssignmentTextContactTableViewCell.xib; sourceTree = "<group>"; };
-		58ABD8131CBDE30E00306CC7 /* TextActionPickerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextActionPickerTableViewController.swift; sourceTree = "<group>"; };
+		58ABD8131CBDE30E00306CC7 /* ActionPickerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionPickerTableViewController.swift; sourceTree = "<group>"; };
 		58ABD8151CBE0C9500306CC7 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		58ABD8171CBE0E4B00306CC7 /* ContactTexter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ContactTexter-Bridging-Header.h"; sourceTree = "<group>"; };
 		58ABD8181CBE0E4C00306CC7 /* UIView+AppearanceSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AppearanceSwift.h"; sourceTree = "<group>"; };
@@ -429,7 +429,7 @@
 			isa = PBXGroup;
 			children = (
 				58ABC0531CBCAFF8009223F4 /* PerformAssignmentTableViewController.swift */,
-				58ABD8131CBDE30E00306CC7 /* TextActionPickerTableViewController.swift */,
+				58ABD8131CBDE30E00306CC7 /* ActionPickerTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -700,7 +700,7 @@
 				58EF525D1CC5D6980041E6C0 /* UserDefaults.swift in Sources */,
 				582D5CD11CBB51F5004D8F78 /* ServiceEmptyResponse.swift in Sources */,
 				582D5D091CBB5D25004D8F78 /* AppearanceManager.swift in Sources */,
-				58ABD8141CBDE30E00306CC7 /* TextActionPickerTableViewController.swift in Sources */,
+				58ABD8141CBDE30E00306CC7 /* ActionPickerTableViewController.swift in Sources */,
 				58EF525F1CC5D8C80041E6C0 /* AssignmentRecord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

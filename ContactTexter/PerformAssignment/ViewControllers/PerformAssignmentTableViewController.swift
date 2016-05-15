@@ -14,6 +14,7 @@ class PerformAssignmentTableViewController : TableViewController {
     
     private let assignment: Assignment
     private var selectedContact: Contact?
+    private var selectedCallAction: CallAction?
     private var selectedTextAction: TextAction?
     
     private lazy var infoCell: PerformAssignmentInfoTableViewCell = {
@@ -125,27 +126,27 @@ class PerformAssignmentTableViewController : TableViewController {
             showViewController(peoplePicker, sender: nil)
             
         case self.callContactCell:
-            let phoneNumber = self.selectedContact!.phoneNumber
-            let phoneNumberArray = phoneNumber.componentsSeparatedByCharactersInSet(
-                NSCharacterSet.decimalDigitCharacterSet().invertedSet)
-            let strippedPhoneNumber = NSArray(array: phoneNumberArray).componentsJoinedByString("")
-            
-            let phoneNumberURL = "telprompt://" + strippedPhoneNumber
-            UIApplication.sharedApplication().openURL(NSURL(string: phoneNumberURL)!)
-            addCurrentAssignmentRecord(action: .Call)
-            
-            self.callContactCell.isCompleted = true
-            self.textContactCell.disabled = false
+            if self.assignment.callActions.count > 1 {
+                let actions: [ActionPickerable] = self.assignment.callActions.flatMap({ return $0 })
+                showActionPicker(navigationTitle: "Call Actions", actions: actions)
+                
+            } else {
+                didSelectCallAction(self.assignment.callActions.first!)
+                if let indexPath = self.tableView.indexPathForCell(self.callContactCell) {
+                    self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
+                }
+            }
             
         case self.textContactCell:
             if self.assignment.textActions.count > 1 {
-                let textActionPickerController = TextActionPickerTableViewController(textActions: self.assignment.textActions)
-                textActionPickerController.delegate = self
-                let pickerNavigationController = UINavigationController(rootViewController: textActionPickerController)
-                presentViewController(pickerNavigationController, animated: true, completion: nil)
+                let actions: [ActionPickerable] = self.assignment.textActions.flatMap({ return $0 })
+                showActionPicker(navigationTitle: "Text Actions", actions: actions)
                 
             } else {
                 didSelectTextAction(self.assignment.textActions.first!)
+                if let indexPath = self.tableView.indexPathForCell(self.textContactCell) {
+                    self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
+                }
             }
             
         default:
@@ -176,6 +177,29 @@ class PerformAssignmentTableViewController : TableViewController {
         self.textContactCell.configureCell(contact: contact)
         self.textContactCell.disabled = self.assignment.requireCallFirst
         self.textContactCell.isCompleted = false
+    }
+    
+    private func showActionPicker(navigationTitle navigationTitle: String, actions: [ActionPickerable]) {
+        let actionPickerController = ActionPickerTableViewController(navigationTitle: navigationTitle, actions: actions)
+        actionPickerController.delegate = self
+        let pickerNavigationController = UINavigationController(rootViewController: actionPickerController)
+        presentViewController(pickerNavigationController, animated: true, completion: nil)
+    }
+    
+    private func didSelectCallAction(callAction: CallAction) {
+        self.selectedCallAction = callAction
+        
+        let phoneNumber = self.selectedContact!.phoneNumber
+        let phoneNumberArray = phoneNumber.componentsSeparatedByCharactersInSet(
+            NSCharacterSet.decimalDigitCharacterSet().invertedSet)
+        let strippedPhoneNumber = NSArray(array: phoneNumberArray).componentsJoinedByString("")
+        
+        let phoneNumberURL = "telprompt://" + strippedPhoneNumber
+        UIApplication.sharedApplication().openURL(NSURL(string: phoneNumberURL)!)
+        addCurrentAssignmentRecord(action: .Call)
+        
+        self.callContactCell.isCompleted = true
+        self.textContactCell.disabled = false
     }
     
     private func didSelectTextAction(textAction: TextAction) {
@@ -237,11 +261,19 @@ extension PerformAssignmentTableViewController : ABPeoplePickerNavigationControl
     
 }
 
-extension PerformAssignmentTableViewController : TextActionPickerTableViewControllerDelegate {
+extension PerformAssignmentTableViewController : ActionPickerTableViewControllerDelegate {
     
-    func textActionPickerController(controller: TextActionPickerTableViewController, didSelectTextAction textAction: TextAction) {
+    func actionPickerController(controller: ActionPickerTableViewController, didSelectAction action: ActionPickerable) {
         controller.dismissViewControllerAnimated(true, completion: nil)
-        didSelectTextAction(textAction)
+        
+        switch action {
+        case is CallAction:
+            didSelectCallAction(action as! CallAction)
+        case is TextAction:
+            didSelectTextAction(action as! TextAction)
+        default:
+            break
+        }
     }
     
 }

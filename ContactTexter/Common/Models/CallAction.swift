@@ -25,3 +25,15 @@ extension CallAction : JSONDecodable {
     }
     
 }
+
+extension CallAction : ActionPickerable {
+    
+    var title: String {
+        return self.name
+    }
+    
+    var body: String {
+        return self.script
+    }
+    
+}

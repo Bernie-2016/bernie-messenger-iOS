@@ -25,3 +25,15 @@ extension TextAction : JSONDecodable {
     }
     
 }
+
+extension TextAction : ActionPickerable {
+    
+    var title: String {
+        return self.name
+    }
+    
+    var body: String {
+        return self.content
+    }
+    
+}
