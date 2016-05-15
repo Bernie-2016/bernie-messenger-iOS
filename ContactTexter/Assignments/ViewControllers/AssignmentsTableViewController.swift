@@ -15,6 +15,12 @@ class AssignmentsTableViewController : TableViewController {
     
     private lazy var dummyAssignmentCell = TitledTableViewCell.loadFromNib()
     
+    private lazy var pullToRefreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(didPullToRefresh), forControlEvents: .ValueChanged)
+        return refreshControl
+    }()
+    
     private lazy var errorCell: UITableViewCell = {
         let cell = UITableViewCell()
         cell.textLabel?.textColor = UIColor.body()
@@ -31,26 +37,9 @@ class AssignmentsTableViewController : TableViewController {
         self.tableView.estimatedRowHeight = 75.0
         self.tableView.registerReusableCell(TitledTableViewCell.self)
         self.tableView.tableFooterView = UIView()
+        self.refreshControl = self.pullToRefreshControl
         
-        let businessService = AssignmentsBusinessService(uiDelegate: self)
-        businessService.fetchAssignments {
-            (result: ServiceResult<[Assignment]>) in
-            
-            switch result {
-            case .Success(let assignments):
-                self.assignments = assignments
-                self.showErrorCell = assignments.isEmpty
-                if assignments.isEmpty {
-                    self.errorCell.textLabel?.text = "There aren't any available assignments at this time. Please check again later."
-                }
-                
-            case .Failure(_):
-                self.errorCell.textLabel?.text = "There was a problem loading the assignments. Please try again later."
-                self.showErrorCell = true
-            }
-            
-            self.tableView.reloadData()
-        }
+        fetchAssignments()
     }
     
     // MARK: UITableViewDataSource
@@ -90,6 +79,35 @@ class AssignmentsTableViewController : TableViewController {
         let assignment = self.assignments[indexPath.row]
         let controller = PerformAssignmentTableViewController(assignment: assignment)
         showViewController(controller, sender: nil)
+    }
+    
+    // MARK: Service calls
+    
+    private func fetchAssignments() {
+        let businessService = AssignmentsBusinessService(uiDelegate: self)
+        businessService.fetchAssignments {
+            (result: ServiceResult<[Assignment]>) in
+            
+            switch result {
+            case .Success(let assignments):
+                self.assignments = assignments
+                self.showErrorCell = assignments.isEmpty
+                if assignments.isEmpty {
+                    self.errorCell.textLabel?.text = "There aren't any available assignments at this time. Please check again later."
+                }
+                
+            case .Failure(_):
+                self.errorCell.textLabel?.text = "There was a problem loading the assignments. Please try again later."
+                self.showErrorCell = true
+            }
+            
+            self.refreshControl?.endRefreshing()
+            self.tableView.reloadData()
+        }
+    }
+    
+    @objc private func didPullToRefresh() {
+        fetchAssignments()
     }
     
 }
