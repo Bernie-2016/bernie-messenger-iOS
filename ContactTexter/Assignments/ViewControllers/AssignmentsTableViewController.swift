@@ -97,7 +97,7 @@ class AssignmentsTableViewController : TableViewController {
                 }
                 
             case .Failure(_):
-                self.errorCell.textLabel?.text = "There was a problem loading the assignments. Please try again later."
+                self.errorCell.textLabel?.text = "There was a problem loading the assignments. Make sure you're connected to the Internet."
                 self.showErrorCell = true
             }
             

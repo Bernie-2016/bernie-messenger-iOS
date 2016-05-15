@@ -132,12 +132,12 @@ class PerformAssignmentTableViewController : TableViewController {
         
         switch cell {
         case self.selectContactCell:
-            let peoplePicker = ABPeoplePickerNavigationController()
-            peoplePicker.displayedProperties = [NSNumber(int: kABPersonPhoneProperty)]
-            peoplePicker.predicateForEnablingPerson = NSPredicate(format: "phoneNumbers.@count > 0")
-            peoplePicker.predicateForSelectionOfPerson = NSPredicate(format: "phoneNumbers.@count == 1")
-            peoplePicker.peoplePickerDelegate = self
-            showViewController(peoplePicker, sender: nil)
+            let peoplePickerController = ABPeoplePickerNavigationController()
+            peoplePickerController.displayedProperties = [NSNumber(int: kABPersonPhoneProperty)]
+            peoplePickerController.predicateForEnablingPerson = NSPredicate(format: "phoneNumbers.@count > 0")
+            peoplePickerController.predicateForSelectionOfPerson = NSPredicate(format: "phoneNumbers.@count == 1")
+            peoplePickerController.peoplePickerDelegate = self
+            showViewController(peoplePickerController, sender: nil)
             
         case self.callContactCell:
             if self.assignment.callActions.count > 1 {
