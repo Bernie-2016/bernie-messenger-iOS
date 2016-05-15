@@ -12,7 +12,7 @@ class PerformAssignmentCallContactTableViewCell : TableViewCell, LoadableFromNib
     
     @IBOutlet private weak var phoneIconLabel: UILabel!
     @IBOutlet private weak var contactNameLabel: UILabel!
-    @IBOutlet private weak var scriptLabel: UILabel!
+    @IBOutlet private weak var scriptLabel: MultilineLabel!
     
     var isCompleted: Bool = false {
         didSet {
@@ -20,13 +20,12 @@ class PerformAssignmentCallContactTableViewCell : TableViewCell, LoadableFromNib
         }
     }
     
-    func configureCell(callAction callAction: CallAction?) {
-        self.scriptLabel.text = callAction?.script ?? "Select a script"
-    }
-    
-    func configureCell(contact contact: Contact) {
-        self.contactNameLabel.text = "Call " + contact.firstName
-        self.scriptLabel.text = self.scriptLabel.text?.stringByReplacingOccurrencesOfString("{{contact.firstName}}", withString: contact.firstName)
+    func configureCell(contact contact: Contact?, callAction: CallAction?) {
+        let firstName = contact?.firstName ?? "Contact"
+        let script = callAction?.script ?? "Select a script"
+        
+        self.contactNameLabel.text = "Call \(firstName)"
+        self.scriptLabel.text = script.stringByReplacingOccurrencesOfString("{{contact.firstName}}", withString: firstName)
     }
     
     override func awakeFromNib() {

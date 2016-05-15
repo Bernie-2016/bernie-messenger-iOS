@@ -34,6 +34,7 @@ class ActionPickerTableViewController : TableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tableView.estimatedRowHeight = 75.0
         self.tableView.registerReusableCell(TitledTableViewCell.self)
     }
     

@@ -29,7 +29,7 @@ class PerformAssignmentTableViewController : TableViewController {
     
     private lazy var callContactCell: PerformAssignmentCallContactTableViewCell = {
         let cell = PerformAssignmentCallContactTableViewCell.loadFromNib()
-        cell.configureCell(callAction: nil)
+        cell.configureCell(contact: nil, callAction: nil)
         cell.disabled = true
         return cell
     }()
@@ -171,12 +171,14 @@ class PerformAssignmentTableViewController : TableViewController {
         self.selectedContact = contact
         
         self.selectContactCell.configureCell(contact: contact)
-        self.callContactCell.configureCell(contact: contact)
+        self.callContactCell.configureCell(contact: contact, callAction: nil)
         self.callContactCell.disabled = false
         self.callContactCell.isCompleted = false
         self.textContactCell.configureCell(contact: contact)
         self.textContactCell.disabled = self.assignment.requireCallFirst
         self.textContactCell.isCompleted = false
+        
+        self.tableView.update()
     }
     
     private func showActionPicker(navigationTitle navigationTitle: String, actions: [ActionPickerable]) {
@@ -188,6 +190,7 @@ class PerformAssignmentTableViewController : TableViewController {
     
     private func didSelectCallAction(callAction: CallAction) {
         self.selectedCallAction = callAction
+        self.callContactCell.configureCell(contact: self.selectedContact!, callAction: callAction)
         
         let phoneNumber = self.selectedContact!.phoneNumber
         let phoneNumberArray = phoneNumber.componentsSeparatedByCharactersInSet(
@@ -200,6 +203,8 @@ class PerformAssignmentTableViewController : TableViewController {
         
         self.callContactCell.isCompleted = true
         self.textContactCell.disabled = false
+        
+        self.tableView.update()
     }
     
     private func didSelectTextAction(textAction: TextAction) {
@@ -287,6 +292,8 @@ extension PerformAssignmentTableViewController : MFMessageComposeViewControllerD
             didSendTextMessage()
         case MessageComposeResultFailed:
             presentAlertMessageOverlay(.Error(message: "Sending text message failed. Try sending your text again!"))
+        case MessageComposeResultCancelled:
+            controller.dismissViewControllerAnimated(true, completion: nil)
         default:
             break
         }

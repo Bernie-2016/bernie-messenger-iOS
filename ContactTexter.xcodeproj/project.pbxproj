@@ -426,8 +426,8 @@
 		58ABC0521CBCAFE5009223F4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				58ABC0531CBCAFF8009223F4 /* PerformAssignmentTableViewController.swift */,
 				58ABD8131CBDE30E00306CC7 /* ActionPickerTableViewController.swift */,
+				58ABC0531CBCAFF8009223F4 /* PerformAssignmentTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
