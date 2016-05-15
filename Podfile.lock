@@ -2,20 +2,33 @@ PODS:
   - Alamofire (3.3.1)
   - Font-Awesome-Swift (1.4.6)
   - Freddy (2.1.0)
+  - MBProgressHUD (0.9.2)
   - PureLayout (3.0.1)
 
 DEPENDENCIES:
   - Alamofire (= 3.3.1)
   - Font-Awesome-Swift (= 1.4.6)
   - Freddy (= 2.1.0)
+  - MBProgressHUD (from `https://github.com/jdg/MBProgressHUD.git`, commit `5c3b93f`)
   - PureLayout (= 3.0.1)
+
+EXTERNAL SOURCES:
+  MBProgressHUD:
+    :commit: 5c3b93f
+    :git: https://github.com/jdg/MBProgressHUD.git
+
+CHECKOUT OPTIONS:
+  MBProgressHUD:
+    :commit: 5c3b93f
+    :git: https://github.com/jdg/MBProgressHUD.git
 
 SPEC CHECKSUMS:
   Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
   Font-Awesome-Swift: a965c23e619514be65de9b113f49038ca683c1bb
   Freddy: bbdca013977db29638b24baf6572ce94452bec29
+  MBProgressHUD: c10206b47acf9e1659bd80a366cc935e35745b9b
   PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
 
-PODFILE CHECKSUM: 03f470c99af38ee8a4e39f3b4960942e143ce871
+PODFILE CHECKSUM: 9ac5495e9416d320b2eac5f9f717f5e725e492a6
 
 COCOAPODS: 1.0.0.rc.1
