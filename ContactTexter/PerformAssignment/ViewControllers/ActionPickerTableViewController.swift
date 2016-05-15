@@ -13,7 +13,7 @@ class ActionPickerTableViewController : TableViewController {
     private let navigationTitle: String
     private let actions: [ActionPickerable]
     
-    private let dummyCell = AssignmentTableViewCell.loadFromNib()
+    private let dummyCell = TitledTableViewCell.loadFromNib()
     
     weak var delegate: ActionPickerTableViewControllerDelegate?
     
@@ -34,7 +34,7 @@ class ActionPickerTableViewController : TableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.registerReusableCell(AssignmentTableViewCell.self)
+        self.tableView.registerReusableCell(TitledTableViewCell.self)
     }
     
     // MARK: ViewControllerType
@@ -66,7 +66,7 @@ class ActionPickerTableViewController : TableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: AssignmentTableViewCell = self.tableView.dequeueReusableCell(indexPath)
+        let cell: TitledTableViewCell = self.tableView.dequeueReusableCell(indexPath)
         cell.configureCell(action: self.actions[indexPath.row])
         return cell
     }

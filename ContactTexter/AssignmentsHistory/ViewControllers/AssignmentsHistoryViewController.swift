@@ -12,7 +12,7 @@ class AssignmentsHistoryViewController : TableViewController {
     
     private let assignmentRecords: [AssignmentRecord]
     
-    private lazy var dummyAssignmentCell = AssignmentTableViewCell.loadFromNib()
+    private lazy var dummyAssignmentCell = TitledTableViewCell.loadFromNib()
     
     // MARK: Initializers
     
@@ -31,7 +31,7 @@ class AssignmentsHistoryViewController : TableViewController {
         super.viewDidLoad()
         
         self.tableView.estimatedRowHeight = 75.0
-        self.tableView.registerReusableCell(AssignmentTableViewCell.self)
+        self.tableView.registerReusableCell(TitledTableViewCell.self)
     }
     
     // MARK: ViewControllerType
@@ -53,7 +53,7 @@ class AssignmentsHistoryViewController : TableViewController {
     // MARK: UITableViewDelegate
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: AssignmentTableViewCell = tableView.dequeueReusableCell(indexPath)
+        let cell: TitledTableViewCell = tableView.dequeueReusableCell(indexPath)
         cell.configureCell(assignmentRecord: self.assignmentRecords[indexPath.row])
         return cell
     }

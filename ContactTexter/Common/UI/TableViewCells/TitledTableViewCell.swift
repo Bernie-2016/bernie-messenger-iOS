@@ -1,5 +1,5 @@
 //
-//  AssignmentTableViewCell.swift
+//  TitledTableViewCell.swift
 //  ContactTexter
 //
 //  Created by Justin Baumgartner on 4/10/16.
@@ -8,33 +8,33 @@
 
 import UIKit
 
-class AssignmentTableViewCell : UITableViewCell, LoadableFromNib {
+class TitledTableViewCell : UITableViewCell, LoadableFromNib {
     
-    @IBOutlet private weak var expirationLabel: UILabel!
-    @IBOutlet private weak var nameLabel: MultilineLabel!
+    @IBOutlet private weak var titleLabel: MultilineLabel!
+    @IBOutlet private weak var contentLabel: MultilineLabel!
     
     func configureCell(assignment assignment: Assignment) {
         self.selectionStyle = .Default
         self.accessoryType = .DisclosureIndicator
         
-        self.expirationLabel.text = assignment.expires.expirationFormat
-        self.nameLabel.text = assignment.name
+        self.titleLabel.text = assignment.expires.expirationFormat
+        self.contentLabel.text = assignment.name
     }
     
     func configureCell(assignmentRecord assignmentRecord: AssignmentRecord) {
         self.selectionStyle = .None
         self.accessoryType = .None
         
-        self.expirationLabel.text = assignmentRecord.recordDate.historyFormat
-        self.nameLabel.text = "\(assignmentRecord.action.rawValue) \(assignmentRecord.contactName)"
+        self.titleLabel.text = assignmentRecord.recordDate.historyFormat
+        self.contentLabel.text = "\(assignmentRecord.action.rawValue) \(assignmentRecord.contactName)"
     }
     
     func configureCell(action action: ActionPickerable) {
         self.selectionStyle = .Default
         self.accessoryType = .None
         
-        self.expirationLabel.text = action.title
-        self.nameLabel.text = action.body
+        self.titleLabel.text = action.title
+        self.contentLabel.text = action.body
     }
     
 }

@@ -12,7 +12,7 @@ class AssignmentsTableViewController : TableViewController {
     
     private var assignments: [Assignment] = []
     
-    private lazy var dummyAssignmentCell = AssignmentTableViewCell.loadFromNib()
+    private lazy var dummyAssignmentCell = TitledTableViewCell.loadFromNib()
     
     // MARK: Life cycle methods
     
@@ -20,7 +20,7 @@ class AssignmentsTableViewController : TableViewController {
         super.viewDidLoad()
         
         self.tableView.estimatedRowHeight = 75.0
-        self.tableView.registerReusableCell(AssignmentTableViewCell.self)
+        self.tableView.registerReusableCell(TitledTableViewCell.self)
         
         let businessService = AssignmentsBusinessService(uiDelegate: self)
         businessService.fetchAssignments {
@@ -51,7 +51,7 @@ class AssignmentsTableViewController : TableViewController {
     // MARK: UITableViewDelegate
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: AssignmentTableViewCell = tableView.dequeueReusableCell(indexPath)
+        let cell: TitledTableViewCell = tableView.dequeueReusableCell(indexPath)
         cell.configureCell(assignment: self.assignments[indexPath.row])
         return cell
     }

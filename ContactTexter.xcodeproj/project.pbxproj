@@ -33,9 +33,9 @@
 		582D5CF91CBB5799004D8F78 /* UIImage+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CF81CBB5799004D8F78 /* UIImage+Utils.swift */; };
 		582D5CFB1CBB57D2004D8F78 /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CFA1CBB57D2004D8F78 /* UIColor+Utils.swift */; };
 		582D5D001CBB5B7E004D8F78 /* AssignmentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CFF1CBB5B7E004D8F78 /* AssignmentsTableViewController.swift */; };
-		582D5D021CBB5B95004D8F78 /* AssignmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5D011CBB5B95004D8F78 /* AssignmentTableViewCell.swift */; };
+		582D5D021CBB5B95004D8F78 /* TitledTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5D011CBB5B95004D8F78 /* TitledTableViewCell.swift */; };
 		582D5D041CBB5BB6004D8F78 /* Assignments.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 582D5D031CBB5BB6004D8F78 /* Assignments.storyboard */; };
-		582D5D061CBB5BC9004D8F78 /* AssignmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 582D5D051CBB5BC9004D8F78 /* AssignmentTableViewCell.xib */; };
+		582D5D061CBB5BC9004D8F78 /* TitledTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 582D5D051CBB5BC9004D8F78 /* TitledTableViewCell.xib */; };
 		582D5D091CBB5D25004D8F78 /* AppearanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5D081CBB5D25004D8F78 /* AppearanceManager.swift */; };
 		582D5D101CBB6AD6004D8F78 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 582D5D0F1CBB6AD6004D8F78 /* LaunchScreen.xib */; };
 		582D5D131CBB6FD9004D8F78 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5D121CBB6FD9004D8F78 /* Assignment.swift */; };
@@ -104,9 +104,9 @@
 		582D5CF81CBB5799004D8F78 /* UIImage+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Utils.swift"; sourceTree = "<group>"; };
 		582D5CFA1CBB57D2004D8F78 /* UIColor+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Utils.swift"; sourceTree = "<group>"; };
 		582D5CFF1CBB5B7E004D8F78 /* AssignmentsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentsTableViewController.swift; sourceTree = "<group>"; };
-		582D5D011CBB5B95004D8F78 /* AssignmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentTableViewCell.swift; sourceTree = "<group>"; };
+		582D5D011CBB5B95004D8F78 /* TitledTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitledTableViewCell.swift; sourceTree = "<group>"; };
 		582D5D031CBB5BB6004D8F78 /* Assignments.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Assignments.storyboard; sourceTree = "<group>"; };
-		582D5D051CBB5BC9004D8F78 /* AssignmentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssignmentTableViewCell.xib; sourceTree = "<group>"; };
+		582D5D051CBB5BC9004D8F78 /* TitledTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitledTableViewCell.xib; sourceTree = "<group>"; };
 		582D5D081CBB5D25004D8F78 /* AppearanceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceManager.swift; sourceTree = "<group>"; };
 		582D5D0F1CBB6AD6004D8F78 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		582D5D121CBB6FD9004D8F78 /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
@@ -347,8 +347,6 @@
 			isa = PBXGroup;
 			children = (
 				582D5D031CBB5BB6004D8F78 /* Assignments.storyboard */,
-				582D5D011CBB5B95004D8F78 /* AssignmentTableViewCell.swift */,
-				582D5D051CBB5BC9004D8F78 /* AssignmentTableViewCell.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -499,6 +497,8 @@
 			isa = PBXGroup;
 			children = (
 				58F26F791CC0A2C500552945 /* TableViewCell.swift */,
+				582D5D011CBB5B95004D8F78 /* TitledTableViewCell.swift */,
+				582D5D051CBB5BC9004D8F78 /* TitledTableViewCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -587,7 +587,7 @@
 				58ABC0581CBCB090009223F4 /* PerformAssignmentInfoTableViewCell.xib in Resources */,
 				58EF52581CC5C4350041E6C0 /* AlertOverlayView.xib in Resources */,
 				582D5D041CBB5BB6004D8F78 /* Assignments.storyboard in Resources */,
-				582D5D061CBB5BC9004D8F78 /* AssignmentTableViewCell.xib in Resources */,
+				582D5D061CBB5BC9004D8F78 /* TitledTableViewCell.xib in Resources */,
 				58F26F7E1CC0A5DD00552945 /* PerformAssignmentCallContactTableViewCell.xib in Resources */,
 				582D5CB81CBB4CB7004D8F78 /* Assets.xcassets in Resources */,
 				58ABD8121CBDC07C00306CC7 /* PerformAssignmentTextContactTableViewCell.xib in Resources */,
@@ -677,7 +677,7 @@
 				582D5CEA1CBB5574004D8F78 /* MultilineLabel.swift in Sources */,
 				58EF52661CC5E8A40041E6C0 /* AssignmentsHistoryViewController.swift in Sources */,
 				58ABD8101CBDBF7700306CC7 /* PerformAssignmentTextContactTableViewCell.swift in Sources */,
-				582D5D021CBB5B95004D8F78 /* AssignmentTableViewCell.swift in Sources */,
+				582D5D021CBB5B95004D8F78 /* TitledTableViewCell.swift in Sources */,
 				582D5CB11CBB4CB7004D8F78 /* AppDelegate.swift in Sources */,
 				584B75A61CE8EE1600FD594A /* BusinessService.swift in Sources */,
 				58ABD80E1CBDB32F00306CC7 /* Contact.swift in Sources */,
