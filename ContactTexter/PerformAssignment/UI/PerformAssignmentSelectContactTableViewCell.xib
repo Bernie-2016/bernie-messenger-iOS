@@ -22,13 +22,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="My Contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ae3-ka-CtD">
-                        <rect key="frame" x="36" y="15" width="340" height="18"/>
+                        <rect key="frame" x="50" y="15" width="326" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.96078431372549022" green="0.35686274509803922" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQf-vA-1sU">
-                        <rect key="frame" x="36" y="37" width="340.5" height="30"/>
+                        <rect key="frame" x="50" y="37" width="326.5" height="30"/>
                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <color key="textColor" red="0.21176470588235294" green="0.2627450980392157" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -41,9 +41,9 @@
                     <constraint firstItem="JQf-vA-1sU" firstAttribute="top" secondItem="ae3-ka-CtD" secondAttribute="baseline" constant="8" id="KHO-lf-qTa"/>
                     <constraint firstItem="JQf-vA-1sU" firstAttribute="trailing" secondItem="ae3-ka-CtD" secondAttribute="trailing" id="MtC-Q2-A4d"/>
                     <constraint firstAttribute="trailing" secondItem="ae3-ka-CtD" secondAttribute="trailing" constant="15" id="UWN-Yv-cIi"/>
+                    <constraint firstItem="ae3-ka-CtD" firstAttribute="leading" secondItem="Xay-o5-Ec5" secondAttribute="leading" constant="50" id="e25-i7-52n"/>
                     <constraint firstItem="YsZ-v7-LAb" firstAttribute="leading" secondItem="Xay-o5-Ec5" secondAttribute="leading" constant="15" id="hgk-aR-NH6"/>
                     <constraint firstItem="ae3-ka-CtD" firstAttribute="top" secondItem="Xay-o5-Ec5" secondAttribute="top" constant="15" id="msY-06-PMT"/>
-                    <constraint firstItem="ae3-ka-CtD" firstAttribute="leading" secondItem="YsZ-v7-LAb" secondAttribute="trailing" constant="10" id="sCp-G5-0Hw"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

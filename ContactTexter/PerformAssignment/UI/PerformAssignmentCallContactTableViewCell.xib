@@ -16,19 +16,19 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zrr-Xj-tQI">
-                        <rect key="frame" x="15" y="31" width="11" height="21"/>
+                        <rect key="frame" x="17" y="31" width="11" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a script" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jf9-W9-sFC" customClass="MultilineLabel" customModule="ContactTexter" customModuleProvider="target">
-                        <rect key="frame" x="36" y="37.5" width="345" height="31"/>
+                        <rect key="frame" x="50" y="37.5" width="331" height="31"/>
                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <color key="textColor" red="0.21176470589999999" green="0.26274509800000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Call Contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="430-mv-ncb">
-                        <rect key="frame" x="36" y="15" width="345" height="18"/>
+                        <rect key="frame" x="50" y="15" width="331" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.96078431369999995" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -38,11 +38,11 @@
                     <constraint firstItem="Zrr-Xj-tQI" firstAttribute="centerY" secondItem="8ys-bQ-GvK" secondAttribute="centerY" id="6X8-80-AOL"/>
                     <constraint firstItem="Jf9-W9-sFC" firstAttribute="leading" secondItem="430-mv-ncb" secondAttribute="leading" id="NND-ZO-qKM"/>
                     <constraint firstItem="Jf9-W9-sFC" firstAttribute="trailing" secondItem="430-mv-ncb" secondAttribute="trailing" id="Qzl-jQ-Zh0"/>
+                    <constraint firstItem="430-mv-ncb" firstAttribute="leading" secondItem="8ys-bQ-GvK" secondAttribute="leading" constant="50" id="cYd-7b-w7y"/>
                     <constraint firstItem="430-mv-ncb" firstAttribute="top" secondItem="8ys-bQ-GvK" secondAttribute="top" constant="15" id="d81-8U-chU"/>
                     <constraint firstAttribute="bottom" secondItem="Jf9-W9-sFC" secondAttribute="bottom" constant="15" id="fa6-Jn-uQg"/>
-                    <constraint firstItem="430-mv-ncb" firstAttribute="leading" secondItem="Zrr-Xj-tQI" secondAttribute="trailing" constant="10" id="nE1-S3-OT1"/>
                     <constraint firstAttribute="trailing" secondItem="430-mv-ncb" secondAttribute="trailing" constant="15" id="oxT-XS-Nji"/>
-                    <constraint firstItem="Zrr-Xj-tQI" firstAttribute="leading" secondItem="8ys-bQ-GvK" secondAttribute="leading" constant="15" id="r5H-R4-6FU"/>
+                    <constraint firstItem="Zrr-Xj-tQI" firstAttribute="leading" secondItem="8ys-bQ-GvK" secondAttribute="leading" constant="17" id="r5H-R4-6FU"/>
                     <constraint firstItem="Jf9-W9-sFC" firstAttribute="top" secondItem="430-mv-ncb" secondAttribute="baseline" constant="8" id="wE8-uJ-cTU"/>
                 </constraints>
             </tableViewCellContentView>
