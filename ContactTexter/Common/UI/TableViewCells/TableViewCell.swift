@@ -20,6 +20,15 @@ class TableViewCell : UITableViewCell {
         }
     }
     
+    var customSeparatorInset: UIEdgeInsets {
+        set {
+            self.customBackgroundView.separatorInset = newValue
+        }
+        get {
+            return self.customBackgroundView.separatorInset
+        }
+    }
+    
     // MARK: Inits
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
@@ -46,6 +55,16 @@ private class TableViewCellBackgroundView : UIView {
         return separator
     }()
     
+    var separatorLeadingConstraint: NSLayoutConstraint!
+    var separatorTrailingConstraint: NSLayoutConstraint!
+    
+    var separatorInset: UIEdgeInsets = UIEdgeInsets(top: 0.0, left: 15.0, bottom: 0.0, right: 0.0) {
+        didSet {
+            self.separatorLeadingConstraint.constant = self.separatorInset.left
+            self.separatorTrailingConstraint.constant = self.separatorInset.right
+        }
+    }
+    
     // MARK: Inits
     
     override init(frame: CGRect) {
@@ -60,8 +79,8 @@ private class TableViewCellBackgroundView : UIView {
     
     func setUpSeparatorLine() {
         addSubview(self.separator)
-        self.separator.autoPinEdgeToSuperviewEdge(.Leading, withInset: 15.0)
-        self.separator.autoPinEdgeToSuperviewEdge(.Trailing)
+        self.separatorLeadingConstraint = self.separator.autoPinEdgeToSuperviewEdge(.Leading, withInset: 15.0)
+        self.separatorTrailingConstraint = self.separator.autoPinEdgeToSuperviewEdge(.Trailing)
         self.separator.autoPinEdgeToSuperviewEdge(.Bottom)
     }
     
