@@ -29,4 +29,12 @@ class AssignmentTableViewCell : UITableViewCell, LoadableFromNib {
         self.nameLabel.text = "\(assignmentRecord.action.rawValue) \(assignmentRecord.contactName)"
     }
     
+    func configureCell(action action: ActionPickerable) {
+        self.selectionStyle = .Default
+        self.accessoryType = .None
+        
+        self.expirationLabel.text = action.title
+        self.nameLabel.text = action.body
+    }
+    
 }
