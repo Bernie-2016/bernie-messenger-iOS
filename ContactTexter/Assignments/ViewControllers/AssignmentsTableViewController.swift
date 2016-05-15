@@ -11,8 +11,17 @@ import UIKit
 class AssignmentsTableViewController : TableViewController {
     
     private var assignments: [Assignment] = []
+    private var showErrorCell: Bool = false
     
     private lazy var dummyAssignmentCell = TitledTableViewCell.loadFromNib()
+    
+    private lazy var errorCell: UITableViewCell = {
+        let cell = UITableViewCell()
+        cell.textLabel?.textColor = UIColor.body()
+        cell.textLabel?.font = UIFont.systemFontOfSize(17.0)
+        cell.textLabel?.numberOfLines = 0
+        return cell
+    }()
     
     // MARK: Life cycle methods
     
@@ -21,6 +30,7 @@ class AssignmentsTableViewController : TableViewController {
         
         self.tableView.estimatedRowHeight = 75.0
         self.tableView.registerReusableCell(TitledTableViewCell.self)
+        self.tableView.tableFooterView = UIView()
         
         let businessService = AssignmentsBusinessService(uiDelegate: self)
         businessService.fetchAssignments {
@@ -29,12 +39,17 @@ class AssignmentsTableViewController : TableViewController {
             switch result {
             case .Success(let assignments):
                 self.assignments = assignments
-                self.tableView.reloadData()
+                self.showErrorCell = assignments.isEmpty
+                if assignments.isEmpty {
+                    self.errorCell.textLabel?.text = "There aren't any available assignments at this time. Please check again later."
+                }
                 
             case .Failure(_):
-                // Do error things
-                break
+                self.errorCell.textLabel?.text = "There was a problem loading the assignments. Please try again later."
+                self.showErrorCell = true
             }
+            
+            self.tableView.reloadData()
         }
     }
     
@@ -45,20 +60,30 @@ class AssignmentsTableViewController : TableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.assignments.count
+        return self.showErrorCell ? 1 : self.assignments.count
     }
     
     // MARK: UITableViewDelegate
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: TitledTableViewCell = tableView.dequeueReusableCell(indexPath)
-        cell.configureCell(assignment: self.assignments[indexPath.row])
-        return cell
+        if self.showErrorCell {
+            return self.errorCell
+            
+        } else {
+            let cell: TitledTableViewCell = tableView.dequeueReusableCell(indexPath)
+            cell.configureCell(assignment: self.assignments[indexPath.row])
+            return cell
+        }
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        self.dummyAssignmentCell.configureCell(assignment: self.assignments[indexPath.row])
-        return self.dummyAssignmentCell.calculatedHeight(tableView: tableView)
+        if self.showErrorCell {
+            return self.errorCell.calculatedHeight(tableView: tableView)
+            
+        } else {
+            self.dummyAssignmentCell.configureCell(assignment: self.assignments[indexPath.row])
+            return self.dummyAssignmentCell.calculatedHeight(tableView: tableView)
+        }
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
