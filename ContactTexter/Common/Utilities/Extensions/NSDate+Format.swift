@@ -14,7 +14,7 @@ extension NSDate {
     
     convenience init?(fromString string: String) {
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
         
         guard let date = dateFormatter.dateFromString(string) else {
             return nil
