@@ -11,23 +11,7 @@ import UIKit
 
 protocol BusinessServiceUIDelegate : class {
     
-    /**
-     Method that will be called whenever a business service is about to perform a blocking
-     call. Any UI that needs to be updated to communicate that the app is waiting should
-     be done inside this method.
-     
-     - parameter businessService: The business service that initiated the blocking call
-     - parameter loadingMessage: Optional message to show beneath loading indicator
-     */
     func willPerformBlockingCall(loadingMessage loadingMessage: String?, businessService: BusinessService)
-    
-    /**
-     Method that will be called whenever a business service completes a blocking call.
-     Any UI updates that need to be done to enable the UI should be done inside this
-     method.
-     
-     - parameter businessService: The business service that initiated the blocking call
-     */
     func didFinishBlockingCall(businessService businessService: BusinessService)
     
 }

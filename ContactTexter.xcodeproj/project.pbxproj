@@ -13,7 +13,6 @@
 		582D5CB81CBB4CB7004D8F78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 582D5CB71CBB4CB7004D8F78 /* Assets.xcassets */; };
 		582D5CCF1CBB51F5004D8F78 /* ServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CC51CBB51F5004D8F78 /* ServiceClient.swift */; };
 		582D5CD01CBB51F5004D8F78 /* FreddyResponseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CC71CBB51F5004D8F78 /* FreddyResponseSerializer.swift */; };
-		582D5CD11CBB51F5004D8F78 /* ServiceEmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CC91CBB51F5004D8F78 /* ServiceEmptyResponse.swift */; };
 		582D5CD21CBB51F5004D8F78 /* ServiceEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CCA1CBB51F5004D8F78 /* ServiceEndpoint.swift */; };
 		582D5CD31CBB51F5004D8F78 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CCB1CBB51F5004D8F78 /* ServiceError.swift */; };
 		582D5CD41CBB51F5004D8F78 /* ServiceMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5CCC1CBB51F5004D8F78 /* ServiceMethod.swift */; };
@@ -84,7 +83,6 @@
 		582D5CBC1CBB4CB8004D8F78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		582D5CC51CBB51F5004D8F78 /* ServiceClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceClient.swift; sourceTree = "<group>"; };
 		582D5CC71CBB51F5004D8F78 /* FreddyResponseSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreddyResponseSerializer.swift; sourceTree = "<group>"; };
-		582D5CC91CBB51F5004D8F78 /* ServiceEmptyResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceEmptyResponse.swift; sourceTree = "<group>"; };
 		582D5CCA1CBB51F5004D8F78 /* ServiceEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceEndpoint.swift; sourceTree = "<group>"; };
 		582D5CCB1CBB51F5004D8F78 /* ServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		582D5CCC1CBB51F5004D8F78 /* ServiceMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceMethod.swift; sourceTree = "<group>"; };
@@ -239,7 +237,6 @@
 		582D5CC81CBB51F5004D8F78 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				582D5CC91CBB51F5004D8F78 /* ServiceEmptyResponse.swift */,
 				582D5CCA1CBB51F5004D8F78 /* ServiceEndpoint.swift */,
 				582D5CCB1CBB51F5004D8F78 /* ServiceError.swift */,
 				582D5CCC1CBB51F5004D8F78 /* ServiceMethod.swift */,
@@ -698,7 +695,6 @@
 				58F26F7C1CC0A5BA00552945 /* PerformAssignmentCallContactTableViewCell.swift in Sources */,
 				58F26F751CBF3E1500552945 /* ViewControllerType.swift in Sources */,
 				58EF525D1CC5D6980041E6C0 /* UserDefaults.swift in Sources */,
-				582D5CD11CBB51F5004D8F78 /* ServiceEmptyResponse.swift in Sources */,
 				582D5D091CBB5D25004D8F78 /* AppearanceManager.swift in Sources */,
 				58ABD8141CBDE30E00306CC7 /* ActionPickerTableViewController.swift in Sources */,
 				58EF525F1CC5D8C80041E6C0 /* AssignmentRecord.swift in Sources */,

@@ -8,16 +8,8 @@
 
 protocol BusinessService : class {
     
-    /// Optional delegate to handle UI updates
     weak var uiDelegate: BusinessServiceUIDelegate? { get }
     
-    /**
-     Initialize a `BusinessService` protocol based object
-     
-     - parameter uiDelegate: Optional delegate to handle UI updates
-     
-     - returns: The initialized business service object
-     */
     init(uiDelegate: BusinessServiceUIDelegate?)
     
 }
