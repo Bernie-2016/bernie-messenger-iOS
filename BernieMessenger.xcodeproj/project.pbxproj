@@ -795,7 +795,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Bernie 2016, Inc. (TL9762W3KX)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BernieMessenger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -814,13 +814,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Bernie 2016, Inc. (TL9762W3KX)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BernieMessenger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.berniesanders.messenger;
 				PRODUCT_NAME = BernieMessenger;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "c371f424-1125-4e23-a5a6-37a0f6c33b81";
 				SWIFT_OBJC_BRIDGING_HEADER = "BernieMessenger/BernieMessenger-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
