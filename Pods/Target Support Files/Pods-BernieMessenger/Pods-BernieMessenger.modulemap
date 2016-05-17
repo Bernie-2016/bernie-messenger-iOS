@@ -1,0 +1,6 @@
+framework module Pods_BernieMessenger {
+  umbrella header "Pods-BernieMessenger-umbrella.h"
+
+  export *
+  module * { export * }
+}
