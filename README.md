@@ -1,6 +1,6 @@
 # Bernie Messenger for iOS
 
-Bernie Messenger helps you communicate official calls to action from the Bernie 2016 campaign with to personal contacts.
+Bernie Messenger helps you communicate official calls to action from the Bernie 2016 campaign to your personal contacts.
 
 * Help get your friends registered to vote.
 * Invite your friends to volunteer or attend campaign events.
