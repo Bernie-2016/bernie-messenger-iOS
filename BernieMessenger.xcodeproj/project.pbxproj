@@ -799,7 +799,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BernieMessenger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.berniesanders.ContactTexter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.berniesanders.messenger;
 				PRODUCT_NAME = BernieMessenger;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "BernieMessenger/BernieMessenger-Bridging-Header.h";
@@ -818,7 +818,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BernieMessenger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.berniesanders.ContactTexter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.berniesanders.messenger;
 				PRODUCT_NAME = BernieMessenger;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "BernieMessenger/BernieMessenger-Bridging-Header.h";
