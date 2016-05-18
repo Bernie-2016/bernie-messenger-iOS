@@ -60,7 +60,7 @@ class PerformAssignmentTableViewController : TableViewController {
         
         // Handle device that can't call or text
         if dataSource.count == 2 {
-            return [self.errorCell]
+            return [self.infoCell, self.errorCell]
         }
         return dataSource
     }()
