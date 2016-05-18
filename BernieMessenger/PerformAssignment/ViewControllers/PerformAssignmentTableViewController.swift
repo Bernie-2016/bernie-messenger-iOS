@@ -40,12 +40,9 @@ class PerformAssignmentTableViewController : TableViewController {
         return cell
     }()
     
-    private lazy var errorCell: UITableViewCell = {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = "Unfortunately, your device cannot complete this assignment. Please try completing this assignment on a device that can call or text!"
-        cell.textLabel?.textColor = UIColor.body()
-        cell.textLabel?.font = UIFont.systemFontOfSize(17.0)
-        cell.textLabel?.numberOfLines = 0
+    private lazy var errorCell: ErrorTableViewCell = {
+        let cell = ErrorTableViewCell.loadFromNib()
+        cell.errorText = "Unfortunately, your device cannot complete this assignment. Please try completing this assignment on a device that can call or text!"
         return cell
     }()
     

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="63" id="PtC-O2-dmE" customClass="ErrorTableViewCell" customModule="BernieMessenger" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="348" height="63"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PtC-O2-dmE" id="I4L-dv-gNS">
+                <rect key="frame" x="0.0" y="0.0" width="348" height="62.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGu-bK-NO0" customClass="MultilineLabel" customModule="BernieMessenger" customModuleProvider="target">
+                        <rect key="frame" x="15" y="15" width="318" height="37"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.21176470588235294" green="0.2627450980392157" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="xGu-bK-NO0" firstAttribute="top" secondItem="I4L-dv-gNS" secondAttribute="top" constant="15" id="1lB-gg-5Ks"/>
+                    <constraint firstItem="xGu-bK-NO0" firstAttribute="leading" secondItem="I4L-dv-gNS" secondAttribute="leading" constant="15" id="NQd-NU-j6i"/>
+                    <constraint firstAttribute="bottom" secondItem="xGu-bK-NO0" secondAttribute="baseline" constant="15" id="TlQ-IS-2bh"/>
+                    <constraint firstAttribute="trailing" secondItem="xGu-bK-NO0" secondAttribute="trailing" constant="15" id="jqU-Kt-s2b"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="errorLabel" destination="xGu-bK-NO0" id="hIu-C5-ec6"/>
+            </connections>
+            <point key="canvasLocation" x="449" y="225.5"/>
+        </tableViewCell>
+    </objects>
+</document>

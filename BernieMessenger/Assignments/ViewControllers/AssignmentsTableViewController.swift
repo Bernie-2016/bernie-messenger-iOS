@@ -21,12 +21,8 @@ class AssignmentsTableViewController : TableViewController {
         return refreshControl
     }()
     
-    private lazy var errorCell: UITableViewCell = {
-        let cell = UITableViewCell()
-        cell.textLabel?.textColor = UIColor.body()
-        cell.textLabel?.font = UIFont.systemFontOfSize(17.0)
-        cell.textLabel?.numberOfLines = 0
-        return cell
+    private lazy var errorCell: ErrorTableViewCell = {
+        return ErrorTableViewCell.loadFromNib()
     }()
     
     // MARK: Life cycle methods
@@ -93,11 +89,11 @@ class AssignmentsTableViewController : TableViewController {
                 self.assignments = assignments
                 self.showErrorCell = assignments.isEmpty
                 if assignments.isEmpty {
-                    self.errorCell.textLabel?.text = "There aren't any available assignments at this time. Please check again later."
+                    self.errorCell.errorText = "There aren't any available assignments at this time. Please check again later."
                 }
                 
-            case .Failure(_):
-                self.errorCell.textLabel?.text = "There was a problem loading the assignments. Make sure you're connected to the Internet."
+            case .Failure:
+                self.errorCell.errorText = "There was a problem loading the assignments. Make sure you're connected to the Internet."
                 self.showErrorCell = true
             }
             

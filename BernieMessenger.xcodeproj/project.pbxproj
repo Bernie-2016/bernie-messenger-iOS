@@ -41,6 +41,8 @@
 		582D5D131CBB6FD9004D8F78 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5D121CBB6FD9004D8F78 /* Assignment.swift */; };
 		582D5D151CBB70C8004D8F78 /* TextAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D5D141CBB70C8004D8F78 /* TextAction.swift */; };
 		583536D01CE7DD670032B9E5 /* CallAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583536CF1CE7DD670032B9E5 /* CallAction.swift */; };
+		584449861CEC09E600A1607F /* ErrorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584449851CEC09E600A1607F /* ErrorTableViewCell.swift */; };
+		584449881CEC0A0900A1607F /* ErrorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584449871CEC0A0900A1607F /* ErrorTableViewCell.xib */; };
 		584B75A61CE8EE1600FD594A /* BusinessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584B75A51CE8EE1600FD594A /* BusinessService.swift */; };
 		584B75A81CE8EE2C00FD594A /* BusinessServiceUIDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584B75A71CE8EE2C00FD594A /* BusinessServiceUIDelegate.swift */; };
 		58ABC04F1CBC9002009223F4 /* AssignmentsBusinessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ABC04E1CBC9002009223F4 /* AssignmentsBusinessService.swift */; };
@@ -109,6 +111,8 @@
 		582D5D121CBB6FD9004D8F78 /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
 		582D5D141CBB70C8004D8F78 /* TextAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextAction.swift; sourceTree = "<group>"; };
 		583536CF1CE7DD670032B9E5 /* CallAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallAction.swift; sourceTree = "<group>"; };
+		584449851CEC09E600A1607F /* ErrorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorTableViewCell.swift; sourceTree = "<group>"; };
+		584449871CEC0A0900A1607F /* ErrorTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ErrorTableViewCell.xib; sourceTree = "<group>"; };
 		584B75A51CE8EE1600FD594A /* BusinessService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessService.swift; sourceTree = "<group>"; };
 		584B75A71CE8EE2C00FD594A /* BusinessServiceUIDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessServiceUIDelegate.swift; sourceTree = "<group>"; };
 		58ABC04E1CBC9002009223F4 /* AssignmentsBusinessService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentsBusinessService.swift; sourceTree = "<group>"; };
@@ -501,6 +505,8 @@
 		58F26F781CC0A2BA00552945 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				584449851CEC09E600A1607F /* ErrorTableViewCell.swift */,
+				584449871CEC0A0900A1607F /* ErrorTableViewCell.xib */,
 				58F26F791CC0A2C500552945 /* TableViewCell.swift */,
 				582D5D011CBB5B95004D8F78 /* TitledTableViewCell.swift */,
 				582D5D051CBB5BC9004D8F78 /* TitledTableViewCell.xib */,
@@ -579,6 +585,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				584449881CEC0A0900A1607F /* ErrorTableViewCell.xib in Resources */,
 				582D5D101CBB6AD6004D8F78 /* LaunchScreen.xib in Resources */,
 				58ABC05C1CBCB469009223F4 /* PerformAssignmentSelectContactTableViewCell.xib in Resources */,
 				58ABC0581CBCB090009223F4 /* PerformAssignmentInfoTableViewCell.xib in Resources */,
@@ -691,6 +698,7 @@
 				58F26F6F1CBF3CD700552945 /* LeftBarButtonItemConfigurable.swift in Sources */,
 				58ABD81A1CBE0E4C00306CC7 /* UIView+AppearanceSwift.m in Sources */,
 				583536D01CE7DD670032B9E5 /* CallAction.swift in Sources */,
+				584449861CEC09E600A1607F /* ErrorTableViewCell.swift in Sources */,
 				58ABC0541CBCAFF8009223F4 /* PerformAssignmentTableViewController.swift in Sources */,
 				58F26F7C1CC0A5BA00552945 /* PerformAssignmentCallContactTableViewCell.swift in Sources */,
 				58F26F751CBF3E1500552945 /* ViewControllerType.swift in Sources */,
