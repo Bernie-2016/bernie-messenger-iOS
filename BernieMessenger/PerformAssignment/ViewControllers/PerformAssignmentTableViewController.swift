@@ -134,7 +134,7 @@ class PerformAssignmentTableViewController : TableViewController {
             peoplePickerController.predicateForEnablingPerson = NSPredicate(format: "phoneNumbers.@count > 0")
             peoplePickerController.predicateForSelectionOfPerson = NSPredicate(format: "phoneNumbers.@count == 1")
             peoplePickerController.peoplePickerDelegate = self
-            showViewController(peoplePickerController, sender: nil)
+            presentViewController(peoplePickerController, animated: true, completion: nil)
             
         case self.callContactCell:
             if self.assignment.callActions.count > 1 {
