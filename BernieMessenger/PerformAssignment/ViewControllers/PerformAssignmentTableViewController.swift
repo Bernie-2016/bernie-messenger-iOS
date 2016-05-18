@@ -267,19 +267,25 @@ extension PerformAssignmentTableViewController : ABPeoplePickerNavigationControl
         let lastName = lastNameOfPerson(person)
         
         let phoneNumbers = ABRecordCopyValue(person, property).takeRetainedValue()
-        let selectedIndex = ABMultiValueGetIndexForIdentifier(phoneNumbers, identifier);
-        let selectedPhoneNumber = ABMultiValueCopyValueAtIndex(phoneNumbers, selectedIndex).takeRetainedValue() as! String;
+        let selectedIndex = ABMultiValueGetIndexForIdentifier(phoneNumbers, identifier)
+        let selectedPhoneNumber = ABMultiValueCopyValueAtIndex(phoneNumbers, selectedIndex).takeRetainedValue() as! String
         
         let contact = Contact(firstName: firstName, lastName: lastName, phoneNumber: selectedPhoneNumber)
         didSelectContact(contact)
     }
     
     private func firstNameOfPerson(person: ABRecord) -> String {
-        return ABRecordCopyValue(person, kABPersonFirstNameProperty).takeRetainedValue() as? String ?? ""
+        guard let personCopy = ABRecordCopyValue(person, kABPersonFirstNameProperty) else {
+            return ""
+        }
+        return personCopy.takeRetainedValue() as? String ?? ""
     }
     
     private func lastNameOfPerson(person: ABRecord) -> String {
-        return ABRecordCopyValue(person, kABPersonLastNameProperty).takeRetainedValue() as? String ?? ""
+        guard let personCopy = ABRecordCopyValue(person, kABPersonLastNameProperty) else {
+            return ""
+        }
+        return personCopy.takeRetainedValue() as? String ?? ""
     }
     
 }
