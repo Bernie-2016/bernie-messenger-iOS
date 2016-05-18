@@ -19,7 +19,7 @@ extension AssignmentsEndpoint : ServiceEndpoint {
     }
     
     var resourcePath: String {
-        return "contact-assignments.json"
+        return "contact-assignments.json?platform=iOS"
     }
     
 }
