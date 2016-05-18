@@ -6,6 +6,7 @@
 //  Copyright © 2016 Bernie Sanders 2016. All rights reserved.
 //
 
+import CoreTelephony
 import MessageUI
 import UIKit
 
@@ -31,7 +32,12 @@ extension UIDevice {
         #if arch(i386) || arch(x86_64)
             return true
         #else
-            return UIApplication.sharedApplication().canOpenURL(NSURL(string: "tel://")!)
+            if UIApplication.sharedApplication().canOpenURL(NSURL(string: "tel://")!) {
+                if let networkCode = CTTelephonyNetworkInfo().subscriberCellularProvider?.mobileNetworkCode {
+                    return !networkCode.isEmpty && networkCode != "65535"
+                }
+            }
+            return false
         #endif
     }
     
