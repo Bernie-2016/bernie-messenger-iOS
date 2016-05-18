@@ -7,6 +7,7 @@
 //
 
 import AddressBookUI
+import ContactsUI
 import MessageUI
 import UIKit
 
@@ -129,12 +130,7 @@ class PerformAssignmentTableViewController : TableViewController {
         
         switch cell {
         case self.selectContactCell:
-            let peoplePickerController = ABPeoplePickerNavigationController()
-            peoplePickerController.displayedProperties = [NSNumber(int: kABPersonPhoneProperty)]
-            peoplePickerController.predicateForEnablingPerson = NSPredicate(format: "phoneNumbers.@count > 0")
-            peoplePickerController.predicateForSelectionOfPerson = NSPredicate(format: "phoneNumbers.@count == 1")
-            peoplePickerController.peoplePickerDelegate = self
-            presentViewController(peoplePickerController, animated: true, completion: nil)
+            showContactPicker()
             
         case self.callContactCell:
             if self.assignment.callActions.count > 1 {
@@ -177,6 +173,25 @@ class PerformAssignmentTableViewController : TableViewController {
     }
     
     // MARK: Cell management
+    
+    private func showContactPicker() {
+        if #available(iOS 9.0, *) {
+            let contactPickerController = CNContactPickerViewController()
+            contactPickerController.displayedPropertyKeys = [CNContactPhoneNumbersKey]
+            contactPickerController.predicateForEnablingContact = NSPredicate(format: "phoneNumbers.@count > 0")
+            contactPickerController.predicateForSelectionOfContact = NSPredicate(format: "phoneNumbers.@count == 1")
+            contactPickerController.delegate = self
+            presentViewController(contactPickerController, animated: true, completion: nil)
+            
+        } else {
+            let peoplePickerController = ABPeoplePickerNavigationController()
+            peoplePickerController.displayedProperties = [NSNumber(int: kABPersonPhoneProperty)]
+            peoplePickerController.predicateForEnablingPerson = NSPredicate(format: "phoneNumbers.@count > 0")
+            peoplePickerController.predicateForSelectionOfPerson = NSPredicate(format: "phoneNumbers.@count == 1")
+            peoplePickerController.peoplePickerDelegate = self
+            presentViewController(peoplePickerController, animated: true, completion: nil)
+        }
+    }
     
     private func didSelectContact(contact: Contact) {
         self.selectedContact = contact
@@ -283,6 +298,35 @@ extension PerformAssignmentTableViewController : ABPeoplePickerNavigationControl
             return ""
         }
         return personCopy.takeRetainedValue() as? String ?? ""
+    }
+    
+}
+
+@available(iOS 9.0, *)
+extension PerformAssignmentTableViewController : CNContactPickerDelegate {
+    
+    func contactPicker(picker: CNContactPickerViewController, didSelectContact contact: CNContact) {
+        let firstName = contact.givenName
+        let lastName = contact.familyName
+        guard let phoneNumber = contact.phoneNumbers.first?.value as? CNPhoneNumber else {
+            // Should never reach here because of custom `predicateForEnablingPerson`
+            return
+        }
+        
+        let contact = Contact(firstName: firstName, lastName: lastName, phoneNumber: phoneNumber.stringValue)
+        didSelectContact(contact)
+    }
+    
+    func contactPicker(picker: CNContactPickerViewController, didSelectContactProperty contactProperty: CNContactProperty) {
+        let firstName = contactProperty.contact.givenName
+        let lastName = contactProperty.contact.familyName
+        guard let phoneNumber = contactProperty.value as? CNPhoneNumber else {
+            // Should never reach here because of custom `predicateForEnablingPerson`
+            return
+        }
+        
+        let contact = Contact(firstName: firstName, lastName: lastName, phoneNumber: phoneNumber.stringValue)
+        didSelectContact(contact)
     }
     
 }
