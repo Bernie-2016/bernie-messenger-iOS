@@ -8,6 +8,8 @@ Bernie Messenger helps you communicate official calls to action from the Bernie 
 
 The Revolution starts with getting millions of new people involved in the political process. If we stand together, there's nothing that we cannot accomplish.
 
+<a href="https://itunes.apple.com/us/app/bernie-messenger/id1114674707"><img alt="Download on the App Store" src="https://linkmaker.itunes.apple.com/images/badges/en-us/badge_appstore-lrg.svg"></a>
+
 ## License
 
 This project is licensed under [AGPL](LICENSE).
